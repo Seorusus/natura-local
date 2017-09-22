@@ -1,0 +1,16 @@
+uuid: e5aa8cf6-5165-4e6a-9502-5ccd9caa6285
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.route_difficulty
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.route_difficulty
+target_entity_type_id: taxonomy_term
+target_bundle: route_difficulty
+default_langcode: site_default
+language_alterable: false

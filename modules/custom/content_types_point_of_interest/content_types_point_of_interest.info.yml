@@ -1,0 +1,34 @@
+name: 'Point Of Interest'
+description: 'Provides Point Of Interest content type and related configuration. Information about the Point Of Interest'
+type: module
+core: 8.x
+dependencies:
+  - address
+  - audiofield
+  - comment
+  - content_translation
+  - content_types_field_storage
+  - content_types_route
+  - content_types_town
+  - field
+  - file
+  - geolocation
+  - image
+  - image_url_formatter
+  - language
+  - menu_ui
+  - node
+  - path
+  - point_of_interest
+  - rest
+  - rest_export_nested
+  - serialization
+  - taxonomy
+  - telephone
+  - text
+  - user
+  - video
+  - views
+  - views_field_view
+  - votingapi_widgets
+package: content-types

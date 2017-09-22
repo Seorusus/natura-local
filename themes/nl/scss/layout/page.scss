@@ -1,0 +1,58 @@
+.s-page {
+  //@include site-width;
+  //@include container($config: $susy2, $debug: $debug_state);
+}
+
+.s-layout__top {
+  position: relative;
+  &::after {
+    content: '';
+    display: block;
+    @include absolute();
+    background: linear-gradient(to bottom, rgba(0,0,0,0.5), transparent) ;
+  }
+
+  .slick img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.region-front-top {
+  position: absolute;
+  top: 44%;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  @include site-width;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .block {
+
+  }
+
+  h2 {
+    margin: 0 0 110px;
+    color: $color-white;
+    font-size: 44px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+  }
+}
+
+.s-layout__main {
+  background: url("img/background.jpg");
+  position: relative;
+
+}
+
+.s-layout__footer {
+  border-top: 1px solid #D3D3D3;
+}
+
+.region-front-content {
+  position: relative;
+  top: -100px;
+  @include site-width;
+}

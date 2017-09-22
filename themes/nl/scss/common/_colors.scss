@@ -1,0 +1,32 @@
+// Colors
+//
+// The project uses a <a href="http://paletton.com/#uid=33B0G0k++BlynZH+1+V+WrC+hls">color scheme</a> with 3 base colors.
+//
+// #F2B200 - <b>$color-orange</b> - "Orange" color
+// #ffd700 - <b>$color-2</b> - "Yellow" color
+// #ff2800 - <b>$color-3</b> - "Red" color
+// #333333 - <b>$color-4</b> - Base color for text
+//
+// Markup:
+// <div style="background: {{ modifier_class }};" class="styleguide-color"></div>
+//
+// Styleguide common.3-colors
+
+$color-orange: #F2B200;
+$color-yellow: #F8D67B;
+$color-red: #6F1112;
+$color-white: #FFFFFF;
+$color-2: #2C3644;
+$color-3: #444D59;
+$color-dark: #2B251A;
+$color-4: #A3A7AB;
+$color-5: #D8D8D8;
+
+// Styles for Styleguide -------------
+.styleguide-color {
+  width: 300px;
+  height: 50px;
+  box-shadow: 1px 1px 3px 0 #777;
+  display: inline-block;
+}
+// ------------------------------------

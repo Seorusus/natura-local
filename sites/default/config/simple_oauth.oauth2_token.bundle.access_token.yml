@@ -1,0 +1,10 @@
+uuid: 52708f6f-d6a7-40d6-8e5e-db7ffef6d9df
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: z9ULI9nj9yt73YKI3ZE8v9yXhkVfvQsDJToEDzijcxY
+id: access_token
+label: 'Access Token'
+description: 'The access token type.'
+locked: true

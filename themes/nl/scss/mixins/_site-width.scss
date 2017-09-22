@@ -1,0 +1,16 @@
+@mixin site-width {
+  margin: 0 auto;
+  padding: 0 15px;
+  @include desktop {
+    max-width: $desktop-width;
+    padding: 0 20px;
+  }
+  @include wide {
+    max-width: $wide-desktop-width;
+    padding: 0 30px;
+  }
+  @include x-wide {
+    max-width: $x-wide-desktop-width;
+    padding: 0 40px;
+  }
+}

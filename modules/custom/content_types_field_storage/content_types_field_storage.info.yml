@@ -1,0 +1,22 @@
+name: 'Field Storage'
+type: module
+core: 8.x
+dependencies:
+  - address
+  - block_content
+  - comment
+  - content_translation
+  - field
+  - file
+  - geolocation
+  - image
+  - language
+  - node
+  - path
+  - rdf
+  - taxonomy
+  - text
+  - user
+  - video
+  - votingapi_widgets
+package: content-types

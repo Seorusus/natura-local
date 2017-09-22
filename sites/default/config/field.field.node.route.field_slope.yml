@@ -1,0 +1,23 @@
+uuid: 6572e0e5-5017-4f08-abb7-7ce0fda7b10f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_slope
+    - node.type.route
+id: node.route.field_slope
+field_name: field_slope
+entity_type: node
+bundle: route
+label: Slope
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

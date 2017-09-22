@@ -1,0 +1,42 @@
+uuid: b046f03f-288d-4335-9935-c873b5d79778
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - node
+    - search
+  theme:
+    - nl
+id: nl_searchform
+theme: nl
+region: content
+weight: -1
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form'
+  provider: search
+  label_display: visible
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      point_of_interest: point_of_interest
+      route: route
+      town: town
+      visit: visit
+    negate: true
+    context_mapping:
+      node: '@node.node_route_context:node'
+  node_type:
+    id: node_type
+    bundles:
+      point_of_interest: point_of_interest
+      route: route
+      town: town
+      visit: visit
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

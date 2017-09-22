@@ -16,6 +16,14 @@ $settings['container_yamls'][] = __DIR__ . '/services.yml';
  */
 include __DIR__ . "/settings.pantheon.php";
 
+$settings['update_free_access'] = TRUE;
+
+/**
+ * srv/bindings/1c5cf691a88f4f94964b8a428418ea88/files/private/tmp
+ */
+$config['system.file']['path']['temporary'] = DRUPAL_ROOT . 'sites/default/files/private/tmp';
+
+
 /**
  * If there is a local settings file, then include it
  */

@@ -1,0 +1,116 @@
+.region-primary-menu {
+  display: inline-block;
+  vertical-align: middle;
+  float: right;
+  @include block-debug();
+  .s-menu {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+
+    &--level-1 {
+
+      > .s-menu__item {
+        margin: 0 20px;
+      }
+    }
+
+    &--level-2 {
+      display: none;
+    }
+
+    &__item {
+      display: inline-block;
+
+      a {
+        color: $color-white;
+        text-decoration: none;
+        display: block;
+        line-height: $header-height;
+        font-size: 16px;
+        padding: 0 20px;
+        border-radius: $header-height/2;
+        @include transition();
+
+        &:hover {
+          color: $color-orange;
+
+        }
+
+        &[href*="login"] {
+          border: 2px solid rgba(255,255,255,0.8);
+          &:hover {
+            color: $color-dark;
+            background: $color-white;
+          }
+        }
+      }
+      &--expanded {
+        position: relative;
+
+        > a{
+          padding-right: 30px;
+            &::after {
+              color: inherit;
+              //@include transition();
+            }
+            @include icon('chevron-down', 0) {
+              top: 0;
+              bottom: 0;
+              right: 0;
+              display: flex;
+              align-items: center;
+            }
+        }
+
+        &:hover {
+
+          >a {
+            &::after {
+              //transform: rotate(180deg);
+            }
+          }
+          .s-menu--level-2 {
+            position: absolute;
+            left: -40px;
+            right: -40px;
+            padding: 10px 0;
+            display: block;
+            border-radius: 2px;
+            box-shadow: 0 0 10px 1px rgba(0,0,0,0.5);
+            background: $color-white;
+
+            &::after {
+              position: absolute;
+              top: -7px;
+              left: 45%;
+              display: block;
+              content: '';
+              width: 0;
+              height: 0;
+              border-style: solid;
+              border-width: 0 7px 7px 7px;
+              border-color: transparent transparent $color-white transparent;
+            }
+
+            .s-menu__item {
+              a {
+                color: $color-dark;
+                margin: 0;
+                padding: 10px 20px;
+                line-height: 1.5;
+                font-size: 14px;
+
+                &:hover {
+                  color: $color-orange;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+
+  }
+}

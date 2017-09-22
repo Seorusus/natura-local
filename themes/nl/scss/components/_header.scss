@@ -1,0 +1,36 @@
+.s-header {
+  @include absolute(top, 10);
+  margin: 10px;
+
+  @include desktop {
+    margin: 30px 65px;
+  }
+
+  &__box {
+
+
+  }
+  //@include container($config: $susy2, $debug: $debug_state);
+  //background: rgba(255,255,255,0.3);
+
+  &__logo {
+    display: inline-block;
+    vertical-align: middle;
+    height: $header-height;
+    line-height: 0;
+    font-size: 0;
+
+    img {
+      max-height: 100%;
+      width: auto;
+    }
+  }
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+    background: rgba(255,255,255,0.5);
+    height: 1px;
+    margin-top: 30px;
+  }
+}

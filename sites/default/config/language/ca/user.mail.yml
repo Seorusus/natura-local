@@ -1,0 +1,18 @@
+register_admin_created:
+  body: "[user:display-name],\r\n\r\nUn administrador del lloc [site:name] us ha creat un compte. Ara podeu iniciar sessió fent clic en aquest enllaç o copiant-lo i enganxant-lo al vostre navegador:\r\n\r\n[user:one-time-login-url]\r\n\r\nAquest enllaç només es pot usar un sol cop per autenticar-vos i us durà a una pàgina on podreu establir la vostra contrasenya.\r\n\r\nDesprés d'establir la vostra contrasenya, ja podreu autenticar-vos a [site:login-url] en un futur usant:\r\n\r\nnom d'usuari: [user:name]\r\ncontrasenya: Your password\r\n\r\n--  L'equip de [site:name]"
+  subject: 'Un administrador us ha creat un compte a [site:name]'
+register_no_approval_required:
+  subject: 'Detalls del compte per [user:display-name] a [site:name]'
+register_pending_approval:
+  subject: 'Detalls del compte per [user:display-name] a [site:name] (pendent d''aprovació per part de l''administrador)'
+register_pending_approval_admin:
+  body: "[user:display-name] ha demanat un compte.\r\n\r\n[user:edit-url]"
+  subject: 'Detalls del compte per [user:display-name] a [site:name] (pendent d''aprovació per part de l''administrador)'
+status_activated:
+  subject: 'Detalls del compte per [user:display-name] a [site:name] (aprovat)'
+status_blocked:
+  body: "[user:display-name],\r\n\r\nEl vostre compte a [site:name] ha estat bloquejat.\r\n\r\n--  L'equip de [site:name]"
+  subject: 'Detalls del compte per [user:display-name] a [site:name] (bloquejat)'
+status_canceled:
+  body: "[user:display-name],\r\n\r\nEl vostre compte a [site:name] ha estat cancel·lat.\r\n\r\n--  L'equip de [site:name]"
+  subject: 'Detalls del compte per [user:display-name] a [site:name] (cancel·lat)'

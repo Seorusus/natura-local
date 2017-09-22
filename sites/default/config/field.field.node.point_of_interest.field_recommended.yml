@@ -1,0 +1,23 @@
+uuid: 6a703bfe-21c0-47bb-9600-ce004bd4b2c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_recommended
+    - node.type.point_of_interest
+id: node.point_of_interest.field_recommended
+field_name: field_recommended
+entity_type: node
+bundle: point_of_interest
+label: Recommended
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'true'
+  off_label: 'false'
+field_type: boolean

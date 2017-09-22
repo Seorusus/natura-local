@@ -1,0 +1,32 @@
+core: 8.x
+type: theme
+base theme: classy
+
+name: 'NaturaLocal theme'
+description: 'Custom theme for site NaturaLocal.'
+
+regions:
+  primary_menu: 'Primary menu'
+  front_top: 'Front top'
+  front_content: 'Front content'
+  navigation_collapsible: 'Navigation (Collapsible)'
+  header: 'Top Bar'
+  header_banner: 'Header Banner'
+  header_nav: 'Header Navigation'
+  header_bottom: 'Header Bottom'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  breadcrumb: 'Breadcrumb'
+  content_top: 'Content Top'
+  content: 'Content'
+  content_bottom: 'Content Bottom'
+  sidebar_first: 'Sidebar First'
+  sidebar_second: 'Sidebar Second'
+  footer: 'Footer'
+  footer_bottom: 'Footer bottom'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  page_bottom_fixed: 'page_bottom_fixed'
+
+libraries:
+  - 'nl/global-styling'

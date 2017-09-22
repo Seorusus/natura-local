@@ -1,0 +1,9 @@
+uuid: b5c2254c-59bd-4284-bb1b-26b3c7773d8d
+langcode: en
+status: true
+dependencies: {  }
+name: 'Route Difficulty'
+vid: route_difficulty
+description: 'easy, familiar, medium, hard'
+hierarchy: 0
+weight: 0

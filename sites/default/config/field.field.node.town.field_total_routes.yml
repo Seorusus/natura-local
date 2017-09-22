@@ -1,0 +1,23 @@
+uuid: 27a608b1-4644-40f1-8fa9-41a0ae722edf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_total_routes
+    - node.type.town
+id: node.town.field_total_routes
+field_name: field_total_routes
+entity_type: node
+bundle: town
+label: 'Total Routes'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

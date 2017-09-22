@@ -1,0 +1,63 @@
+// Breakpoints
+//
+// The project uses a mobile first approach. For responsive design and theming components uses several breakpoints for different screen resolutions.
+// Each breakpoint is specified by the corresponding variable in pixels.
+// To set breakpoints for particular block or element, mixins are used.
+//
+// <pre class="prettyprint linenums lang-css"><code data-language="css">
+// .class {
+//   ... // Set common styles and styles for "mobile" resolution
+//
+//   @include tablet {
+//     ... // Set styles for "tablet" resolution
+//   }
+//
+//   @include desktop {
+//     ... // Set styles for "desktop" resolution.
+//   }
+//
+//   @include wide {
+//     ... // Set styles for "wide desktop" resolution.
+//   }
+//
+//   @include x-wide {
+//     ... // Set styles for "extra wide desktop" resolution.
+//   }
+// }
+//  </code></pre>
+//
+// $tablet-width - Maximal width for "mobile" resolution and Minimal width for "tablet" resolution.
+// $desktop-width - Maximal width for "tablet" resolution and Minimal width for "desktop" resolution.
+// $wide-desktop-width - Maximal width for "desktop" resolution and Minimal width for "wide desktop" resolution.
+// $x-wide-desktop-width - Maximal width for "wide desktop" resolution and Minimal width for "extra wide desktop" resolution.
+//
+// Styleguide common.2-breakpoints
+
+$tablet-width: 640px;
+$desktop-width: 960px;
+$wide-desktop-width: 1200px;
+$x-wide-desktop-width: 1600px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin wide {
+  @media (min-width: #{$wide-desktop-width}) {
+    @content;
+  }
+}
+
+@mixin x-wide {
+  @media (min-width: #{$x-wide-desktop-width}) {
+    @content;
+  }
+}

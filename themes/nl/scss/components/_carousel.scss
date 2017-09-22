@@ -1,0 +1,85 @@
+.slick {
+  &__slide {
+
+  }
+
+
+  & &-arrow {
+    height: 40px;
+    width: 40px;
+
+    &::before {
+      content: none;
+    }
+
+    &::after {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      font-size: 13px;
+      content: '';
+    }
+  }
+
+
+
+  .s-layout__top & {
+
+    &-arrow {
+      opacity: 0.7;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    &-next {
+      right: 5px;
+      &::after {
+        @include sprite(arrow-2-right)
+      }
+    }
+
+    &-prev {
+      left: 5px;
+      &::after {
+        @include sprite(arrow-2-left)
+      }
+    }
+  }
+
+  .s-layout__main & {
+
+    &-arrow {
+
+      background: rgba(255,255,255,0.9);
+      box-shadow: 0 0 5px 1px rgba(0,0,0,0.5);
+      border-radius: 50%;
+
+      &:hover {
+        background: rgba(255,255,255,1);
+        box-shadow: 0 0 3px 1px rgba(0,0,0,0.3);
+      }
+      &:active {
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.1);
+      }
+    }
+
+    &-next {
+      right: -5px;
+      &::after {
+        @include sprite(arrow-1-right)
+      }
+    }
+
+    &-prev {
+      left: -5px;
+      &::after {
+        @include sprite(arrow-1-left)
+      }
+    }
+  }
+}

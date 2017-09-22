@@ -1,0 +1,14 @@
+uuid: 7c6729a9-9a72-4eb3-9dcd-1622de423a59
+langcode: en
+status: true
+dependencies: {  }
+name: m
+label: m
+effects:
+  5a4b4920-9ba0-4cf9-ab50-bfb34b172e43:
+    uuid: 5a4b4920-9ba0-4cf9-ab50-bfb34b172e43
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 500
+      height: 430

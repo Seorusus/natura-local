@@ -1,0 +1,16 @@
+uuid: fc9ee7a8-db28-4bae-b5f5-a4faa8c99c16
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.town
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.town
+target_entity_type_id: node
+target_bundle: town
+default_langcode: site_default
+language_alterable: false

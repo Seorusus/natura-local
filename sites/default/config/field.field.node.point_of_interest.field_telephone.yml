@@ -1,0 +1,21 @@
+uuid: fa8fbdb4-25ff-49e1-848c-1ac1b8fc91c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_telephone
+    - node.type.point_of_interest
+  module:
+    - telephone
+id: node.point_of_interest.field_telephone
+field_name: field_telephone
+entity_type: node
+bundle: point_of_interest
+label: telephone
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

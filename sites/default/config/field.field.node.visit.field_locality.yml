@@ -1,0 +1,36 @@
+uuid: 417b40f8-1fe7-4a37-9b06-f64238b0c9c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_locality
+    - node.type.visit
+  module:
+    - address
+id: node.visit.field_locality
+field_name: field_locality
+entity_type: node
+bundle: visit
+label: Locality
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_countries:
+    ES: ES
+  fields:
+    administrativeArea: administrativeArea
+    locality: locality
+    dependentLocality: dependentLocality
+    postalCode: postalCode
+    addressLine1: addressLine1
+    sortingCode: '0'
+    addressLine2: '0'
+    organization: '0'
+    givenName: '0'
+    additionalName: '0'
+    familyName: '0'
+  langcode_override: ''
+field_type: address

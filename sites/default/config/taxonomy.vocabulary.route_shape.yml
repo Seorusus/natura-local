@@ -1,0 +1,9 @@
+uuid: 8af0de5a-f1e8-4090-a43d-5c98a260b16c
+langcode: en
+status: true
+dependencies: {  }
+name: 'Route Typology'
+vid: route_shape
+description: 'Circular Clockwise, Circular Counter Clockwise, crossing, linear'
+hierarchy: 0
+weight: 0

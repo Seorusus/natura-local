@@ -1,0 +1,18 @@
+uuid: f10e076b-dc93-46eb-b2b8-fb62fb6e3db1
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.route_difficulty
+id: taxonomy_term.route_difficulty.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: route_difficulty
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

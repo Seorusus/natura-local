@@ -1,0 +1,28 @@
+uuid: 10892d31-4a69-4ab7-adb7-1590b2ce7c84
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_visit_tags
+    - node.type.visit
+    - taxonomy.vocabulary.visit_type
+id: node.visit.field_visit_tags
+field_name: field_visit_tags
+entity_type: node
+bundle: visit
+label: 'Visit Tags'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      visit_type: visit_type
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

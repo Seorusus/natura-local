@@ -1,0 +1,9 @@
+uuid: 28b20a2b-f35b-436a-ac75-cea14118eef4
+langcode: en
+status: true
+dependencies: {  }
+name: 'Experience Tags'
+vid: experience_tags
+description: 'Fauna, Workshops, To walk, Flora'
+hierarchy: 0
+weight: 0

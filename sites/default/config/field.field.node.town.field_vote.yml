@@ -1,0 +1,27 @@
+uuid: 133684f1-ffd8-471a-aab1-85396accd5d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_vote
+    - node.type.town
+  module:
+    - votingapi_widgets
+id: node.town.field_vote
+field_name: field_vote
+entity_type: node
+bundle: town
+label: Vote
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    status: '1'
+default_value_callback: ''
+settings:
+  anonymous_window: '-1'
+  user_window: '-1'
+  result_function: vote_average
+  widget_format: fivestar
+field_type: voting_api_field

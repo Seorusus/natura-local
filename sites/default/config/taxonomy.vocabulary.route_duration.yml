@@ -1,0 +1,9 @@
+uuid: da624475-a07c-426e-8d80-80aabb479801
+langcode: en
+status: true
+dependencies: {  }
+name: 'Route Duration'
+vid: route_duration
+description: 'short 0-2h, medium 2-4h, long >4h'
+hierarchy: 0
+weight: 0

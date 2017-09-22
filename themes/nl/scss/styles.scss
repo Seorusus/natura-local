@@ -1,0 +1,9 @@
+@import "vendor";
+@import "mixins";
+@import "common";
+@import "layout";
+@import "components";
+
+#search-block-form {
+  display: none;
+}

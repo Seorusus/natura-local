@@ -1,0 +1,28 @@
+uuid: fedb968a-42a2-4143-8e7d-b542f1fb3d35
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_navigation_pois
+    - node.type.navigation_poi
+    - node.type.route
+id: node.route.field_navigation_pois
+field_name: field_navigation_pois
+entity_type: node
+bundle: route
+label: 'Navigation POIS'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      navigation_poi: navigation_poi
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

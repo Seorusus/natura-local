@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Service Type'
+vid: poi_type
+description: 'Food, To sleep, Local product, Active leisure, Art and culture, Architecture, Landscape, Events'
+hierarchy: 0
+weight: 0

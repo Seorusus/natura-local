@@ -1,0 +1,34 @@
+uuid: 8e642e10-ce2c-4917-a67f-0f3cffe22cec
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access own consumers'
+  - 'access shortcuts'
+  - 'access site-wide contact form'
+  - 'access user profiles'
+  - 'administer vote types'
+  - 'administer voting api'
+  - 'clear own vote on node:route:field_vote'
+  - 'clear own vote on node:town:field_vote'
+  - 'edit any route content'
+  - 'edit own comments'
+  - 'edit own vote on node:route:field_vote'
+  - 'edit own vote on node:town:field_vote'
+  - 'edit voting status on node:route:field_vote'
+  - 'grant simple_oauth codes'
+  - 'post comments'
+  - 'restful post user_registration'
+  - 'search content'
+  - 'skip comment approval'
+  - 'use text format basic_html'
+  - 'vote on node:route:field_vote'
+  - 'vote on node:town:field_vote'

@@ -1,0 +1,20 @@
+uuid: 24b6ba0a-070b-4b06-8cac-89059e7617e9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_route_time
+field_name: field_route_time
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

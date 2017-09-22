@@ -1,0 +1,27 @@
+label: 'Pàgina d''edició de la vista'
+tips:
+  views-main:
+    label: 'Gestiona els paràmetres de la vista'
+    body: 'Visualitzeu o editeu la configuració.'
+  views-ui-displays:
+    label: 'Presentacions en aquesta vista'
+    body: 'Una presentació és la forma de mostrar els resultats, per exemple, com una pàgina o un bloc. Una vista pot contenir múltiples presentacions que es mostren aquí.  La presentació activa es mostra destacada.'
+  views-ui-view-admin:
+    label: 'Administració de la vista'
+  views-ui-format:
+    label: 'Format de sortida'
+  views-ui-fields:
+    label: Camps
+  views-ui-filter:
+    label: 'Filtra la teva vista'
+  views-ui-filter-operations:
+    label: 'Filtra les accions'
+    body: 'Afegeix, reordena o elimina filtres.'
+  views-ui-sorts:
+    label: 'Criteris d''ordenació'
+  views-ui-sorts-operations:
+    label: 'Ordena les accions'
+    body: 'Afegeix, ordena o elimina regles d''ordenació.'
+  views-ui-preview:
+    label: Previsualitza
+    body: 'Mostra una previsualització del resultat de la vista.'

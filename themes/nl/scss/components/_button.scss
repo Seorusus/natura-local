@@ -1,0 +1,22 @@
+.s-layout__button {
+  @include absolute(bottom);
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.s-button {
+  display: inline-block;
+  padding: 5px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $color-white;
+  background: $color-orange;
+  font-size: 18px;
+  line-height: 2;
+  border-radius: 30px;
+  @include transition();
+
+  &:hover {
+    background: darken($color-orange, 5%);
+  }
+}

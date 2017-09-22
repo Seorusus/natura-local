@@ -1,0 +1,32 @@
+name: Route
+description: 'Provides Route content type and related configuration. Information about the route'
+type: module
+core: 8.x
+dependencies:
+  - address
+  - content_translation
+  - content_types_field_storage
+  - content_types_point_of_interest
+  - field
+  - file
+  - geolocation
+  - image
+  - image_url_formatter
+  - interval
+  - language
+  - link
+  - menu_ui
+  - node
+  - path
+  - rest
+  - rest_export_nested
+  - route
+  - serialization
+  - taxonomy
+  - text
+  - user
+  - video
+  - views
+  - views_field_view
+  - votingapi_widgets
+package: content-types

@@ -1,0 +1,40 @@
+.s-footer {
+  @include site-width;
+
+  &__top {
+    @include clearfix;
+    margin: 40px 0 70px;
+  }
+
+  &__bottom {
+    @include clearfix;
+    border-top: 1px solid $color-5;
+    padding: 20px 0 40px;
+  }
+
+  &__logo {
+    @include span(4);
+  }
+  
+  &__logo-link {
+    font-size: 0;
+    display: inline-block;
+    height: 30px;
+    width: 190px;
+    background: url("img/logo-footer.png") no-repeat;
+  }
+
+  &__copyright {
+    @include span(4);
+    color: $color-4;
+    font-size: 14px;
+    line-height: 2;
+  }
+
+  @at-root .region-footer {
+    @include span(8 last);
+  }
+  @at-root .region-footer-bottom {
+    @include span(6);
+  }
+}

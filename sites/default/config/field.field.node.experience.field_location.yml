@@ -1,0 +1,21 @@
+uuid: 1c6f76ba-0653-4047-b08a-3a9330a47c4b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_location
+    - node.type.experience
+  module:
+    - geolocation
+id: node.experience.field_location
+field_name: field_location
+entity_type: node
+bundle: experience
+label: Location
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: geolocation

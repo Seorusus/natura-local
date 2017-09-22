@@ -1,0 +1,87 @@
+.region-footer {
+  display: inline-block;
+  vertical-align: middle;
+  float: right;
+  @include block-debug();
+  .s-menu {
+    margin: 0;
+    padding: 0;
+
+  &__item {
+
+    a {
+      text-decoration: none;
+      @include transition();
+      display: inline-block;
+    }
+  }
+  &--level-1 {
+
+    > .s-menu__item {
+      display: inline-block;
+      @include span(3);
+
+      &:nth-child(4) {
+        @include span(3 last);
+      }
+
+      > a {
+        color: $color-3;
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 4;
+        font-size: 16px;
+
+        &:hover {
+          color: $color-orange;
+        }
+      }
+    }
+
+  }
+  &--level-2 {
+
+    .s-menu__item {
+      display: block;
+
+      a {
+        color: $color-4;
+        line-height: 2;
+        font-size: 14px;
+
+        &:hover {
+          color: $color-orange;
+        }
+
+        &[href*="facebook"] {
+          @include social-icon() {
+            @include sprite(fb)
+          }
+        }
+        &[href*="youtube"] {
+          @include social-icon() {
+            @include sprite(yt)
+          }
+        }
+        &[href*="instagram"] {
+          @include social-icon() {
+            @include sprite(in)
+          }
+        }
+        &[href*="mailto"] {
+          @include social-icon() {
+            @include sprite(em)
+          }
+        }
+        &[href*="contact"] {
+          @include social-icon() {
+            @include sprite(ms)
+          }
+        }
+      }
+    }
+
+  }
+
+  }
+}

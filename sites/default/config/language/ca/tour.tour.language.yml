@@ -1,0 +1,12 @@
+label: Llengua
+tips:
+  language-overview:
+    label: Llengües
+  language-add:
+    label: 'Afegint llengües'
+  language-reorder:
+    label: 'Reordenament de les llengües'
+  language-default:
+    label: 'Estableix l''idioma per defecte'
+  language-operations:
+    label: 'Modificant les llengües'

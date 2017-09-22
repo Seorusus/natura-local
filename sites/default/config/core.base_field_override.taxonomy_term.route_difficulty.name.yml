@@ -1,0 +1,18 @@
+uuid: 15417875-a7ae-4584-81eb-50bb43665e43
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.route_difficulty
+id: taxonomy_term.route_difficulty.name
+field_name: name
+entity_type: taxonomy_term
+bundle: route_difficulty
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

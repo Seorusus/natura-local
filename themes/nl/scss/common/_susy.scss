@@ -1,0 +1,145 @@
+// Grid
+//
+// Project use <a href="http://oddbird.net/susy/docs/index.html">SUSY</a> as a grid system.
+// This is a grids-on-demand system. 12 columns grid uses as default.
+//
+// $debug_state - variable for debugging layout (true - show background grid in block with "container" mixin)
+// $color-grid-0 - Colors for grid background
+// $color-grid-1 - Colors for grid background
+// $color-grid-2 - Colors for grid background
+// $color-grid-3 - Colors for grid background
+// $susy - Common settings for susy-grid
+// $sus1 - Settings #1 for susy container and debugging
+// $sus2 - Settings #2 for susy container and debugging
+// $sus3 - Settings #3 for susy container and debugging
+//
+// Styleguide: common.1-grid
+
+
+@import "node_modules/susy/sass/susy";
+@import "node_modules/susy/sass/plugins/svg-grid";
+
+$color-grid-0: rgba(250, 10, 100, 0.3) rgba(250, 10, 100, 0.5);
+$color-grid-1: rgba(19, 122, 243, 0.3) rgba(19, 122, 243, 0.5);
+$color-grid-2: rgba(0, 237, 83, 0.3) rgba(0, 237, 83, 0.5);
+$color-grid-3: rgba(253, 100, 123, 0.3) rgba(253, 100, 123, 0.5);
+
+$sidebar-left: 155px;
+$sidebar-left-overlay: 52px;
+$sidebar-right: 308px;
+
+$susy: (
+'columns': susy-repeat(12),
+'gutters': 0.2,
+'spread': 'narrow',
+'container-spread': 'narrow',
+'svg-grid-colors': $color-grid-0
+);
+
+/*
+Mixins
+
+Mixins for susy
+
+Style guide: common.1-grid.mixins
+
+*/
+
+
+@mixin gradient($start, $end) {
+
+}
+
+
+// Settings
+$susy1: (
+        'columns': susy-repeat(9),
+        'spread': 'wide',
+        //'container-spread': 'wide',
+        'svg-grid-colors': $color-grid-1
+);
+
+$susy2: (
+        'columns': susy-repeat(12),
+        'svg-grid-colors': $color-grid-2,
+        'spread': 'wide'
+);
+
+$susy-page: (
+        'columns': $sidebar-left susy-repeat(12) $sidebar-right,
+        //'gutters': 20px,
+        'spread': 'narrow',
+        'svg-grid-colors': $color-grid-2,
+);
+$susy-page-overlay: (
+        'columns': $sidebar-left-overlay susy-repeat(12) $sidebar-right,
+        //'gutters': 20px,
+        'spread': 'narrow',
+        'svg-grid-colors': $color-grid-2,
+);
+
+$col-12-0: (
+        'columns': susy-repeat(12),
+        'svg-grid-colors': $color-grid-3,
+        'gutters': 0,
+);
+$susy4: (
+        'columns': susy-repeat(4),
+        'svg-grid-colors': $color-grid-3,
+);
+
+// box-sizing
+* { box-sizing: border-box; }
+
+/*
+
+container($width, $config, $debug)
+
+Creates a container with parameters.
+
+$width  - Width of container in "span" format.
+$config - Susy config (span, gutter, color of background grid).
+$debug  - Show background grid if "true".
+
+Styleguide common.1-grid.mixins.container
+
+*/
+@mixin container($width: all, $config: $susy, $debug: false) {
+  $config: susy-settings($config);
+  $container-spread: map-get($config, 'container-spread');
+  $grid-colors: map-get($config, 'svg-grid-colors');
+  $width: span($width $container-spread of $container-spread, $config);
+
+  @include clearfix;
+  margin: 0 auto;
+  max-width: $width or 100%;
+
+  @if $debug {
+    background: susy-svg-grid($grid: $config, $colors: $grid-colors) no-repeat scroll;
+  }
+}
+
+/*
+
+span($span, $config)
+
+Creates a container with parameters.
+
+$span  - Width of container in "column".
+$config - Susy config (span, gutter, color of background grid).
+
+Styleguide common.1-grid.mixins.container
+
+*/
+@mixin span($span, $config: $susy) {
+  width: span($span, $config);
+
+  @if index($span, 'last') {
+    float: right;
+     margin-right: 0; //if you want an explicit reset
+  } @else {
+    float: left;
+    margin-right: gutter($config);
+  }
+}
+

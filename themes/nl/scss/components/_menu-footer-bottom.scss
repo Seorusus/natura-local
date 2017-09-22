@@ -1,0 +1,34 @@
+.region-footer-bottom {
+  display: inline-block;
+  vertical-align: middle;
+  float: right;
+  @include block-debug();
+  .s-menu {
+    margin: 0;
+    padding: 0;
+
+  &__item {
+    display: inline-block;
+    @include span(4);
+
+
+    &:nth-child(3) {
+      @include span(4 last);
+    }
+
+    a {
+      text-decoration: none;
+      color: $color-4;
+      font-weight: bold;
+      line-height: 2;
+      font-size: 14px;
+      @include transition();
+
+      &:hover {
+        color: $color-orange;
+      }
+    }
+  }
+
+  }
+}

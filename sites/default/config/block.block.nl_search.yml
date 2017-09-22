@@ -1,0 +1,22 @@
+uuid: 9d4e2dcf-4547-49cc-ab3b-1225b86676f9
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - nl
+_core:
+  default_config_hash: za-39d5WDUg6XvbyqSnuVYEeq6QM4qKJxW8MnoAha5A
+id: nl_search
+theme: nl
+region: sidebar_first
+weight: -1
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  provider: search
+  label_display: visible
+visibility: {  }

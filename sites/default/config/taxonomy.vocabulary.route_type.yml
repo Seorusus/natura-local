@@ -1,0 +1,9 @@
+uuid: f5df0a0e-eefb-4e5c-9dbc-e13523c3e615
+langcode: en
+status: true
+dependencies: {  }
+name: 'Route Type'
+vid: route_type
+description: 'biking, trekking, Horse, Handicapped'
+hierarchy: 0
+weight: 0

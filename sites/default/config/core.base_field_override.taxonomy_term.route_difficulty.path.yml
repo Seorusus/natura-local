@@ -1,0 +1,20 @@
+uuid: e46dbb78-3ef4-448f-9dbc-027e5a26c407
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.route_difficulty
+  module:
+    - path
+id: taxonomy_term.route_difficulty.path
+field_name: path
+entity_type: taxonomy_term
+bundle: route_difficulty
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

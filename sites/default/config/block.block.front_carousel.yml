@@ -1,0 +1,24 @@
+uuid: 1011475e-84c4-4cf5-8dc1-dc099e8ad6c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.card_carousel
+  module:
+    - views
+  theme:
+    - nl
+id: front_carousel
+theme: nl
+region: front_content
+weight: 0
+provider: null
+plugin: 'views_block:card_carousel-block_1'
+settings:
+  id: 'views_block:card_carousel-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility: {  }

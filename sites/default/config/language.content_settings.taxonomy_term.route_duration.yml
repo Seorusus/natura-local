@@ -1,0 +1,16 @@
+uuid: c0be8ce2-b18e-4e98-9d5c-3ebb9c5de5bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.route_duration
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.route_duration
+target_entity_type_id: taxonomy_term
+target_bundle: route_duration
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,27 @@
+name: Town
+description: 'Provides Town content type and related configuration. Areas to group routes & point of interests'
+type: module
+core: 8.x
+dependencies:
+  - comment
+  - content_translation
+  - content_types_field_storage
+  - content_types_point_of_interest
+  - content_types_route
+  - field
+  - geolocation
+  - image
+  - image_url_formatter
+  - language
+  - menu_ui
+  - node
+  - path
+  - rest
+  - rest_export_nested
+  - serialization
+  - town
+  - user
+  - views
+  - views_field_view
+  - votingapi_widgets
+package: content-types
