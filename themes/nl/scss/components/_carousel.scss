@@ -3,10 +3,15 @@
 
   }
 
+  &__arrow {
+    top: 57%;
+  }
+
 
   & &-arrow {
     height: 40px;
     width: 40px;
+
 
     &::before {
       content: none;
@@ -55,30 +60,34 @@
 
     &-arrow {
 
-      background: rgba(255,255,255,0.9);
-      box-shadow: 0 0 5px 1px rgba(0,0,0,0.5);
-      border-radius: 50%;
+      //background: rgba(255,255,255,0.9);
+      //box-shadow: 0 0 5px 1px rgba(0,0,0,0.5);
+      //border-radius: 50%;
+      //
+      //&:hover {
+      //  background: rgba(255,255,255,1);
+      //  box-shadow: 0 0 3px 1px rgba(0,0,0,0.3);
+      //}
+      //&:active {
+      //  box-shadow: 0 0 0 1px rgba(0,0,0,0.1);
+      //}
 
-      &:hover {
-        background: rgba(255,255,255,1);
-        box-shadow: 0 0 3px 1px rgba(0,0,0,0.3);
-      }
-      &:active {
-        box-shadow: 0 0 0 1px rgba(0,0,0,0.1);
+      &:after {
+        font-size: 16px;
       }
     }
 
     &-next {
       right: -5px;
       &::after {
-        @include sprite(arrow-1-right)
+        @include sprite(arrow-right)
       }
     }
 
     &-prev {
       left: -5px;
       &::after {
-        @include sprite(arrow-1-left)
+        @include sprite(arrow-left)
       }
     }
   }

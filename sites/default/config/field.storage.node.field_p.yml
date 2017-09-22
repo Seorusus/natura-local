@@ -1,0 +1,22 @@
+uuid: f69e2747-1911-4ea7-92e3-27eb20b1e903
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - votingapi_widgets
+id: node.field_p
+field_name: field_p
+entity_type: node
+type: voting_api_field
+settings:
+  vote_type: vote
+  vote_plugin: useful
+  status: ''
+module: votingapi_widgets
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,17 +1,30 @@
 .region-primary-menu {
-  display: inline-block;
-  vertical-align: middle;
-  float: right;
+
   @include block-debug();
   .s-menu {
     margin: 0;
     padding: 0;
     font-size: 0;
+    display: none;
+    @include desktop {
+      display: block;
+    }
 
     &--level-1 {
+      @include desktop {
+        display: flex;
+        justify-content: space-between;
+      }
+
 
       > .s-menu__item {
-        margin: 0 20px;
+        display: block;
+        @include desktop {
+          display: inline-block;
+        }
+        a {
+          font-family: $ff-3;
+        }
       }
     }
 
@@ -20,17 +33,21 @@
     }
 
     &__item {
-      display: inline-block;
+      //display: inline-block;
 
       a {
         color: $color-white;
         text-decoration: none;
         display: block;
-        line-height: $header-height;
-        font-size: 16px;
-        padding: 0 20px;
-        border-radius: $header-height/2;
+        //line-height: $header-height;
+        font-size: $fs-1;
+        line-height: 2.5;
+        padding: 0 10px;
+        border-radius: 2.5em;
         @include transition();
+        @include wide {
+          padding: 0 30px;
+        }
 
         &:hover {
           color: $color-orange;
@@ -38,7 +55,8 @@
         }
 
         &[href*="login"] {
-          border: 2px solid rgba(255,255,255,0.8);
+          border: 1px solid rgba(255,255,255,0.8);
+          padding: 0 18px;
           &:hover {
             color: $color-dark;
             background: $color-white;
@@ -47,6 +65,7 @@
       }
       &--expanded {
         position: relative;
+        padding-bottom: 10px;
 
         > a{
           padding-right: 30px;
@@ -72,10 +91,12 @@
           }
           .s-menu--level-2 {
             position: absolute;
-            left: -40px;
-            right: -40px;
-            padding: 10px 0;
+            top: 100%;
+            left: -50px;
+            right: -50px;
+            padding: 15px 0;
             display: block;
+            font-size: $fs-1;
             border-radius: 2px;
             box-shadow: 0 0 10px 1px rgba(0,0,0,0.5);
             background: $color-white;
@@ -99,7 +120,7 @@
                 margin: 0;
                 padding: 10px 20px;
                 line-height: 1.5;
-                font-size: 14px;
+                font-size: $fs-3;
 
                 &:hover {
                   color: $color-orange;

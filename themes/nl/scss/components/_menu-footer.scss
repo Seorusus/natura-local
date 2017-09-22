@@ -1,8 +1,11 @@
 .region-footer {
-  display: inline-block;
-  vertical-align: middle;
-  float: right;
-  @include block-debug();
+
+  @include desktop {
+    display: inline-block;
+    vertical-align: middle;
+    float: right;
+    @include block-debug();
+  }
   .s-menu {
     margin: 0;
     padding: 0;
@@ -19,10 +22,23 @@
 
     > .s-menu__item {
       display: inline-block;
-      @include span(3);
+      @include span(6);
+
+      @include desktop {
+        @include span(3);
+      }
+
+      &:nth-child(2n) {
+        @include span(6 last);
+        @include desktop {
+          @include span(3);
+        }
+      }
 
       &:nth-child(4) {
-        @include span(3 last);
+        @include desktop {
+          @include span(3 last);
+        }
       }
 
       > a {
@@ -30,7 +46,7 @@
         font-weight: bold;
         text-transform: uppercase;
         line-height: 4;
-        font-size: 16px;
+        font-size: $fs-2;
 
         &:hover {
           color: $color-orange;
@@ -47,7 +63,7 @@
       a {
         color: $color-4;
         line-height: 2;
-        font-size: 14px;
+        font-size: $fs-3;
 
         &:hover {
           color: $color-orange;

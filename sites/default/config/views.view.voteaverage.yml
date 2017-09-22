@@ -6,6 +6,8 @@ dependencies:
     - rest
     - serialization
     - votingapi
+_core:
+  default_config_hash: B8N20c94Gj3Syl9LYeMIQdf14NV-Q-ib489lY4oTVnA
 id: voteaverage
 label: VoteAverage
 module: views
@@ -193,7 +195,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          default_action: 'not found'
+          default_action: ignore
           exception:
             value: all
             title_enable: false

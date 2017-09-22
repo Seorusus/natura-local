@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.town.field_image_default
     - field.field.node.town.field_land_type
     - field.field.node.town.field_location
+    - field.field.node.town.field_p
     - field.field.node.town.field_recommended
     - field.field.node.town.field_routes
     - field.field.node.town.field_services
@@ -21,6 +22,7 @@ dependencies:
     - geolocation
     - image
     - user
+    - votingapi_widgets
 id: node.town.card
 targetEntityType: node
 bundle: town
@@ -51,6 +53,30 @@ content:
     third_party_settings: {  }
     type: geolocation_latlng
     region: content
+  field_p:
+    type: voting_api_formatter
+    weight: 5
+    region: content
+    label: above
+    settings:
+      readonly: false
+      style: default
+      show_results: false
+      values: {  }
+      show_own_vote: false
+    third_party_settings: {  }
+  field_vote:
+    type: voting_api_formatter
+    weight: 4
+    region: content
+    label: hidden
+    settings:
+      style: css-stars
+      readonly: 0
+      show_results: 0
+      values: {  }
+      show_own_vote: false
+    third_party_settings: {  }
   links:
     weight: 0
     region: content
@@ -64,5 +90,4 @@ hidden:
   field_services: true
   field_total_routes: true
   field_visits: true
-  field_vote: true
   langcode: true

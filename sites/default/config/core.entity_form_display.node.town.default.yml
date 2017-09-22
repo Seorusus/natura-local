@@ -3,11 +3,13 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.town.body
     - field.field.node.town.field_comments
     - field.field.node.town.field_experiences
     - field.field.node.town.field_image_default
     - field.field.node.town.field_land_type
     - field.field.node.town.field_location
+    - field.field.node.town.field_p
     - field.field.node.town.field_recommended
     - field.field.node.town.field_routes
     - field.field.node.town.field_services
@@ -21,12 +23,22 @@ dependencies:
     - geolocation
     - image
     - path
+    - text
     - votingapi_widgets
 id: node.town.default
 targetEntityType: node
 bundle: town
 mode: default
 content:
+  body:
+    weight: 44
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
   created:
     type: datetime_timestamp
     weight: 10
@@ -64,6 +76,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: geolocation_latlng
+    region: content
+  field_p:
+    weight: 43
+    settings:
+      show_initial_vote: 0
+    third_party_settings: {  }
+    type: voting_api_widget
     region: content
   field_recommended:
     weight: 35

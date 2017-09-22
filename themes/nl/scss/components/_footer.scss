@@ -1,5 +1,9 @@
 .s-footer {
   @include site-width;
+  font-family: $ff-2;
+  @include desktop {
+    padding: 0 8%;
+  }
 
   &__top {
     @include clearfix;
@@ -13,7 +17,11 @@
   }
 
   &__logo {
-    @include span(4);
+    display: none;
+    @include desktop {
+      display: block;
+      @include span(4);
+    }
   }
   
   &__logo-link {
@@ -25,16 +33,25 @@
   }
 
   &__copyright {
-    @include span(4);
-    color: $color-4;
-    font-size: 14px;
-    line-height: 2;
+    display: none;
+    @include desktop {
+      display: block;
+      @include span(4);
+      color: $color-4;
+      font-size: 14px;
+      line-height: 2;
+    }
+
   }
 
   @at-root .region-footer {
-    @include span(8 last);
+    @include desktop {
+      @include span(8 last);
+    }
   }
   @at-root .region-footer-bottom {
-    @include span(6);
+    @include desktop {
+      @include span(6);
+    }
   }
 }

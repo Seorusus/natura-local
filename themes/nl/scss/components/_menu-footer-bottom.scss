@@ -1,8 +1,13 @@
 .region-footer-bottom {
-  display: inline-block;
-  vertical-align: middle;
-  float: right;
-  @include block-debug();
+
+
+  @include desktop {
+    display: inline-block;
+    vertical-align: middle;
+    float: right;
+    @include block-debug();
+  }
+
   .s-menu {
     margin: 0;
     padding: 0;
@@ -20,9 +25,12 @@
       text-decoration: none;
       color: $color-4;
       font-weight: bold;
-      line-height: 2;
+      line-height: 1.5;
       font-size: 14px;
       @include transition();
+      @include desktop {
+
+      }
 
       &:hover {
         color: $color-orange;

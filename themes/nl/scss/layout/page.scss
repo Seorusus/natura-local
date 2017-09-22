@@ -1,6 +1,9 @@
 .s-page {
   //@include site-width;
   //@include container($config: $susy2, $debug: $debug_state);
+  max-width: 1370px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px 1px rgba(0,0,0,0.5);
 }
 
 .s-layout__top {
@@ -8,6 +11,7 @@
   &::after {
     content: '';
     display: block;
+    pointer-events: none;
     @include absolute();
     background: linear-gradient(to bottom, rgba(0,0,0,0.5), transparent) ;
   }
@@ -18,41 +22,69 @@
   }
 }
 
-.region-front-top {
+.s-layout__title {
+  display: none;
+  @include desktop {
+    display: block;
+    font-size: 42px;
+    text-align: center;
+    color: white;
+    margin: 0 0 104px;
+    //padding: 0 50px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  }
+
+}
+
+.s-front-search {
+  @include site-width;
   position: absolute;
-  top: 44%;
+  top: 40%;
   left: 0;
   right: 0;
+  margin: 0 20px;
   z-index: 5;
-  @include site-width;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include desktop {
+    top: 30%;
+    margin: 0 10%;
+  }
+
+}
+
+.region-front-top {
+
 
   .block {
 
   }
 
-  h2 {
-    margin: 0 0 110px;
-    color: $color-white;
-    font-size: 44px;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
-  }
+  //h2 {
+  //  margin: 0 0 110px;
+  //  color: $color-white;
+  //  font-size: 44px;
+  //  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+  //}
 }
 
 .s-layout__main {
   background: url("img/background.jpg");
   position: relative;
+  padding-bottom: 20px;
 
 }
 
 .s-layout__footer {
   border-top: 1px solid #D3D3D3;
+  background: white;
 }
 
 .region-front-content {
-  position: relative;
-  top: -100px;
+
+
   @include site-width;
+  @include desktop {
+    position: relative;
+    top: -100px;
+    padding: 0 8%;
+  }
 }

@@ -12,4 +12,31 @@
       border-radius: 8px 8px 0 0;
     }
   }
+
+  &__title {
+    font-size: 20px;
+    font-weight: bold;
+    color: $color-2;
+  }
+
+  &__rate {
+    font-size: 18px;
+    color: $color-6;
+    margin-bottom: 20px;
+
+    &::after {
+      content: '';
+      height: 30px;
+      width: 120px;
+      background: url("img/stars_2.svg") no-repeat;
+      display: inline-block;
+      vertical-align: top;
+      float: right;
+    }
+  }
+
+  &__body {
+    line-height: 1.6;
+    color: $color-6;
+  }
 }

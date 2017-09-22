@@ -1,4 +1,10 @@
 @import "common/variables";
 @import "common/colors";
 @import "common/breakpoints";
+@import "common/fonts";
 @import "common/susy";
+
+body {
+  font-size: 16px;
+  background-image:  linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("img/background.jpg");
+}

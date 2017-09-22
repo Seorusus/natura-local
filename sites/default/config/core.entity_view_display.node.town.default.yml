@@ -4,11 +4,13 @@ status: true
 dependencies:
   config:
     - core.entity_view_display.comment.comment.default
+    - field.field.node.town.body
     - field.field.node.town.field_comments
     - field.field.node.town.field_experiences
     - field.field.node.town.field_image_default
     - field.field.node.town.field_land_type
     - field.field.node.town.field_location
+    - field.field.node.town.field_p
     - field.field.node.town.field_recommended
     - field.field.node.town.field_routes
     - field.field.node.town.field_services
@@ -20,6 +22,7 @@ dependencies:
     - comment
     - geolocation
     - image
+    - text
     - user
     - votingapi_widgets
 id: node.town.default
@@ -27,6 +30,13 @@ targetEntityType: node
 bundle: town
 mode: default
 content:
+  body:
+    weight: 114
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
   field_comments:
     weight: 111
     label: above
@@ -67,6 +77,18 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: geolocation_latlng
+    region: content
+  field_p:
+    weight: 113
+    label: above
+    settings:
+      readonly: false
+      style: default
+      show_results: false
+      values: {  }
+      show_own_vote: false
+    third_party_settings: {  }
+    type: voting_api_formatter
     region: content
   field_recommended:
     weight: 105
@@ -115,9 +137,9 @@ content:
     weight: 112
     label: above
     settings:
-      style: default
-      show_results: '1'
+      style: css-stars
       readonly: 0
+      show_results: 0
       values: {  }
     third_party_settings: {  }
     type: voting_api_formatter
