@@ -1,0 +1,25 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Admin
+ * Date: 16.10.2017
+ * Time: 20:47
+ */
+function getNodesCountByTaxonomyTermIds($termIds){
+  $termIds = (array) $termIds;
+  if(empty($termIds)){
+    return NULL;
+  }
+
+  $query = \Drupal::database()->select('taxonomy_index', 'ti');
+  $query->addExpression('COUNT(DISTINCT ti.nid)');
+  $query->condition('ti.tid', $termIds, 'IN');
+  $query->distinct(TRUE);
+  $result = $query->execute();
+
+  if($nodesCount = $result->fetchField()){
+    return $nodesCount;
+  }
+
+  return 0;
+}

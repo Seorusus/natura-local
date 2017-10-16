@@ -17,12 +17,9 @@
 
     &-tid {
       border-right: 2px solid lightgrey;
-      width: 56%;
+      width: 85%;
     }
 
-    &-type {
-      width: 29%;
-    }
   }
 
   label {
@@ -60,4 +57,8 @@
 
 .block-views-exposed-filter-blockfront-search-form-page-1 {
   width: 100%;
+}
+
+span.invisible-span{
+  display: none;
 }
