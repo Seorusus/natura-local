@@ -1,0 +1,15 @@
+name: 'Natura Local Export Views'
+type: module
+core: 8.x
+dependencies:
+  - address
+  - better_exposed_filters
+  - block
+  - content_types_point_of_interest
+  - geolocation
+  - image
+  - node
+  - system
+  - taxonomy
+  - user
+  - views
