@@ -23,3 +23,10 @@ function getNodesCountByTaxonomyTermIds($termIds){
 
   return 0;
 }
+
+/**
+ * Implements hook_page_attachments().
+ */
+function alter_entity_autocomplete_page_attachments(array &$attachments) {
+  $attachments['#attached']['library'][] = 'alter_entity_autocomplete/alter-entity-autocomplete';
+}
