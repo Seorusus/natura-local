@@ -4,6 +4,7 @@ namespace Drupal\alter_entity_autocomplete;
 
 use Drupal\Component\Utility\Html;
 use Drupal\Component\Utility\Tags;
+use Drupal\Core\Url;
 
 class EntityAutocompleteMatcher extends \Drupal\Core\Entity\EntityAutocompleteMatcher {
 
@@ -39,11 +40,11 @@ class EntityAutocompleteMatcher extends \Drupal\Core\Entity\EntityAutocompleteMa
           $status = '';
           if($type == 'location'){
             $nc = getNodesCountByTaxonomyTermIds($entity_id);
-
-            //$status = '123';
+            $url = Url::fromRoute('entity.taxonomy_term.canonical', array('taxonomy_term' => $entity_id), array('absolute' => TRUE));
+            //$link = Link::fromTextAndUrl($this->t($label), $url);
             $key = $label;
-
-            $label = $label . ' (' . $nc . ')'.' <span class="invisible-span">' . $entity_id . '</span>';
+            //debug($url);
+            $label = $label . ' (' . $nc . ')'.' <span class="invisible-span">' . $url->toString() . '</span>';
             $matches[] = ['value' => $key, 'label' => $label];
             //debug($nc);
           }
