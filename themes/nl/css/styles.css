@@ -7016,5 +7016,16 @@ body {
 span.invisible-span {
   display: none; }
 
+ul.ui-autocomplete {
+  padding: 0.95em 0.5em; }
+  ul.ui-autocomplete .title {
+    display: inline-block;
+    margin-top: 0.7em; }
+  ul.ui-autocomplete .item {
+    font-size: 0.85em; }
+  ul.ui-autocomplete .note {
+    font-size: 0.7em;
+    color: darkgrey; }
+
 #search-block-form {
   display: none; }

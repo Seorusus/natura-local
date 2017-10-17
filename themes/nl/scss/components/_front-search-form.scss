@@ -62,3 +62,17 @@
 span.invisible-span{
   display: none;
 }
+ul.ui-autocomplete{
+  padding: 0.95em 0.5em;
+  .title{
+    display: inline-block;
+    margin-top: 0.7em;
+  }
+  .item{
+    font-size: 0.85em;
+  }
+  .note{
+    font-size: 0.7em;
+    color: darkgrey;
+  }
+}

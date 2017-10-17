@@ -39,14 +39,20 @@ class EntityAutocompleteMatcher extends \Drupal\Core\Entity\EntityAutocompleteMa
           $type = !empty($entity->type->entity) ? $entity->type->entity->label() : $entity->bundle();
           $status = '';
           if($type == 'location'){
-            $nc = getNodesCountByTaxonomyTermIds($entity_id);
+            //$nc = getNodesCountByTaxonomyTermIds($entity_id);
+            $nds = getNodesByTaxonomyTermIds($entity_id);
+            uksort($nds, 'alter_entity_autocomplete_localSort');
+            $wideLabel = !empty($wasFirst) ? '' : '<span class="note">' . t('Recommended directions...') . '</span></br>';
+            $wasFirst = 1;
+            $wideLabel .= '<span class="title">' . $label . '</span></br>';
+            foreach ($nds as $name => $count){
+              $wideLabel .= '<span class="item">'.\Drupal::translation()->formatPlural($count, '@count :title', '@count :titles', array(':title' => $name)).'</span> | ';
+            }
+            $wideLabel = substr($wideLabel, 0, -3);
             $url = Url::fromRoute('entity.taxonomy_term.canonical', array('taxonomy_term' => $entity_id), array('absolute' => TRUE));
-            //$link = Link::fromTextAndUrl($this->t($label), $url);
             $key = $label;
-            //debug($url);
-            $label = $label . ' (' . $nc . ')'.' <span class="invisible-span">' . $url->toString() . '</span>';
+            $label = $wideLabel .' <span class="invisible-span">' . $url->toString() . '</span>';
             $matches[] = ['value' => $key, 'label' => $label];
-            //debug($nc);
           }
           else {
             //debug($entity->getEntityType()->id());
