@@ -13,3 +13,4 @@ dependencies:
   - taxonomy
   - user
   - views
+  - votingapi_widgets
