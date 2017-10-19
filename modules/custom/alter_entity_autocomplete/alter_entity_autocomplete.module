@@ -56,3 +56,14 @@ function alter_entity_autocomplete_localSort($a,$b){
   $arr = array('route'=> 1,'visit' => 2,'experience' => 3);
   return $arr[$a] - $arr[$b];
 }
+
+function alter_entity_autocomplete_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+
+  if ($form_id == 'views_exposed_form') {
+    $view_names = array('front_search_form');
+    $view = $form_state->getStorage('view');
+    if(in_array($view['view']->id(), $view_names)){
+      // @TODO: alter code must do
+    }
+  }
+}
