@@ -1,0 +1,23 @@
+uuid: 1bd67a95-6630-4656-9d45-64f6cd298f9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_slope
+    - node.type.destins
+id: node.destins.field_slope
+field_name: field_slope
+entity_type: node
+bundle: destins
+label: Slope
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

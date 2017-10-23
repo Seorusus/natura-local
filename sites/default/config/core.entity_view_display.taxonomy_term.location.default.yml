@@ -5,53 +5,12 @@ dependencies:
   config:
     - field.field.taxonomy_term.location.field_locations
     - taxonomy.vocabulary.location
-  module:
-    - geolocation
-    - text
 id: taxonomy_term.location.default
 targetEntityType: taxonomy_term
 bundle: location
 mode: default
-content:
-  description:
-    label: hidden
-    type: text_default
-    weight: 1
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_locations:
-    weight: 0
-    label: hidden
-    settings:
-      title: ''
-      set_marker: '1'
-      common_map: ''
-      info_text: ''
-      use_overridden_map_settings: 0
-      google_map_settings:
-        type: ROADMAP
-        zoom: '10'
-        minZoom: 0
-        maxZoom: 18
-        rotateControl: 0
-        mapTypeControl: 1
-        streetViewControl: 1
-        zoomControl: 1
-        fullscreenControl: 0
-        scrollwheel: 1
-        disableDoubleClickZoom: 0
-        draggable: 1
-        height: 400px
-        width: 100%
-        info_auto_display: 1
-        marker_icon_path: ''
-        disableAutoPan: 1
-        style: ''
-        preferScrollingToZooming: 0
-        gestureHandling: auto
-    third_party_settings: {  }
-    type: geolocation_map
-    region: content
+content: {  }
 hidden:
+  description: true
+  field_locations: true
   langcode: true

@@ -1,0 +1,2 @@
+label: 'Voto normal'
+description: 'La etiqueta predeterminada para votos en contenido. Si se están emitiendo múltiples votos con distintas etiquetas en una pieza de contenido, considere emitir un voto de «resumen» con esta etiqueta también.'

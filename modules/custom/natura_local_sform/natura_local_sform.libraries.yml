@@ -1,0 +1,6 @@
+nl-sform:
+  version: 1.x
+  js:
+    js/nl-fsorm.js: {}
+  dependencies:
+    - core/jquery

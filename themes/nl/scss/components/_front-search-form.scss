@@ -1,4 +1,4 @@
-#views-exposed-form-front-search-form-page-1 {
+#views-exposed-form-front-search-form-page-1, #autocomlpete-sform {
   background: $color-white;
   padding: 0 10px;
   border-radius: 1px;
@@ -15,7 +15,7 @@
 
     }
 
-    &-tid {
+    &-keys {
       border-right: 2px solid lightgrey;
       width: 85%;
     }
@@ -55,7 +55,7 @@
   }
 }
 
-.block-views-exposed-filter-blockfront-search-form-page-1 {
+.block-views-exposed-filter-blockfront-search-form-page-1, .block-natura-local-sform {
   width: 100%;
 }
 
