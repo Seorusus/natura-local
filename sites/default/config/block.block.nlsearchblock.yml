@@ -1,0 +1,20 @@
+uuid: de0c665c-9df7-40dd-b39a-5fa6377689d5
+langcode: en
+status: true
+dependencies:
+  module:
+    - natura_local_sform
+  theme:
+    - nl
+id: nlsearchblock
+theme: nl
+region: front_top
+weight: 0
+provider: null
+plugin: nl_search_block
+settings:
+  id: nl_search_block
+  label: 'NL Search Block'
+  provider: natura_local_sform
+  label_display: '0'
+visibility: {  }
