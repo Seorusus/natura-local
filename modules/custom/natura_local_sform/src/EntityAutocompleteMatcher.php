@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\alter_entity_autocomplete;
+namespace Drupal\natura_local_sform;
 
 use Drupal\Component\Utility\Html;
 use Drupal\Component\Utility\Tags;
@@ -38,20 +38,29 @@ class EntityAutocompleteMatcher extends \Drupal\Core\Entity\EntityAutocompleteMa
 
           $type = !empty($entity->type->entity) ? $entity->type->entity->label() : $entity->bundle();
           $status = '';
-          if($type == 'location'){
-            //$nc = getNodesCountByTaxonomyTermIds($entity_id);
-            $nds = getNodesByTaxonomyTermIds($entity_id);
-            uksort($nds, 'alter_entity_autocomplete_localSort');
-            $wideLabel = !empty($wasFirst) ? '' : '<span class="note">' . t('Recommended directions...') . '</span></br>';
+          if($type == 'Place'){
+            $fields = array(
+              'route' => 'field_routes',
+              'visit' => 'field_visits',
+              'service' => 'field_services',
+              'experience' => 'field_experiences',
+            );
+            $nds = natura_local_sform_get_refs($entity, $fields);
+            $wideLabel = !empty($wasFirst) ? '' : '<span class="note">' . t('Recommended destinations...') . '</span></br>';
             $wasFirst = 1;
             $wideLabel .= '<span class="title">' . $label . '</span></br>';
-            foreach ($nds as $name => $count){
-              $wideLabel .= '<span class="item">'.\Drupal::translation()->formatPlural($count, '@count :title', '@count :titles', array(':title' => $name)).'</span> | ';
+            if(count($nds)) {
+              foreach ($nds as $name => $count) {
+                $wideLabel .= '<span class="item">' . \Drupal::translation()
+                    ->formatPlural($count, '@count :title', '@count :titles', array(':title' => $name)) . '</span> | ';
+              }
+              $wideLabel = substr($wideLabel, 0, -3);
             }
-            $wideLabel = substr($wideLabel, 0, -3);
-            $url = Url::fromRoute('entity.taxonomy_term.canonical', array('taxonomy_term' => $entity_id), array('absolute' => TRUE));
+            $url = Url::fromRoute('entity.node.canonical', array('node' => $entity_id), array('absolute' => TRUE));
             $key = $label;
-            $label = $wideLabel .' <span class="invisible-span">' . $url->toString() . '</span>';
+            $label = $wideLabel . ' <span class="invisible-span">' . $url->toString() . '</span>';
+            $key = preg_replace('/\s\s+/', ' ', str_replace("\n", '', trim(Html::decodeEntities(strip_tags($key)))));
+            $key = Tags::encode($key);
             $matches[] = ['value' => $key, 'label' => $label];
           }
           else {
@@ -65,7 +74,7 @@ class EntityAutocompleteMatcher extends \Drupal\Core\Entity\EntityAutocompleteMa
             $key = preg_replace('/\s\s+/', ' ', str_replace("\n", '', trim(Html::decodeEntities(strip_tags($key)))));
             // Names containing commas or quotes must be wrapped in quotes.
             $key = Tags::encode($key);
-            $label = $label . ' (' . $entity_id . ')';
+            $label = $label . ' (' . $entity_id . ') '.$type;
             $matches[] = ['value' => $key, 'label' => $label];
           }
         }

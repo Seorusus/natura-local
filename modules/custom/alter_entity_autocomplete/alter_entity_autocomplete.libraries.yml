@@ -1,6 +1,0 @@
-alter-entity-autocomplete:
-  version: 1.x
-  js:
-    js/alter-entity-autocomplete.js: {}
-  dependencies:
-    - core/jquery

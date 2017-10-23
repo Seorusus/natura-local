@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.point_of_interest.field_description
     - field.field.node.point_of_interest.field_email
     - field.field.node.point_of_interest.field_image_default
+    - field.field.node.point_of_interest.field_local_term
     - field.field.node.point_of_interest.field_locality
     - field.field.node.point_of_interest.field_location
     - field.field.node.point_of_interest.field_poi_images
@@ -34,25 +35,25 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
   field_audio:
-    weight: 44
+    weight: 15
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
     type: file_generic
     region: content
   field_comments:
-    weight: 50
+    weight: 20
     settings: {  }
     third_party_settings: {  }
     type: comment_default
     region: content
   field_description:
-    weight: 37
+    weight: 11
     settings:
       size: 60
       placeholder: ''
@@ -60,7 +61,7 @@ content:
     type: string_textfield
     region: content
   field_email:
-    weight: 42
+    weight: 14
     settings:
       size: 60
       placeholder: ''
@@ -68,28 +69,34 @@ content:
     type: email_default
     region: content
   field_image_default:
-    weight: 32
+    weight: 10
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
     region: content
+  field_local_term:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_locality:
-    weight: 46
+    weight: 17
     settings:
       default_country: null
     third_party_settings: {  }
     type: address_default
     region: content
   field_location:
-    weight: 31
+    weight: 9
     settings: {  }
     third_party_settings: {  }
     type: geolocation_latlng
     region: content
   field_poi_images:
-    weight: 39
+    weight: 12
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -97,7 +104,7 @@ content:
     type: image_image
     region: content
   field_poi_type:
-    weight: 45
+    weight: 16
     settings:
       match_operator: CONTAINS
       size: 60
@@ -106,29 +113,30 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_recommended:
-    weight: 48
+    weight: 19
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
   field_telephone:
-    weight: 41
+    weight: 13
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: telephone_default
     region: content
   field_video:
-    weight: 47
+    weight: 18
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
     type: file_generic
     region: content
   field_vote:
-    weight: 51
-    settings: {  }
+    weight: 21
+    settings:
+      show_initial_vote: 0
     third_party_settings: {  }
     type: voting_api_widget
     region: content
@@ -140,7 +148,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 30
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -148,32 +156,32 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 15
+    weight: 6
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 16
+    weight: 7
     region: content
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: -5
+    weight: 0
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 10
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 3
     settings:
       match_operator: CONTAINS
       size: 60

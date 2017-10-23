@@ -1,0 +1,32 @@
+<?php
+
+function natura_local_sform_localSort($a,$b){
+  $arr = array('route'=> 1,'visit' => 2,'experience' => 3);
+  return $arr[$a] - $arr[$b];
+}
+
+function natura_local_sform_get_refs($entity, $fields){
+  $out = array();
+  foreach ($fields as $type => $field){
+    $count = count($entity->get($field)->getValue());
+    if($count) {
+      $out[$type] = $count;
+    }
+  }
+  return $out;
+}
+
+function natura_local_sform_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+
+  if ($form_id == 'views_exposed_form') {
+    $view_names = array('front_search_form');
+    $view = $form_state->getStorage('view');
+    if(in_array($view['view']->id(), $view_names)){
+    }
+  }
+  if($form_id == 'autocomlpete_sform'){
+    $form['form_build_id']['#access'] = FALSE;
+    $form['form_token']['#access'] = FALSE;
+    $form['form_id']['#access'] = FALSE;
+  }
+}

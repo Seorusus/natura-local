@@ -1,0 +1,10 @@
+services:
+
+  natura_local_sform.route_subscriber:
+    class: Drupal\natura_local_sform\Routing\AutocompleteRouteSubscriber
+    tags:
+      - { name: event_subscriber }
+
+  natura_local_sform.autocomplete_matcher:
+    class: Drupal\natura_local_sform\EntityAutocompleteMatcher
+    arguments: ['@plugin.manager.entity_reference_selection']

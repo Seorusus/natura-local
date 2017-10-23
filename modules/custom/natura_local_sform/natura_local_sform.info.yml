@@ -1,0 +1,8 @@
+name: Natura Local Search Form
+description: 'Natura Local autocomlete search form'
+type: module
+core: 8.x
+version: 1.0
+package: Natura Local
+dependencies:
+  - block

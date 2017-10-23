@@ -4,12 +4,12 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.card
+    - field.field.node.town.body
     - field.field.node.town.field_comments
     - field.field.node.town.field_experiences
     - field.field.node.town.field_image_default
     - field.field.node.town.field_land_type
     - field.field.node.town.field_location
-    - field.field.node.town.field_p
     - field.field.node.town.field_recommended
     - field.field.node.town.field_routes
     - field.field.node.town.field_services
@@ -53,18 +53,6 @@ content:
     third_party_settings: {  }
     type: geolocation_latlng
     region: content
-  field_p:
-    type: voting_api_formatter
-    weight: 5
-    region: content
-    label: above
-    settings:
-      readonly: false
-      style: default
-      show_results: false
-      values: {  }
-      show_own_vote: false
-    third_party_settings: {  }
   field_vote:
     type: voting_api_formatter
     weight: 4
@@ -83,6 +71,7 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  body: true
   field_comments: true
   field_land_type: true
   field_recommended: true

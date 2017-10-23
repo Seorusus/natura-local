@@ -1,9 +1,9 @@
 <?php
 
-namespace Drupal\alter_entity_autocomplete\Controller;
+namespace Drupal\natura_local_sform\Controller;
 
 use Drupal\Core\KeyValueStore\KeyValueStoreInterface;
-use Drupal\alter_entity_autocomplete\EntityAutocompleteMatcher;
+use Drupal\natura_local_sform\EntityAutocompleteMatcher;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 class EntityAutocompleteController extends \Drupal\system\Controller\EntityAutocompleteController {
@@ -26,7 +26,7 @@ class EntityAutocompleteController extends \Drupal\system\Controller\EntityAutoc
    */
   public static function create(ContainerInterface $container) {
     return new static(
-      $container->get('alter_entity_autocomplete.autocomplete_matcher'),
+      $container->get('natura_local_sform.autocomplete_matcher'),
       $container->get('keyvalue')->get('entity_autocomplete')
     );
   }

@@ -1,0 +1,7 @@
+natura_local_sform.autocomlpete_sform.form:
+  path: '/nl-autocomplete'
+  defaults:
+    _title: 'Autocomplete search form'
+    _form: '\Drupal\natura_local_sform\Form\AutocompleteSForm'
+  requirements:
+    _permission: 'access content'
