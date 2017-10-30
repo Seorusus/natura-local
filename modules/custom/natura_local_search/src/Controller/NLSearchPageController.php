@@ -44,12 +44,12 @@ class NLSearchPageController extends ControllerBase {
         _natura_local_search_fill_places($entity, $type, $fields, $fieldsByType, $places);
       }
     }
-    $output =  [
+    $output =  array(
       '#theme' => 'natura_local_search',
       '#keys' => $this->t($keys),
       '#places' => $places,
       '#form' => \Drupal::formBuilder()->getForm('Drupal\natura_local_sform\Form\AutocompleteSForm'),
-    ];
+    );
     $output['#attached']['library'][] = 'natura_local_search/nl-search';
     $element['#markup'] = '<br>' . ' : ';
     return $output;

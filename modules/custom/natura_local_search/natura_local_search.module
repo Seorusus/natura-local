@@ -1,17 +1,15 @@
 <?
 
-
-
 function natura_local_search_theme($existing, $type, $theme, $path) {
-  return [
-    'natura_local_search' => [
-      'variables' => [
+  return array(
+    'natura_local_search' => array(
+      'variables' => array(
         'keys' => NULL,
-        'places' => [],
-        'form' => [],
-      ],
-    ],
-  ];
+        'places' => array(),
+        'form' => array(),
+      ),
+    ),
+  );
 }
 
 function _natura_local_search_get_names(){
@@ -38,7 +36,6 @@ function _natura_local_get_loc($nid){
   $query->fields('floc', ['field_location_lat', 'field_location_lng']);
   $query->condition('floc.entity_id', $nid);
   $result = $query->execute()->fetchAssoc();
-  $a='';
   return $result;
 }
 
@@ -48,10 +45,6 @@ function _natura_local_get_title($nid){
   $query->condition('nfd.nid', $nid);
   $result = $query->execute()->fetchField();
   return $result;
-}
-
-function natura_local_search_vote_result() {
-
 }
 
 function _natura_local_search_fill_places($entity, $type, $fields, $fieldsByType, &$places) {
