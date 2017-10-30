@@ -1,17 +1,5 @@
 <?
 
-function natura_local_search_theme($existing, $type, $theme, $path) {
-  return array(
-    'natura_local_search' => array(
-      'variables' => array(
-        'keys' => NULL,
-        'places' => array(),
-        'form' => array(),
-      ),
-    ),
-  );
-}
-
 function _natura_local_search_get_names(){
   return array(
     'route' => 'field_routes',
@@ -63,4 +51,16 @@ function _natura_local_search_fill_places($entity, $type, $fields, $fieldsByType
   $places[$type][$nid]['teaser'] = $teaser;
 
   return TRUE;
+}
+
+function natura_local_search_theme($existing, $type, $theme, $path) {
+  return array(
+    'natura_local_search' => array(
+      'variables' => array(
+        'keys' => NULL,
+        'places' => array(),
+        'form' => array(),
+      ),
+    ),
+  );
 }
