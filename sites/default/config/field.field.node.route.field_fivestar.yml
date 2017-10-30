@@ -1,0 +1,27 @@
+uuid: 9a367d1a-ba62-4521-a05a-56930c55026a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fivestar
+    - node.type.route
+  module:
+    - fivestar
+id: node.route.field_fivestar
+field_name: field_fivestar
+entity_type: node
+bundle: route
+label: fivestar
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  stars: 5
+  allow_clear: false
+  allow_revote: true
+  allow_ownvote: true
+  rated_while: viewing
+  target: ''
+field_type: fivestar

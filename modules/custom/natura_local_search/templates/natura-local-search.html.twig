@@ -1,0 +1,18 @@
+<p>Natura Local Search</p>
+{{ form }}
+<div id="stabs" class="ui-tabs">
+    <ul>
+        <li><a href="#tabs-1">{{ 'Destinations'|trans }}</a></li>
+        <li><a href="#tabs-2">{{ 'Routes'|trans }}</a></li>
+    </ul>
+    <div id="tabs-1">
+        {% for nid, val in places.town %}
+        <div class = "destin-wrapper">{{ val.teaser }}</div>
+        {% endfor %}
+    </div>
+    <div id="tabs-2">
+        {% for nid, val in places.route %}
+            <div class = "route-wrapper">{{ val.teaser }}</div>
+        {% endfor %}
+    </div>
+</div>

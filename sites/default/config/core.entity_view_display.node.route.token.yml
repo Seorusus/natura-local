@@ -11,25 +11,28 @@ dependencies:
     - field.field.node.route.field_distance
     - field.field.node.route.field_duration
     - field.field.node.route.field_experiences
+    - field.field.node.route.field_fivestar
     - field.field.node.route.field_gpx
     - field.field.node.route.field_image_default
     - field.field.node.route.field_land_type
+    - field.field.node.route.field_local_term
     - field.field.node.route.field_locality
     - field.field.node.route.field_location
     - field.field.node.route.field_navigation_pois
     - field.field.node.route.field_others
-    - field.field.node.route.field_pois
     - field.field.node.route.field_recommended
     - field.field.node.route.field_route_difficulty
     - field.field.node.route.field_route_images
     - field.field.node.route.field_route_time
     - field.field.node.route.field_route_type
     - field.field.node.route.field_route_typology
+    - field.field.node.route.field_services
     - field.field.node.route.field_slope
     - field.field.node.route.field_surroundings
     - field.field.node.route.field_theme
     - field.field.node.route.field_video
     - field.field.node.route.field_visits
+    - field.field.node.route.field_vote
     - node.type.route
   module:
     - address
@@ -121,15 +124,6 @@ content:
     third_party_settings: {  }
     type: geolocation_latlng
     region: content
-  field_pois:
-    weight: 19
-    label: above
-    settings:
-      view_mode: default
-      link: false
-    third_party_settings: {  }
-    type: entity_reference_entity_view
-    region: content
   field_route_difficulty:
     weight: 7
     label: above
@@ -183,13 +177,17 @@ content:
 hidden:
   field_comments: true
   field_experiences: true
+  field_fivestar: true
   field_land_type: true
+  field_local_term: true
   field_navigation_pois: true
   field_others: true
   field_recommended: true
   field_route_time: true
+  field_services: true
   field_surroundings: true
   field_theme: true
   field_video: true
   field_visits: true
+  field_vote: true
   langcode: true

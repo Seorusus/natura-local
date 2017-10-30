@@ -1,0 +1,8 @@
+natura_local_search.search_destins:
+  path: '/search-destins'
+  defaults:
+    _title: 'Search of Destinations'
+    _controller: '\Drupal\natura_local_search\Controller\NLSearchPageController::searchPage'
+  requirements:
+    _permission: 'access content'
+  methods: [GET]

@@ -1,0 +1,73 @@
+<?
+
+
+
+function natura_local_search_theme($existing, $type, $theme, $path) {
+  return [
+    'natura_local_search' => [
+      'variables' => [
+        'keys' => NULL,
+        'places' => [],
+        'form' => [],
+      ],
+    ],
+  ];
+}
+
+function _natura_local_search_get_names(){
+  return array(
+    'route' => 'field_routes',
+    'experience' => 'field_experiences',
+    'point_of_interest' => 'field_services',
+    'visit' => 'field_visits',
+  );
+}
+
+function _natura_local_search_get_ids($vals){
+  $vals = (array)$vals;
+  $arr = array();
+  foreach ($vals as $key => $val){
+    $arr[$val['target_id']]['loc'] = _natura_local_get_loc($val['target_id']);
+    $arr[$val['target_id']]['title'] = _natura_local_get_title($val['target_id']);
+  }
+  return $arr;
+}
+
+function _natura_local_get_loc($nid){
+  $query = \Drupal::database()->select('node__field_location', 'floc');
+  $query->fields('floc', ['field_location_lat', 'field_location_lng']);
+  $query->condition('floc.entity_id', $nid);
+  $result = $query->execute()->fetchAssoc();
+  $a='';
+  return $result;
+}
+
+function _natura_local_get_title($nid){
+  $query = \Drupal::database()->select('node_field_data', 'nfd');
+  $query->addField('nfd', 'title');
+  $query->condition('nfd.nid', $nid);
+  $result = $query->execute()->fetchField();
+  return $result;
+}
+
+function natura_local_search_vote_result() {
+
+}
+
+function _natura_local_search_fill_places($entity, $type, $fields, $fieldsByType, &$places) {
+  $nid = $entity->get('nid')->getValue()[0]['value'];
+  $places[$type][$nid]=array(
+    'title' => $entity->get('title')->getValue()[0]['value'],
+    'loc' => $entity->get('field_location')->getValue()[0],
+    'created' => $entity->get('created')->getValue()[0]['value'],
+  );
+  foreach ($fields as $id => $field){
+    $places[$type][$nid][$id] = isset($fieldsByType[$type][$field]) ? _natura_local_search_get_ids($entity->get($field)->getValue()) : array();
+  }
+  $places[$type][$nid]['rating'] =  \Drupal::service('plugin.manager.votingapi.resultfunction')->getResults('node', $nid);
+  $view_builder = \Drupal::entityManager()->getViewBuilder('node');
+  $teaser = $view_builder->view($entity, 'nlsearch');
+  $places[$type][$nid]['teaser'] = $teaser;
+
+  return TRUE;
+}

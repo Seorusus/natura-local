@@ -41,6 +41,7 @@ module:
   field_ui: 0
   file: 0
   filter: 0
+  fivestar: 0
   geolocation: 0
   hal: 0
   help: 0
@@ -57,6 +58,7 @@ module:
   menu_ui: 0
   metatag: 0
   module_filter: 0
+  natura_local_search: 0
   natura_local_sform: 0
   node: 0
   options: 0
@@ -69,7 +71,9 @@ module:
   rest_api_doc: 0
   rest_export_nested: 0
   restui: 0
-  search: 0
+  search_api: 0
+  search_api_db: 0
+  search_api_db_defaults: 0
   serialization: 0
   shortcut: 0
   simple_oauth: 0

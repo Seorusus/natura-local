@@ -1,0 +1,7 @@
+tips:
+  search-api-index-fields-label:
+    label: Etiqueta
+  search-api-index-fields-machine-name:
+    label: Nom-màquina
+  search-api-index-fields-type:
+    label: Tipus

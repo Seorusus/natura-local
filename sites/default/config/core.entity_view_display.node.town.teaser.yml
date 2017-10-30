@@ -4,16 +4,53 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.town.body
+    - field.field.node.town.field_comments
+    - field.field.node.town.field_experiences
+    - field.field.node.town.field_fivestar
+    - field.field.node.town.field_image_default
+    - field.field.node.town.field_land_type
+    - field.field.node.town.field_local_term
+    - field.field.node.town.field_location
+    - field.field.node.town.field_recommended
+    - field.field.node.town.field_routes
+    - field.field.node.town.field_services
+    - field.field.node.town.field_total_routes
+    - field.field.node.town.field_visits
+    - field.field.node.town.field_vote
     - node.type.town
   module:
+    - fivestar
     - user
 id: node.town.teaser
 targetEntityType: node
 bundle: town
 mode: teaser
 content:
-  links:
-    weight: 100
+  field_fivestar:
+    type: fivestar_rating
+    weight: 1
     region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
+  body: true
+  field_comments: true
+  field_experiences: true
+  field_image_default: true
+  field_land_type: true
+  field_local_term: true
+  field_location: true
+  field_recommended: true
+  field_routes: true
+  field_services: true
+  field_total_routes: true
+  field_visits: true
+  field_vote: true
   langcode: true
