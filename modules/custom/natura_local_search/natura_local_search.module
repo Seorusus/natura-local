@@ -1,4 +1,4 @@
-<?
+<?php
 
 function _natura_local_search_get_names(){
   return array(
