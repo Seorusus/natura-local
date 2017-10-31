@@ -7,6 +7,18 @@
       $(window).load(function () {
         $("#stabs").tabs();
       });
+
+      $(document).on("click", '#stabs',function () {
+        $.ajax({
+          url: '/search-destins-get-map',
+          dataType: 'json',
+          type: 'GET',
+          cache: false,
+          success: function (response, textStatus, xhr) {
+            $('#map-container').html(response.data);
+          }
+        });
+      });
     }
   };
 })(jQuery);

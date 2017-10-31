@@ -53,6 +53,9 @@ function _natura_local_search_fill_places($entity, $type, $fields, $fieldsByType
   return TRUE;
 }
 
+/**
+ * Implements hook_theme().
+ */
 function natura_local_search_theme($existing, $type, $theme, $path) {
   return array(
     'natura_local_search' => array(
@@ -60,7 +63,26 @@ function natura_local_search_theme($existing, $type, $theme, $path) {
         'keys' => NULL,
         'places' => array(),
         'form' => array(),
+        'map' => '',
       ),
     ),
   );
+}
+
+/**
+ * Implements hook_entity_display_build_alter().
+ */
+function natura_local_search_entity_display_build_alter(&$build, $context) {
+  if($context['view_mode'] == 'nlsearch') {
+    $entity = $context['entity'];
+    $type = $entity->get('type')->getValue()[0]['target_id'];
+    if ($type == 'town') {
+//      $build['custom_field']= array(
+//        0 => array(
+//        '#markup' => 'this is custom field 3',
+//        ),
+//        '#theme' => 'field',
+//      );
+    }
+  }
 }

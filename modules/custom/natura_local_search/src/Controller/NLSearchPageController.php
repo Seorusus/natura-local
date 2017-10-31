@@ -5,8 +5,16 @@ namespace Drupal\natura_local_search\Controller;
 use Drupal\Core\Controller\ControllerBase;
 use Symfony\Component\HttpFoundation\Request;
 use Drupal\node\Entity\Node;
+use Symfony\Component\HttpFoundation\JsonResponse;
 
 class NLSearchPageController extends ControllerBase {
+
+  public function jsonData(Request $request) {
+    $output = array();
+    $output[] = array('map' => views_embed_view('piois_etc', 'default', '59+60'));
+    $output[] = array('result'=> "OK");
+    return new JsonResponse($output);
+  }
 
   public function searchPage(Request $request) {
     $keys = $request->query->get('keys');
@@ -49,6 +57,7 @@ class NLSearchPageController extends ControllerBase {
       '#keys' => $this->t($keys),
       '#places' => $places,
       '#form' => \Drupal::formBuilder()->getForm('Drupal\natura_local_sform\Form\AutocompleteSForm'),
+      '#map' => views_embed_view('piois_etc', 'default', '59+60'),
     );
     $output['#attached']['library'][] = 'natura_local_search/nl-search';
     $element['#markup'] = '<br>' . ' : ';

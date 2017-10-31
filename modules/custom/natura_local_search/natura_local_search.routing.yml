@@ -6,3 +6,11 @@ natura_local_search.search_destins:
   requirements:
     _permission: 'access content'
   methods: [GET]
+
+natura_local_search.search_get_point_map:
+  path: '/search-destins-get-map'
+  defaults:
+    _controller: '\Drupal\natura_local_search\Controller\NLSearchPageController::jsonData'
+  requirements:
+    _permission: 'access content'
+  methods: [GET]
