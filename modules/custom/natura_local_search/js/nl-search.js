@@ -11,7 +11,7 @@
       $(document).on("click", '#stabs',function () {
         $.ajax({
           url: '/search-destins-get-map',
-          dataType: 'json',
+          dataType: 'html',
           type: 'GET',
           cache: false,
           success: function (response, textStatus, xhr) {
