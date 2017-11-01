@@ -4,15 +4,15 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_experiences
-    - field.storage.node.field_location
     - field.storage.node.field_routes
     - field.storage.node.field_services
     - field.storage.node.field_visits
     - search_api.index.default_index
+    - views.view.piois_etc
   module:
     - better_exposed_filters
-    - geolocation
     - search_api
+    - user
     - views_autocomplete_filters
 id: search_destins
 label: 'search Destins'
@@ -30,8 +30,9 @@ display:
     position: 0
     display_options:
       access:
-        type: none
-        options: {  }
+        type: perm
+        options:
+          perm: 'access content'
       cache:
         type: tag
         options: {  }
@@ -74,7 +75,7 @@ display:
         options:
           grouping: {  }
           row_class: ''
-          default_row_class: false
+          default_row_class: true
       row:
         type: fields
         options:
@@ -163,75 +164,6 @@ display:
             format_plural_values:
               - '1'
               - '@count'
-          entity_type: node
-          plugin_id: search_api_field
-        field_location:
-          id: field_location
-          table: search_api_datasource_default_index_entity_node
-          field: field_location
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: lat
-          type: geolocation_latlng
-          settings: {  }
-          group_column: ''
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          field_rendering: true
-          fallback_handler: search_api
-          fallback_options:
-            link_to_item: false
-            multi_type: separator
-            multi_separator: ', '
           entity_type: node
           plugin_id: search_api_field
         type:
@@ -708,11 +640,7 @@ display:
           admin_label: ''
           operator: or
           value:
-            experience: experience
-            point_of_interest: point_of_interest
-            route: route
             town: town
-            visit: visit
           group: 1
           exposed: false
           expose:
@@ -803,7 +731,18 @@ display:
           expose:
             label: ''
           plugin_id: search_api
-      header: {  }
+      header:
+        view:
+          id: view
+          table: views
+          field: view
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          view_to_insert: 'piois_etc:default'
+          inherit_arguments: true
+          plugin_id: view
       footer: {  }
       empty:
         area:
@@ -822,161 +761,37 @@ display:
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
+      use_ajax: true
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
+        - user.permissions
       tags:
         - 'config:field.storage.node.field_experiences'
-        - 'config:field.storage.node.field_location'
         - 'config:field.storage.node.field_routes'
         - 'config:field.storage.node.field_services'
         - 'config:field.storage.node.field_visits'
   page_1:
     display_plugin: page
     id: page_1
-    display_title: Page
+    display_title: Destinations
     position: 2
     display_options:
       display_extenders: {  }
       path: search-destinatons
+      display_description: ''
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
+        - user.permissions
       tags:
         - 'config:field.storage.node.field_experiences'
-        - 'config:field.storage.node.field_location'
-        - 'config:field.storage.node.field_routes'
-        - 'config:field.storage.node.field_services'
-        - 'config:field.storage.node.field_visits'
-  routes:
-    display_plugin: attachment
-    id: routes
-    display_title: Attachment
-    position: 1
-    display_options:
-      display_extenders: {  }
-      filters:
-        type:
-          id: type
-          table: search_api_index_default_index
-          field: type
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value:
-            experience: experience
-            point_of_interest: point_of_interest
-            route: route
-            visit: visit
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          plugin_id: search_api_options
-        search_api_fulltext:
-          id: search_api_fulltext
-          table: search_api_index_default_index
-          field: search_api_fulltext
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: and
-          value: ''
-          group: 1
-          exposed: true
-          expose:
-            operator_id: search_api_fulltext_op
-            label: 'On?'
-            description: ''
-            use_operator: false
-            operator: search_api_fulltext_op
-            identifier: keys
-            required: true
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              app_user: '0'
-            autocomplete_filter: 0
-            autocomplete_min_chars: '0'
-            autocomplete_items: '10'
-            autocomplete_raw_suggestion: 1
-            autocomplete_raw_dropdown: 1
-            autocomplete_dependent: 0
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          parse_mode: phrase
-          min_length: 3
-          fields: {  }
-          plugin_id: views_autocomplete_filters_search_api_fulltext
-      defaults:
-        filters: false
-        filter_groups: false
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
-      pager:
-        type: none
-        options:
-          offset: 0
-      displays:
-        default: default
-        page_1: page_1
-      attachment_position: after
-      inherit_exposed_filters: true
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - url
-      tags:
-        - 'config:field.storage.node.field_experiences'
-        - 'config:field.storage.node.field_location'
         - 'config:field.storage.node.field_routes'
         - 'config:field.storage.node.field_services'
         - 'config:field.storage.node.field_visits'

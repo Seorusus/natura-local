@@ -37,6 +37,7 @@ module:
   features: 0
   features_ui: 0
   field: 0
+  field_count_formatter: 0
   field_group: 0
   field_ui: 0
   file: 0
@@ -95,6 +96,7 @@ module:
   video: 0
   views_autocomplete_filters: 0
   views_field_view: 0
+  views_fieldsets: 0
   views_ui: 0
   vote_average: 0
   votingapi: 0
