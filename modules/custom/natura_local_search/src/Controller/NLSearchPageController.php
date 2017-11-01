@@ -66,7 +66,7 @@ class NLSearchPageController extends ControllerBase {
     }
     $fields = array(
       'town' => 'destins',
-      'rout' => 'routes',
+      'route' => 'routes',
       'visit' => 'visites',
       'experience' => 'experiences',
       'point_of_interest' => 'services',
