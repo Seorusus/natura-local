@@ -6,3 +6,4 @@ nl-search:
     - core/drupal
     - core/jquery
     - core/jquery.ui.tabs
+    - core/drupal.ajax

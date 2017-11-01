@@ -1,0 +1,11 @@
+name: Field Count Formatter
+description: Formatter for multiple value field to simply show how many values have been entered
+package: Other
+type: module
+# core: 8.x
+
+# Information added by Drupal.org packaging script on 2017-05-10
+version: '8.x-1.x-dev'
+core: '8.x'
+project: 'field_count_formatter'
+datestamp: 1494416595
