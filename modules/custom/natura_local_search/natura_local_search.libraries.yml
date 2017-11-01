@@ -1,0 +1,9 @@
+nl-search:
+  version: 1.x
+  js:
+    js/nl-search.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/jquery.ui.tabs
+    - core/drupal.ajax

@@ -1,0 +1,6 @@
+name: Natura Local Search Page
+description: 'Natura Local search process page'
+type: module
+core: 8.x
+version: 1.0
+package: Natura Local

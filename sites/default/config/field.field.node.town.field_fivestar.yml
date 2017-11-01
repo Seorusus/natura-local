@@ -1,0 +1,27 @@
+uuid: 1f7ad33d-4650-430d-9981-886df81bd217
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fivestar
+    - node.type.town
+  module:
+    - fivestar
+id: node.town.field_fivestar
+field_name: field_fivestar
+entity_type: node
+bundle: town
+label: fivestar
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  stars: 5
+  allow_clear: false
+  allow_revote: true
+  allow_ownvote: true
+  rated_while: viewing
+  target: ''
+field_type: fivestar

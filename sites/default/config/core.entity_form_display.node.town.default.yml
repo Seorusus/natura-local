@@ -5,7 +5,9 @@ dependencies:
   config:
     - field.field.node.town.body
     - field.field.node.town.field_comments
+    - field.field.node.town.field_description
     - field.field.node.town.field_experiences
+    - field.field.node.town.field_fivestar
     - field.field.node.town.field_image_default
     - field.field.node.town.field_land_type
     - field.field.node.town.field_local_term
@@ -20,6 +22,7 @@ dependencies:
     - node.type.town
   module:
     - comment
+    - fivestar
     - geolocation
     - image
     - path
@@ -51,11 +54,26 @@ content:
     third_party_settings: {  }
     type: comment_default
     region: content
+  field_description:
+    weight: 27
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_experiences:
     weight: 16
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_fivestar:
+    weight: 26
+    settings:
+      fivestar_widget: modules/fivestar/widgets/basic/basic.css
+    third_party_settings: {  }
+    type: fivestar_stars
     region: content
   field_image_default:
     weight: 9

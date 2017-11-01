@@ -74,6 +74,7 @@ hidden:
   body: true
   field_comments: true
   field_land_type: true
+  field_local_term: true
   field_recommended: true
   field_routes: true
   field_services: true

@@ -1,0 +1,89 @@
+<?php
+
+function _natura_local_search_get_names(){
+  return array(
+    'route' => 'field_routes',
+    'experience' => 'field_experiences',
+    'point_of_interest' => 'field_services',
+    'visit' => 'field_visits',
+  );
+}
+
+function _natura_local_search_get_ids($vals){
+  $vals = (array)$vals;
+  $arr = array();
+  foreach ($vals as $key => $val){
+    $arr[$val['target_id']]['loc'] = _natura_local_get_loc($val['target_id']);
+    $arr[$val['target_id']]['title'] = _natura_local_get_title($val['target_id']);
+  }
+  return $arr;
+}
+
+function _natura_local_get_loc($nid){
+  $query = \Drupal::database()->select('node__field_location', 'floc');
+  $query->fields('floc', ['field_location_lat', 'field_location_lng']);
+  $query->condition('floc.entity_id', $nid);
+  $result = $query->execute()->fetchAssoc();
+  return $result;
+}
+
+function _natura_local_get_title($nid){
+  $query = \Drupal::database()->select('node_field_data', 'nfd');
+  $query->addField('nfd', 'title');
+  $query->condition('nfd.nid', $nid);
+  $result = $query->execute()->fetchField();
+  return $result;
+}
+
+function _natura_local_search_fill_places($entity, $type, $fields, $fieldsByType, &$places) {
+  $nid = $entity->get('nid')->getValue()[0]['value'];
+  $places[$type][$nid]=array(
+    'title' => $entity->get('title')->getValue()[0]['value'],
+    'loc' => $entity->get('field_location')->getValue()[0],
+    'created' => $entity->get('created')->getValue()[0]['value'],
+  );
+  foreach ($fields as $id => $field){
+    $places[$type][$nid][$id] = isset($fieldsByType[$type][$field]) ? _natura_local_search_get_ids($entity->get($field)->getValue()) : array();
+  }
+  $places[$type][$nid]['rating'] =  \Drupal::service('plugin.manager.votingapi.resultfunction')->getResults('node', $nid);
+  $view_builder = \Drupal::entityManager()->getViewBuilder('node');
+  $teaser = $view_builder->view($entity, 'nlsearch');
+  $places[$type][$nid]['teaser'] = $teaser;
+
+  return TRUE;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function natura_local_search_theme($existing, $type, $theme, $path) {
+  return array(
+    'natura_local_search' => array(
+      'variables' => array(
+        'keys' => NULL,
+        'places' => array(),
+        'form' => array(),
+        'map' => '',
+        'view' => array(),
+      ),
+    ),
+  );
+}
+
+/**
+ * Implements hook_entity_display_build_alter().
+ */
+function natura_local_search_entity_display_build_alter(&$build, $context) {
+  if($context['view_mode'] == 'nlsearch') {
+//    $entity = $context['entity'];
+//    $type = $entity->get('type')->getValue()[0]['target_id'];
+//    if ($type == 'town') {
+//      $build['custom_field']= array(
+//        0 => array(
+//        '#markup' => 'this is custom field 3',
+//        ),
+//        '#theme' => 'field',
+//      );
+//    }
+  }
+}

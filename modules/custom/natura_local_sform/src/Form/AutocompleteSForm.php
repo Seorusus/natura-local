@@ -29,7 +29,7 @@ class AutocompleteSForm extends FormBase {
   public function buildForm(array $form, FormStateInterface $form_state) {
 
     $form= array(
-      '#action' => 'test-test',
+      '#action' => 'search-destins',
       '#method' => 'get',
       '#attributes' => array('class' => array('form--inline')),
     );
@@ -68,9 +68,7 @@ class AutocompleteSForm extends FormBase {
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $path = '/test-test';
     $field = 'keys';
-    debug(array('submit', $form_state->getValue($field)));
     $url = Url::fromUserInput($path, array('query' => array($field => $form_state->getValue($field))))->toString();
-    debug($url);
     $responce = new RedirectResponse($url);
     return $responce->send();
   }

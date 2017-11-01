@@ -1,0 +1,20 @@
+<p>Natura Local Search</p>
+{{ form }}
+<div id="search-container">
+
+    <div id="stabs" class="ui-tabs">
+        <ul>
+            <li><a href="#tabs-destins">{{ 'Destinations'|trans }}</a></li>
+            <li><a href="#tabs-routes">{{ 'Routes'|trans }}</a></li>
+            <li><a href="#tabs-visites">{{ 'Visites'|trans }}</a></li>
+            <li><a href="#tabs-experiences">{{ 'Experiences'|trans }}</a></li>
+            <li><a href="#tabs-services">{{ 'Services'|trans }}</a></li>
+        </ul>
+            {% for key, val in view %}
+                <div id="tabs-{{ key }}">
+                    <div class="map-container">{{ map[key] }}</div>
+                    <div class="view-container">{{ val }}</div>
+                </div>
+            {% endfor %}
+    </div>
+</div>

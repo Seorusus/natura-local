@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.route.field_distance
     - field.field.node.route.field_duration
     - field.field.node.route.field_experiences
+    - field.field.node.route.field_fivestar
     - field.field.node.route.field_gpx
     - field.field.node.route.field_image_default
     - field.field.node.route.field_land_type
@@ -18,13 +19,13 @@ dependencies:
     - field.field.node.route.field_location
     - field.field.node.route.field_navigation_pois
     - field.field.node.route.field_others
-    - field.field.node.route.field_pois
     - field.field.node.route.field_recommended
     - field.field.node.route.field_route_difficulty
     - field.field.node.route.field_route_images
     - field.field.node.route.field_route_time
     - field.field.node.route.field_route_type
     - field.field.node.route.field_route_typology
+    - field.field.node.route.field_services
     - field.field.node.route.field_slope
     - field.field.node.route.field_surroundings
     - field.field.node.route.field_theme
@@ -38,6 +39,7 @@ dependencies:
     - comment
     - field_group
     - file
+    - fivestar
     - geolocation
     - image
     - interval
@@ -119,6 +121,13 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
+  field_fivestar:
+    weight: 37
+    settings:
+      fivestar_widget: modules/fivestar/widgets/basic/basic.css
+    third_party_settings: {  }
+    type: fivestar_stars
+    region: content
   field_gpx:
     weight: 17
     settings:
@@ -172,12 +181,6 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
-  field_pois:
-    weight: 3
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
   field_recommended:
     weight: 31
     settings:
@@ -216,6 +219,15 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_services:
+    weight: 38
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   field_slope:
     weight: 16
