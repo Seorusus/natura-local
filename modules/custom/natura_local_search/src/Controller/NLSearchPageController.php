@@ -73,8 +73,12 @@ class NLSearchPageController extends ControllerBase {
     );
     $maps=array();
     foreach ($fields as $key => $val){
-      $arg = isset($places[$key]) ? $places[$key] : '';
-      $maps[$val] = views_embed_view('piois_etc', 'default', $arg);
+      if(isset($places[$key])) {
+        $maps[$val] = views_embed_view('piois_etc', 'default', $places[$key]);
+      }
+      else{
+        $maps[$val] = views_embed_view('piois_etc', 'default');
+      }
     }
     $nl_search = array(
       'destins' => views_embed_view('nl_search', 'page_1'),
