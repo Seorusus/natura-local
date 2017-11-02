@@ -7027,5 +7027,8 @@ ul.ui-autocomplete {
     font-size: 0.7em;
     color: darkgrey; }
 
+#views-exposed-form-nl-search-page-2 .form-item-keys {
+  display: none; }
+
 #search-block-form {
   display: none; }
