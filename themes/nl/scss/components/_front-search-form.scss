@@ -76,6 +76,18 @@ ul.ui-autocomplete{
     color: darkgrey;
   }
 }
-#views-exposed-form-nl-search-page-2 .form-item-keys{
-  display: none;
+#views-exposed-form-nl-search-page-2 {
+  .form-item-keys {
+    display: none;
+  }
+  details.edit-other, .reset-values{
+    float: left;
+  }
+  input.nls-page2-filter-submit{
+    display: none;
+  }
+  .enable-values, .reset-values{
+    cursor: pointer;
+  }
 }
+

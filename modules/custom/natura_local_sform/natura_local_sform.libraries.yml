@@ -4,3 +4,4 @@ nl-sform:
     js/nl-fsorm.js: {}
   dependencies:
     - core/jquery
+    - core/jquery.once
