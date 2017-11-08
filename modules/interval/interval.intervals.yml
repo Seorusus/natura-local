@@ -7,14 +7,16 @@ second:
 minute:
   plural: Minutes
   singular: Minute
-  php: '
+  php: minutes
   multiplier: 1
+  new: '
 
 hour:
   plural: Hours
   singular: Hour
-  php: h
+  php: hours
   multiplier: 1
+  new: h
 
 day:
   plural: Days
