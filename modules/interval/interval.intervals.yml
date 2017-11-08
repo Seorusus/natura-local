@@ -9,14 +9,12 @@ minute:
   singular: Minute
   php: minutes
   multiplier: 1
-  new: '
 
 hour:
   plural: Hours
   singular: Hour
   php: hours
   multiplier: 1
-  new: h
 
 day:
   plural: Days
