@@ -1,0 +1,6 @@
+name: 'Interval overwrite'
+type: module
+core: 8.x
+description: 'Customizing module interval'
+dependencies:
+  - interval
