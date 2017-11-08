@@ -5,7 +5,14 @@ dependencies:
   config:
     - field.storage.node.field_tags
     - field.storage.node.field_description
+    - field.storage.node.field_activity
+    - field.storage.node.field_difficulty
+    - field.storage.node.field_time
+    - field.storage.node.field_tour
+    - field.storage.node.field_land
+    - field.storage.node.field_thematic
     - search_api.server.default_server
+    - core.entity_view_mode.node.nlsearch
     - core.entity_view_mode.node.search_index
   module:
     - user
@@ -28,7 +35,14 @@ field_settings:
       view_mode:
         'entity:node':
           article: search_index
+          destins: ''
+          experience: ''
+          navigation_poi: ''
           page: search_index
+          point_of_interest: ''
+          route: ''
+          town: nlsearch
+          visit: ''
   node_grants:
     label: 'Node access information'
     property_path: search_api_node_grants
@@ -106,6 +120,54 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_description
+  field_activity:
+    label: Activity
+    datasource_id: 'entity:node'
+    property_path: field_activity
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_activity
+  field_difficulty:
+    label: Difficulty
+    datasource_id: 'entity:node'
+    property_path: field_difficulty
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_difficulty
+  field_time:
+    label: Time
+    datasource_id: 'entity:node'
+    property_path: field_time
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_time
+  field_tour:
+    label: Tour
+    datasource_id: 'entity:node'
+    property_path: field_tour
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_tour
+  field_land:
+    label: Land
+    datasource_id: 'entity:node'
+    property_path: field_land
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_land
+  field_thematic:
+    label: Thematic
+    datasource_id: 'entity:node'
+    property_path: field_thematic
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_thematic
 datasource_settings:
   'entity:node':
     bundles:
@@ -129,11 +191,10 @@ processor_settings:
     weights:
       preprocess_index: -10
   html_filter:
-    weights:
-      preprocess_index: -3
-      preprocess_query: -6
+    all_fields: false
     fields:
       - rendered_item
+      - field_description
     title: true
     alt: true
     tags:
@@ -142,23 +203,23 @@ processor_settings:
       h3: 2
       string: 2
       b: 2
-    all_fields: false
-  ignorecase:
     weights:
-      preprocess_index: -5
-      preprocess_query: -8
+      preprocess_index: -3
+      preprocess_query: -6
+  ignorecase:
+    all_fields: false
     fields:
       - rendered_item
       - title
-    all_fields: false
+    weights:
+      preprocess_index: -5
+      preprocess_query: -8
   rendered_item:
     weights:
       add_properties: 0
       pre_index_save: -10
   stopwords:
-    weights:
-      preprocess_query: -10
-      postprocess_query: -10
+    all_fields: false
     fields:
       - rendered_item
       - title
@@ -198,26 +259,28 @@ processor_settings:
       - was
       - will
       - with
-    all_fields: false
-  tokenizer:
     weights:
-      preprocess_index: -2
-      preprocess_query: -5
+      preprocess_index: -5
+      preprocess_query: -10
+  tokenizer:
+    all_fields: false
     fields:
       - rendered_item
       - title
     spaces: ''
     overlap_cjk: 1
     minimum_word_size: '3'
-    all_fields: false
-  transliteration:
     weights:
-      preprocess_index: -4
-      preprocess_query: -7
+      preprocess_index: -2
+      preprocess_query: -5
+  transliteration:
+    all_fields: false
     fields:
       - rendered_item
       - title
-    all_fields: false
+    weights:
+      preprocess_index: -4
+      preprocess_query: -7
 tracker_settings:
   default: {  }
 options:

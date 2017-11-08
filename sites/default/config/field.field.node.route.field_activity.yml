@@ -1,0 +1,21 @@
+uuid: fa2314b9-2267-4eca-82c7-1f5b6f6c62a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_activity
+    - node.type.route
+  module:
+    - options
+id: node.route.field_activity
+field_name: field_activity
+entity_type: node
+bundle: route
+label: Activity
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,21 @@
+uuid: 4caa0944-0f9a-433f-9baa-9afa8158ce30
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_difficulty
+    - node.type.route
+  module:
+    - options
+id: node.route.field_difficulty
+field_name: field_difficulty
+entity_type: node
+bundle: route
+label: Difficulty
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

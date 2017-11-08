@@ -3,16 +3,19 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.route.field_activity
     - field.field.node.route.field_advices
     - field.field.node.route.field_audio
     - field.field.node.route.field_comments
     - field.field.node.route.field_description
+    - field.field.node.route.field_difficulty
     - field.field.node.route.field_distance
     - field.field.node.route.field_duration
     - field.field.node.route.field_experiences
     - field.field.node.route.field_fivestar
     - field.field.node.route.field_gpx
     - field.field.node.route.field_image_default
+    - field.field.node.route.field_land
     - field.field.node.route.field_land_type
     - field.field.node.route.field_local_term
     - field.field.node.route.field_locality
@@ -28,7 +31,10 @@ dependencies:
     - field.field.node.route.field_services
     - field.field.node.route.field_slope
     - field.field.node.route.field_surroundings
+    - field.field.node.route.field_thematic
     - field.field.node.route.field_theme
+    - field.field.node.route.field_time
+    - field.field.node.route.field_tour
     - field.field.node.route.field_video
     - field.field.node.route.field_visits
     - field.field.node.route.field_vote
@@ -72,6 +78,12 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_activity:
+    weight: 39
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_advices:
     weight: 23
     settings:
@@ -100,6 +112,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_difficulty:
+    weight: 40
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_distance:
     weight: 15
@@ -143,6 +161,12 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
+  field_land:
+    weight: 43
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_land_type:
     weight: 32
@@ -242,8 +266,26 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
+  field_thematic:
+    weight: 44
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_theme:
     weight: 34
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_time:
+    weight: 41
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_tour:
+    weight: 42
     settings: {  }
     third_party_settings: {  }
     type: options_select

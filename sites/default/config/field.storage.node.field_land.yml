@@ -1,0 +1,33 @@
+uuid: 420d28fb-83a8-45f9-be56-5c3af16da1e2
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_land
+field_name: field_land
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: mountain
+      label: 'High mountain'
+    -
+      value: hills
+      label: Hills
+    -
+      value: lowland
+      label: Lowland
+    -
+      value: coastline
+      label: Coastline
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
