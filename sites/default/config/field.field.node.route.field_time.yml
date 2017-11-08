@@ -1,0 +1,21 @@
+uuid: 6a6e0aba-8d76-4f14-8093-a53c7123af7b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_time
+    - node.type.route
+  module:
+    - options
+id: node.route.field_time
+field_name: field_time
+entity_type: node
+bundle: route
+label: Time
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

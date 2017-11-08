@@ -1,0 +1,30 @@
+uuid: e0e8a5f7-7318-4c8a-86f2-cc11037dd70a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_tour
+field_name: field_tour
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: circular
+      label: Circular
+    -
+      value: linear
+      label: Linear
+    -
+      value: crossing
+      label: 'Crossing (by stretches)'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
