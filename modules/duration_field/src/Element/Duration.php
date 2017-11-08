@@ -84,11 +84,11 @@ class Duration extends FormElement
 				'key' => 'day',
 			],
 			'h' => [
-				'label' => t('Hours'),
+				'label' => t('h'),
 				'key' => 'hour',
 			],
 			'i' => [
-				'label' => t('Minutes'),
+				'label' => t('`'),
 				'key' => 'minute',
 			],
 			's' => [
