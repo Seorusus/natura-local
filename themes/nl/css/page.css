@@ -1,0 +1,88 @@
+/*------------------Correct makeup for homepage----------------------*/
+#autocomlpete-sform {
+  /*width: 450px;*/
+  /*height: 35px;*/
+  object-fit: contain;
+  border-radius: 6px;
+  background-color: #ffffff;
+  border: solid 0.3px #909090;
+  background-image: url("img/search-icon.svg");
+  background-position: 1% 50%;
+  background-repeat: no-repeat;
+}
+#autocomlpete-sform .form-item-keys {
+  border-right: none;
+  margin-top: 10px;
+}
+#autocomlpete-sform label {
+  display: none;
+}
+#autocomlpete-sform .button {
+  border-radius: 6px;
+}
+#autocomlpete-sform .form-autocomplete {
+  background-image: none;
+}
+.region-primary-menu .s-menu__item a[href*="login"] {
+  border: none;
+}
+.region-primary-menu .s-menu__item a[href*="register"] {
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  padding: 0 18px;
+}
+.region-primary-menu .s-menu__item a[href*="login"]:hover {
+  color: #F2B200;
+  background: none;
+}
+.region-primary-menu .s-menu__item a[href*="register"]:hover {
+  color: #2B251A;
+  background: #FFFFFF;
+}
+@media (min-width: 960px) {
+  .region-front-content {
+    top: 0px;
+    margin-top: -27px;
+    padding-top: 33px;
+  }
+}
+body {
+  font-size: 16px;
+  background-image: none;
+}
+.s-layout__main {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(img/background.jpg);
+  background-position-y: 100%;
+  background-repeat: no-repeat;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+}
+h2 {
+  font-family: Raleway;
+  font-weight: bold;
+  line-height: 0.81;
+  letter-spacing: 0.1px;
+  text-align: left;
+  color: #f2b200;
+}
+
+.path-frontpage .view-header {
+  margin: 20px 0;
+  font-size: 1.3em;
+  font-family: Raleway;
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: 0.1px;
+  text-align: left;
+  color: #2c3644;
+}
+
+/*------------------main slideshow---------------------------*/
+
+#slick-views-card-carousel-block-1-2 .slick__slide {
+  padding: 10px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  margin: 15px;
+}
