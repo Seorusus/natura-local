@@ -215,3 +215,25 @@ h2 {
   background-position: -0.3125em -26.125em;
 }
 
+/*------Page search result------*/
+.search-header__logo {
+  float: left;
+  margin-left: 20px;
+}
+
+#block-maine-menu-search-res .s-menu__item a {
+  line-height: 1.25;
+  color: #2c3644;
+}
+#block-maine-menu-search-res .s-menu__item a:hover {
+  line-height: 1.25;
+  color: #f2b200;
+}
+
+#block-nl-content #autocomlpete-sform {
+  display: none;
+}
+
+li.s-menu__item {
+  list-style-type: none;
+}
