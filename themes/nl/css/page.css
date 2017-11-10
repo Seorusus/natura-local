@@ -75,14 +75,52 @@ h2 {
   text-align: left;
   color: #2c3644;
 }
+/*.ui-widget-content li {*/
+  /*!*opacity: 0.52;*!*/
+  /*border-radius: 1px;*/
+  /*border: none;*/
+  /*background: rgba(242, 178, 0, 0.52);*/
+/*}*/
+.ui-widget-content li:hover {
+  /*opacity: 0.52;*/
+  border-radius: 1px;
+  border: none;
+  background: rgba(242, 178, 0, 0.52);
+  display: block;
+}
+ .ui-widget-content .item {
+  color: #909090;
+}
+/*------------------main slider---------------------------*/
 
-/*------------------main slideshow---------------------------*/
+/*------------------main carousel---------------------------*/
 
 #slick-views-card-carousel-block-1-2 .slick__slide {
-  padding: 10px;
+  padding: 0px;
   background: #FFFFFF;
   border-radius: 10px;
-  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.21);
   display: inline-block;
   margin: 15px;
+}
+#slick-views-card-carousel-block-1-2 .slick__slide  .views-field {
+  margin-bottom: 17px;
+}
+#slick-views-card-carousel-block-1-2 .slick__slide .views-field.views-field-title {
+  margin-left: 10px;
+  font-family: Raleway;
+  font-size: 1.3em;
+  font-weight: bold;
+  line-height: 1.17;
+  text-align: left;
+  color: #2c3644;
+}
+#slick-views-card-carousel-block-1-2 .slick__slide .views-field.views-field-field-fivestar {
+  margin-left: 10px;
+}
+#slick-views-card-carousel-block-1-2 .slick__slide span.views-field.views-field-field-routes {
+  margin-left: 10px;
+}
+#slick-views-card-carousel-block-1-2 .slick-slide {
+  padding-bottom: 10px;
 }
