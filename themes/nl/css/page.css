@@ -128,7 +128,7 @@ h2 {
 .slick--view--card-carousel .slick__slide .views-field.views-field-title {
   margin-left: 10px;
   font-family: Raleway;
-  font-size: 1.3em;
+  font-size: 1.5em;
   font-weight: bold;
   line-height: 1.17;
   text-align: left;
@@ -146,29 +146,45 @@ h2 {
 .slick--view--card-carousel .slick-slide {
   padding-bottom: 10px;
 }
+#slick-views-card-carousel-block-1-2 span.views-label.views-label-field-routes.characteristic,
+#slick-views-card-carousel-block-1-2 span.views-label.views-label-field-visits.characteristic,
+#slick-views-card-carousel-block-1-2 span.views-label.views-label-field-experiences.characteristic {
+  margin-right: 5px;
+}
 
-.slick--view--card-carousel .slick__slide .slide {
+#slick-views-card-carousel-block-4-5 .slick__slide .slide,
+#slick-views-card-carousel-block-3-4 .slick__slide .slide,
+#slick-views-card-carousel-block-2-3 .slick__slide .slide  {
   padding: 0px;
   background: #FFFFFF;
   border-radius: 10px;
   box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.21);
   display: inline-block;
-  margin: 15px;
+  margin: 0px;
   margin-left: 5px;
-}
-.slick--view--card-carousel .slick__slide .slide {
   padding-bottom: 10px;
 }
+#slick-views-card-carousel-block-2-3 .slick__slide .slide {
+  border-radius: 10px;
+}
+/*.slick--view--card-carousel .slick__slide .slide {*/
+  /*padding-bottom: 10px;*/
+/*}*/
 #slick-views-card-carousel-block-4-5  .views-field.views-field-title,
 #slick-views-card-carousel-block-3-4  .views-field.views-field-title,
 #slick-views-card-carousel-block-2-3  .views-field.views-field-title {
-  height:56px;
+  height:35px;
   margin-right: 7px;
+  font-size: 1.3em;
+  font-weight: 900;
+}
+#slick-views-card-carousel-block-2-3 img.image-style-m {
+  border-radius: 10px 10px 0 0;
 }
 #slick-views-card-carousel-block-4-5  nav.slick__arrow,
 #slick-views-card-carousel-block-3-4  nav.slick__arrow,
 #slick-views-card-carousel-block-2-3  nav.slick__arrow {
-  top: 46%;
+  top: 43%;
 }
 .characteristic {
   font-size: 1.0em;
