@@ -49,16 +49,17 @@
 
   <header role="banner">
     {{ page.header }}
+    <div class="s-header">
+      <div class="s-header__box">
+        {% if site_logo %}
+          <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="search-header__logo">
+            <img src="/themes/nl/css/img/natura-local.png" alt="{{ 'Home'|t }}" />
+          </a>
+        {% endif %}
+        {{ page.primary_menu }}
+      </div>
+    </div>
   </header>
-
-  {{ page.primary_menu }}
-  {{ page.secondary_menu }}
-
-  {{ page.breadcrumb }}
-
-  {{ page.highlighted }}
-
-  {{ page.help }}
 
   <main role="main">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}

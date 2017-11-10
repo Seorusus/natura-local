@@ -5,6 +5,7 @@ function nl_preprocess_page(array &$variables) {
   $variables['site_logo'] = file_url_transform_relative(file_create_url(theme_get_setting('logo.url')));
   $variables['footer_logo'] = file_url_transform_relative(file_create_url(theme_get_setting('logo.url')));
   $variables['copyright'] = '© ' . date('Y') . ' Tots els drets reservats.';
+  $variables['chearch_logo'] = file_url_transform_relative(file_create_url(theme_get_setting('logo.url')));
 
 
   if (\Drupal::service('path.matcher')->isFrontPage()) {
