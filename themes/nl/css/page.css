@@ -237,3 +237,18 @@ h2 {
 li.s-menu__item {
   list-style-type: none;
 }
+.path-search-destins .s-header {
+  margin: 25px 0px;
+}
+.path-search-destins .region-primary-menu,
+#block-nl-search-block-page {
+  float: left;
+}
+.path-search-destins  .search-container-subtitle,
+.path-search-destins #block-nl-page-title {
+  display: none;
+}
+
+.path-search-destins  main {
+  margin-top: 72px;
+}
