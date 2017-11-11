@@ -219,6 +219,7 @@ h2 {
 .search-header__logo {
   float: left;
   margin-left: 20px;
+  margin-top: 28px;
 }
 
 #block-maine-menu-search-res .s-menu__item a {
@@ -237,13 +238,17 @@ h2 {
 li.s-menu__item {
   list-style-type: none;
 }
+
 .path-search-destins .s-header {
   margin: 25px 0px;
 }
+
 .path-search-destins .region-primary-menu,
 #block-nl-search-block-page {
   float: left;
+  width: 400px;
 }
+
 .path-search-destins  .search-container-subtitle,
 .path-search-destins #block-nl-page-title {
   display: none;
@@ -252,3 +257,64 @@ li.s-menu__item {
 .path-search-destins  main {
   margin-top: 72px;
 }
+
+.path-search-destins .s-header__box img {
+  width: 40px;
+}
+
+.path-search-destins #autocomlpete-sform {
+  /* width: 450px; */
+  height: 53px;
+  object-fit: contain;
+  border-radius: 0px;
+  background-color: #ffffff;
+  border: none;
+  border-bottom: solid 0.3px #909090;;
+  background-image: url(img/search-icon.svg);
+  background-position: 0% 75%;
+  background-repeat: no-repeat;
+}
+.path-search-destins #autocomlpete-sform .button {
+  background: #F2B200;
+  font-family: "Arimo", sans-serif;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  width: 11%;
+  height: 50px;
+  margin: 10px 0;
+  border: 0;
+  text-align: center;
+  outline: 0;
+  box-shadow: none;
+  border-radius: 1px;
+  display: block;
+  position: relative;
+  right: 350px;
+  opacity: 0;
+}
+
+input {
+  outline: 0;
+}
+
+#autocomlpete-sform .form-autocomplete input#edit-keys::-moz-focus-inner {
+  border: 0;
+}
+
+.path-search-destins .s-menu {
+  margin: 40px;
+}
+
+/*---Content Page search result---*/
+
+.path-search-destins #stabs .ui-tabs-nav {
+  background: none;
+  border: none;
+  display: block;
+  float: right;
+}
+.path-search-destins .view-piois-etc {
+  width: 50%;
+  float: left;
+}
+
