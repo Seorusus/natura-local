@@ -322,6 +322,7 @@ input {
 }
 .path-search-destins  .view-filters {
   float: right;
+  width: 100%;
 }
 
 .path-search-destins .view-nl-search  {
@@ -364,4 +365,54 @@ input {
 .path-search-destins .view-nl-search .view-empty {
   float: right;
 }
-
+.path-search-destins .view-filters details {
+  border:none;
+}
+.path-search-destins .view-filters  .form-checkboxes {
+  border: 1px solid #ccc;
+}
+.path-search-destins .view-filters summary {
+  outline: 0;
+}
+.path-search-destins .view-filters summary::-webkit-details-marker {
+  display: none
+}
+.path-search-destins .view-filters summary:after {
+  position: absolute;
+  margin: auto;
+  content: "\F140";
+  font-family: "Material Design Icons";
+  font-weight: inherit;
+  line-height: 1;
+  font-size: 24px;
+  /*top: 0;*/
+  /*bottom: 0;*/
+  /*right: 0;*/
+  /*display: flex;*/
+  align-items: center;
+}
+.path-search-destins .view-filters details[open] summary:after {
+  position: absolute;
+  margin: auto;
+  content: "\F140";
+  font-family: "Material Design Icons";
+  font-weight: inherit;
+  line-height: 1;
+  font-size: 24px;
+  /*top: 0;*/
+  /*bottom: 0;*/
+  /*right: 0;*/
+  /*display: flex;*/
+  align-items: center;
+  -moz-transform: rotate(180deg); /* Для Firefox */
+  -ms-transform: rotate(180deg); /* Для IE */
+  -webkit-transform: rotate(180deg); /* Для Safari, Chrome, iOS */
+  -o-transform: rotate(180deg); /* Для Opera */
+  transform: rotate(180deg);
+}
+.path-search-destins .view-filters details {
+  width: 24%;
+}
+.path-search-destins .view-filters .edit-other .reset-values {
+  float: right;
+}
