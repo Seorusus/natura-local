@@ -1,0 +1,10 @@
+name: Entity Clone
+description: Add a clone action for all entities
+# core:  "8.x"
+type: module
+
+# Information added by Drupal.org packaging script on 2017-10-04
+version: '8.x-1.0-alpha1+3-dev'
+core: '8.x'
+project: 'entity_clone'
+datestamp: 1507117749

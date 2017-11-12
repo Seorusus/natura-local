@@ -1,0 +1,33 @@
+uuid: 21128732-8084-4752-b220-707c44879e34
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_difficulty
+field_name: field_difficulty
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: family
+      label: Family
+    -
+      value: easy
+      label: Easy
+    -
+      value: average
+      label: Average
+    -
+      value: difficult
+      label: Difficult
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

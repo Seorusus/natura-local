@@ -1,0 +1,30 @@
+uuid: 4fa6bad5-8455-47e0-adf1-c8989ec52df7
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_time
+field_name: field_time
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '2'
+      label: 0-2h
+    -
+      value: '4'
+      label: 2-4h
+    -
+      value: more
+      label: '>4h'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,51 @@
+uuid: deebf833-eff9-4f6b-90a4-31cfc8ffb23b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_thematic
+field_name: field_thematic
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: flora
+      label: 'Flora and fauna'
+    -
+      value: rivers
+      label: 'Rivers and lakes'
+    -
+      value: forest
+      label: Forests
+    -
+      value: prats
+      label: Prats
+    -
+      value: rock
+      label: Rock
+    -
+      value: sea
+      label: 'As of sea'
+    -
+      value: architecture
+      label: 'Architecture and environment'
+    -
+      value: landscaping
+      label: Landscaping
+    -
+      value: thematic
+      label: 'Thematic itinerary'
+    -
+      value: play
+      label: 'To play'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

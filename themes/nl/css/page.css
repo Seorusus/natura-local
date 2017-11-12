@@ -1,0 +1,254 @@
+/*------------------Correct makeup for homepage----------------------*/
+#autocomlpete-sform {
+  /*width: 450px;*/
+  /*height: 35px;*/
+  object-fit: contain;
+  border-radius: 6px;
+  background-color: #ffffff;
+  border: solid 0.3px #909090;
+  background-image: url("img/search-icon.svg");
+  background-position: 1% 50%;
+  background-repeat: no-repeat;
+}
+
+#autocomlpete-sform .form-item-keys {
+  border-right: none;
+  margin-top: 10px;
+}
+
+#autocomlpete-sform label {
+  display: none;
+}
+
+#autocomlpete-sform .button {
+  border-radius: 6px;
+}
+
+#autocomlpete-sform .form-autocomplete {
+  background-image: none;
+}
+
+.region-primary-menu .s-menu__item a[href*="login"] {
+  border: none;
+}
+
+.region-primary-menu .s-menu__item a[href*="register"] {
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  padding: 0 18px;
+}
+
+.region-primary-menu .s-menu__item a[href*="login"]:hover {
+  color: #F2B200;
+  background: none;
+}
+
+.region-primary-menu .s-menu__item a[href*="register"]:hover {
+  color: #2B251A;
+  background: #FFFFFF;
+}
+
+@media (min-width: 960px) {
+  .region-front-content {
+    top: 0px;
+    margin-top: -27px;
+    padding-top: 33px;
+  }
+}
+
+body {
+  font-size: 16px;
+  background-image: none;
+}
+
+.s-layout__main {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(img/background.jpg);
+  background-position-y: 100%;
+  background-repeat: no-repeat;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+}
+
+h2 {
+  font-family: Raleway;
+  font-weight: bold;
+  line-height: 0.81;
+  letter-spacing: 0.1px;
+  text-align: left;
+  color: #f2b200;
+}
+
+.path-frontpage .view-header {
+  margin: 20px 0;
+  font-size: 1.3em;
+  font-family: Raleway;
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: 0.1px;
+  text-align: left;
+  color: #2c3644;
+}
+/*.ui-widget-content li {*/
+  /*!*opacity: 0.52;*!*/
+  /*border-radius: 1px;*/
+  /*border: none;*/
+  /*background: rgba(242, 178, 0, 0.52);*/
+/*}*/
+
+.ui-widget-content li:hover {
+  /*opacity: 0.52;*/
+  border-radius: 1px;
+  border: none;
+  background: rgba(242, 178, 0, 0.52);
+  display: block;
+}
+
+ .ui-widget-content .item {
+  color: #909090;
+}
+/*------------------main slider---------------------------*/
+
+/*------------------main carousel---------------------------*/
+
+#slick-views-card-carousel-block-1-2 .slick__slide {
+  padding: 0px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.21);
+  display: inline-block;
+  margin: 15px;
+  margin-left: 5px;
+}
+
+#slick-views-card-carousel-block-1-2 .slick__slide  .views-field,
+.slick--view--card-carousel .slick__slide  .views-field {
+  margin-bottom: 17px;
+}
+
+#slick-views-card-carousel-block-1-2 .slick__slide .views-field.views-field-title,
+.slick--view--card-carousel .slick__slide .views-field.views-field-title {
+  margin-left: 10px;
+  font-family: Raleway;
+  font-size: 1.5em;
+  font-weight: bold;
+  line-height: 1.17;
+  text-align: left;
+  color: #2c3644;
+}
+
+#slick-views-card-carousel-block-1-2 .slick__slide .views-field.views-field-field-fivestar,
+#slick-views-card-carousel-block-1-2 .slick__slide span.views-field.views-field-field-routes,
+.slick--view--card-carousel .slick__slide .views-field.views-field-field-fivestar,
+.slick--view--card-carousel .slick__slide .views-field-field-local-term {
+  margin-left: 10px;
+}
+
+#slick-views-card-carousel-block-1-2 .slick-slide,
+.slick--view--card-carousel .slick-slide {
+  padding-bottom: 10px;
+}
+#slick-views-card-carousel-block-1-2 span.views-label.views-label-field-routes.characteristic,
+#slick-views-card-carousel-block-1-2 span.views-label.views-label-field-visits.characteristic,
+#slick-views-card-carousel-block-1-2 span.views-label.views-label-field-experiences.characteristic {
+  margin-right: 5px;
+}
+
+#slick-views-card-carousel-block-4-5 .slick__slide .slide,
+#slick-views-card-carousel-block-3-4 .slick__slide .slide,
+#slick-views-card-carousel-block-2-3 .slick__slide .slide  {
+  padding: 0px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.21);
+  display: inline-block;
+  margin: 0px;
+  margin-left: 5px;
+  padding-bottom: 10px;
+}
+#slick-views-card-carousel-block-2-3 .slick__slide .slide {
+  border-radius: 10px;
+}
+/*.slick--view--card-carousel .slick__slide .slide {*/
+  /*padding-bottom: 10px;*/
+/*}*/
+#slick-views-card-carousel-block-4-5  .views-field.views-field-title,
+#slick-views-card-carousel-block-3-4  .views-field.views-field-title,
+#slick-views-card-carousel-block-2-3  .views-field.views-field-title {
+  height:35px;
+  margin-right: 7px;
+  font-size: 1.3em;
+  font-weight: 900;
+}
+#slick-views-card-carousel-block-2-3 img.image-style-m {
+  border-radius: 10px 10px 0 0;
+}
+#slick-views-card-carousel-block-4-5  nav.slick__arrow,
+#slick-views-card-carousel-block-3-4  nav.slick__arrow,
+#slick-views-card-carousel-block-2-3  nav.slick__arrow {
+  top: 43%;
+}
+.characteristic {
+  font-size: 1.0em;
+  font-weight: 500;
+  line-height: 1.54;
+  text-align: left;
+  color: #959595;
+}
+/*Footer menu*/
+.region-footer .s-menu--level-2 .s-menu__item a[href*="twitter"] {
+  padding-left: 30px;
+  position: relative;
+  display: flex;
+}
+.region-footer .s-menu--level-2 .s-menu__item a[href*="twitter"]::after {
+  display: inline-block;
+  background-image: url(../css/img/sprite.svg);
+  background-size: 3.5em 35.9375em;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  font-size: 20px;
+  content: '';
+  width: 1.0625em;
+  height: 1.0625em;
+  background-position: -0.3125em -26.125em;
+}
+
+/*------Page search result------*/
+.search-header__logo {
+  float: left;
+  margin-left: 20px;
+}
+
+#block-maine-menu-search-res .s-menu__item a {
+  line-height: 1.25;
+  color: #2c3644;
+}
+#block-maine-menu-search-res .s-menu__item a:hover {
+  line-height: 1.25;
+  color: #f2b200;
+}
+
+#block-nl-content #autocomlpete-sform {
+  display: none;
+}
+
+li.s-menu__item {
+  list-style-type: none;
+}
+.path-search-destins .s-header {
+  margin: 25px 0px;
+}
+.path-search-destins .region-primary-menu,
+#block-nl-search-block-page {
+  float: left;
+}
+.path-search-destins  .search-container-subtitle,
+.path-search-destins #block-nl-page-title {
+  display: none;
+}
+
+.path-search-destins  main {
+  margin-top: 72px;
+}
