@@ -160,8 +160,9 @@
     attach: function (context, settings) {
       //init(settings.geofield, settings.title);
       gmapInit();
-
-
+      $(window).load(function () {
+        loadMarkers($('#stabs li.ui-tabs-active'));
+      });
     }
   };
 
