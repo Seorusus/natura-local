@@ -413,6 +413,15 @@ input {
 .path-search-destins .view-filters details {
   width: 24%;
 }
-.path-search-destins .view-filters .edit-other .reset-values {
-  float: right;
+.path-search-destins .view-filters span.reset-values {
+  float: right!important;
+  display: block;
 }
+.path-search-destins .view-nl-search .view-content {
+  background: url(img/background-search.jpg);
+  background-position-y: 100%;
+  background-repeat: repeat-x;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+}
+
