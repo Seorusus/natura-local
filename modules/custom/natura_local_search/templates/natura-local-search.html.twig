@@ -1,7 +1,7 @@
 <p>Natura Local Search</p>
 {{ form }}
 <div id="search-container">
-
+    <div id="map-canvas"></div>
     <div id="stabs" class="ui-tabs">
         <ul>
             <li><a href="#tabs-destins">{{ 'Destinations'|trans }}</a></li>
@@ -12,7 +12,7 @@
         </ul>
             {% for key, val in view %}
                 <div id="tabs-{{ key }}">
-                    <div class="map-container">{{ map[key] }}</div>
+                    {#<div class="map-container">{{ map[key] }}</div>#}
                     <div class="view-container">{{ val }}</div>
                 </div>
             {% endfor %}

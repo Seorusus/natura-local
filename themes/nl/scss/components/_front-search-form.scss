@@ -90,4 +90,12 @@ ul.ui-autocomplete{
     cursor: pointer;
   }
 }
-
+#search-container{
+  #map-canvas{
+    width: 640px;
+    height: 480px;
+  }
+  .marker-location, .node-id, .marker-preview{
+    display: none;
+  }
+}

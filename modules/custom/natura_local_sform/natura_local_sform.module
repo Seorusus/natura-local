@@ -51,8 +51,6 @@ function natura_local_sform_form_alter(&$form, \Drupal\Core\Form\FormStateInterf
       $form['actions']['submit']['#attributes'] = array('class' => array('nls-page2-filter-submit'));
 
       $form['actions']['resetic'] = array(
-//        '#type' => 'item',
-//        '#title' => 'item title',
         '#markup' => '<span class="reset-values">' . t('Clear') . '</span>',
       );
     }

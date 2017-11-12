@@ -7036,5 +7036,11 @@ ul.ui-autocomplete {
 #views-exposed-form-nl-search-page-2 .enable-values, #views-exposed-form-nl-search-page-2 .reset-values {
   cursor: pointer; }
 
+#search-container #map-canvas {
+  width: 640px;
+  height: 480px; }
+#search-container .marker-location, #search-container .node-id, #search-container .marker-preview {
+  display: none; }
+
 #search-block-form {
   display: none; }
