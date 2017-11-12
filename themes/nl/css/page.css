@@ -313,8 +313,55 @@ input {
   display: block;
   float: right;
 }
+
 .path-search-destins .view-piois-etc {
-  width: 50%;
+  width: 40%;
   float: left;
+  margin-top: 35px;
+
+}
+.path-search-destins  .view-filters {
+  float: right;
+}
+
+.path-search-destins .view-nl-search  {
+  width: 60%;
+  float: left;
+}
+
+.path-search-destins .ui-widget-content {
+  border: none;
+}
+
+.path-search-destins .ui-tabs .ui-tabs-nav li {
+  border: none;
+  background: none;
+  font-family: Raleway;
+  font-weight: 600;
+  text-align: center;
+  color: #909090;
+  display: block;
+  height: 48px;
+  padding-top: 5px;
+}
+
+.path-search-destins li.ui-state-default.ui-corner-top.ui-tabs-active.ui-state-active a {
+  color: #f2b200;
+}
+
+.path-search-destins li.ui-state-default.ui-corner-top a {
+  display: block;
+  text-align: center;
+  height: 100%;
+}
+
+.path-search-destins li.ui-state-default.ui-corner-top.ui-tabs-active.ui-state-active a:focus {
+  outline: 0;
+}
+.path-search-destins li.ui-state-default.ui-corner-top.ui-tabs-active.ui-state-active {
+  border-bottom: solid 3px #f2b200 ;
+}
+.path-search-destins .view-nl-search .view-empty {
+  float: right;
 }
 
