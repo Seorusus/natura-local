@@ -2,6 +2,7 @@ name: 'NL search Destins view'
 type: module
 core: 8.x
 dependencies:
+  - address
   - better_exposed_filters
   - block
   - comment
@@ -19,8 +20,10 @@ dependencies:
   - path
   - search_api
   - slick_views
+  - telephone
   - text
   - user
   - views
   - views_autocomplete_filters
   - views_fieldsets
+  - votingapi_widgets

@@ -1,0 +1,53 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_typology_exp
+field_name: field_typology_exp
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: nature
+      label: Nature
+    -
+      value: workshops
+      label: Workshops
+    -
+      value: recreation
+      label: Recreation
+    -
+      value: culture
+      label: Culture
+    -
+      value: gastronomy
+      label: Gastronomy
+    -
+      value: sports
+      label: Sports
+    -
+      value: eat
+      label: 'Eat and Drink'
+    -
+      value: history
+      label: History
+    -
+      value: art
+      label: Art
+    -
+      value: shows
+      label: Shows
+    -
+      value: music
+      label: Music
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
