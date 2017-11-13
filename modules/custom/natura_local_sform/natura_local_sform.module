@@ -22,37 +22,42 @@ function natura_local_sform_form_alter(&$form, \Drupal\Core\Form\FormStateInterf
     $view_names = array('nl_search');
     $view = $form_state->getStorage('view');
     if(in_array($view['view']->id(), $view_names)){
-      $afields = array('activity', 'difficulty','time');
-      foreach ($afields as $k => $afield){
-        $form[$afield]['enabletext'] = array(
+      if($view['view']->current_display == 'page_2') {
+        $afields = array('activity', 'difficulty', 'time');
+        foreach ($afields as $k => $afield) {
+          $form[$afield]['enabletext'] = array(
+            '#markup' => '<span class="enable-values">' . t('Apply') . '</span>',
+            '#weight' => 10,
+          );
+        }
+        $form['other'] = array(
+          '#type' => 'details',
+          '#title' => t('Other'),
+          '#open' => FALSE,
+          '#attributes' => array('class' => array('edit-other')),
+        );
+        $alteredfields = array(
+          'tour' => 'tour',
+          'land' => 'land',
+          'thema' => 'thematic'
+        );
+        foreach ($alteredfields as $id => $field) {
+          $form['other'][$id] = $form[$id];
+          $form['other'][$id]['#title'] = $form['#info']['filter-field_' . $field]['label'];
+          unset($form[$id]);
+        }
+        $form['other']['enabletext'] = array(
           '#markup' => '<span class="enable-values">' . t('Apply') . '</span>',
-          '#weight' => 10,
         );
       }
-      $form['other'] = array(
-        '#type' => 'details',
-        '#title' => t('Other'),
-        '#open' => FALSE,
-        '#attributes' => array('class' => array('edit-other')),
-      );
-      $alteredfields = array(
-        'tour' => 'tour',
-        'land' => 'land',
-        'thema' => 'thematic'
-      );
-      foreach ($alteredfields as $id => $field){
-        $form['other'][$id] = $form[$id];
-        $form['other'][$id]['#title'] = $form['#info']['filter-field_' . $field]['label'];
-        unset($form[$id]);
-      }
-      $form['other']['enabletext'] = array(
-        '#markup' => '<span class="enable-values">' . t('Apply') . '</span>',
-      );
       $form['actions']['submit']['#attributes'] = array('class' => array('nls-page2-filter-submit'));
 
-      $form['actions']['resetic'] = array(
+      $form['resetic'] = array(
         '#markup' => '<span class="reset-values">' . t('Clear') . '</span>',
+        '#weight' => 8,
       );
+      $form['sort_by']['#weight'] = 9;
+      unset($form['sort_order']);
     }
   }
   if($form_id == 'autocomlpete_sform'){

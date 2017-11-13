@@ -67,7 +67,7 @@ display:
           submit_button: Search
           reset_button: false
           reset_button_label: 'Reset filters'
-          exposed_sorts_label: 'Sort by'
+          exposed_sorts_label: 'Order by'
           expose_sort_order: false
           sort_asc_label: Asc
           sort_desc_label: Desc
@@ -79,6 +79,16 @@ display:
               secondary_label: 'Advanced options'
               autosubmit: false
               autosubmit_hide: false
+            sort:
+              bef_format: default
+              advanced:
+                collapsible: false
+                collapsible_label: 'Sort options'
+                combine: false
+                combine_rewrite: ''
+                reset: false
+                reset_label: ''
+                is_secondary: false
             search_api_fulltext:
               bef_format: default
               more_options:
@@ -1777,17 +1787,29 @@ display:
             group_items: {  }
           plugin_id: search_api_language
       sorts:
-        search_api_relevance:
-          id: search_api_relevance
+        created:
+          id: created
           table: search_api_index_default_index
-          field: search_api_relevance
+          field: created
           relationship: none
           group_type: group
           admin_label: ''
-          order: ASC
-          exposed: false
+          order: DESC
+          exposed: true
           expose:
-            label: ''
+            label: Creating
+          plugin_id: search_api
+        rating:
+          id: rating
+          table: search_api_index_default_index
+          field: rating
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: true
+          expose:
+            label: Rating
           plugin_id: search_api
       header:
         result:
@@ -1818,13 +1840,14 @@ display:
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
-      use_ajax: false
+      use_ajax: true
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
+        - 'url.query_args:sort_by'
         - user.permissions
       tags:
         - 'config:field.storage.node.field_description'
@@ -1860,7 +1883,7 @@ display:
         title: 'NL Search'
         description: ''
         weight: 0
-      exposed_block: true
+      exposed_block: false
       title: Destinations
       defaults:
         title: false
@@ -2002,6 +2025,7 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
+        - 'url.query_args:sort_by'
         - user.permissions
       tags:
         - 'config:field.storage.node.field_description'
@@ -4381,6 +4405,7 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
+        - 'url.query_args:sort_by'
         - user.permissions
       tags:
         - 'config:field.storage.node.field_description'
@@ -4549,7 +4574,7 @@ display:
         weight: 0
         context: '0'
         menu_name: main
-      exposed_block: true
+      exposed_block: false
       fields:
         nid:
           id: nid
@@ -5877,6 +5902,7 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
+        - 'url.query_args:sort_by'
         - user.permissions
       tags:
         - 'config:field.storage.node.field_description'
@@ -6039,7 +6065,7 @@ display:
         weight: 0
         context: '0'
         menu_name: main
-      exposed_block: true
+      exposed_block: false
       fields:
         nid:
           id: nid
@@ -7362,6 +7388,7 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
+        - 'url.query_args:sort_by'
         - user.permissions
       tags:
         - 'config:field.storage.node.field_description'
@@ -7524,7 +7551,7 @@ display:
         weight: 0
         context: '0'
         menu_name: main
-      exposed_block: true
+      exposed_block: false
       fields:
         nid:
           id: nid
@@ -8946,6 +8973,7 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
+        - 'url.query_args:sort_by'
         - user.permissions
       tags:
         - 'config:field.storage.node.field_description'

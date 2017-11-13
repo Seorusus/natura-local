@@ -8,10 +8,12 @@ dependencies:
   - content_types_town
   - field
   - field_count_formatter
+  - file
   - fivestar
   - geolocation
   - image
   - interval
+  - node
   - options
   - path
   - search_api

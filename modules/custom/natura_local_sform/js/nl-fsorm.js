@@ -12,14 +12,17 @@
         }
       });
 
-      $(document).on("click", '#views-exposed-form-nl-search-page-2 .enable-values', function () {
-        updateResults();
+      $(document).on("click", '.views-exposed-form .enable-values', function () {
+        updateResults($(this));
       });
       $(document).on("click", '.reset-values', function () {
-        $(context).find("#views-exposed-form-nl-search-page-2 input[type=checkbox]").each(function() {
+        $(this).parents('.views-exposed-form').eq(0).find("input[type=checkbox]").each(function() {
           $(this).removeAttr("checked");
         });
-        updateResults();
+        updateResults($(this));
+      });
+      $(document).on("change", '.view-filters select.form-select', function () {
+        updateResults($(this));
       });
       $(context).find('details summary').once('added-span').append('<span class="checked-count"></span>');
       $(context).find('span.checked-count').text(function () {
@@ -33,7 +36,7 @@
     }
   };
 
-  function updateResults(){
-    $("#views-exposed-form-nl-search-page-2 .form-submit").trigger('click');
+  function updateResults(obj){
+    obj.parents('.views-exposed-form').eq(0).find('.form-submit').trigger('click');
   }
 })(jQuery);
