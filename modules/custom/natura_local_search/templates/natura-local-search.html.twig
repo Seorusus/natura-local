@@ -11,7 +11,7 @@
             <li><a href="#tabs-services">{{ 'Services'|trans }}</a></li>
         </ul>
             {% for key, val in view %}
-                <div id="tabs-{{ key }}">
+                <div id="tabs-{{ key }}" class="nl-search-tab-content">
                     {#<div class="map-container">{{ map[key] }}</div>#}
                     <div class="view-container">{{ val }}</div>
                 </div>
