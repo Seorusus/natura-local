@@ -3,6 +3,7 @@ type: module
 core: 8.x
 dependencies:
   - better_exposed_filters
+  - block
   - comment
   - content_types_point_of_interest
   - content_types_town
@@ -17,6 +18,7 @@ dependencies:
   - options
   - path
   - search_api
+  - slick_views
   - text
   - user
   - views
