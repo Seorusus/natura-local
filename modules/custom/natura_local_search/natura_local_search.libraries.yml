@@ -7,3 +7,15 @@ nl-search:
     - core/jquery
     - core/jquery.ui.tabs
     - core/drupal.ajax
+nl-google.maps:
+  version: 3
+  js:
+    http://maps.google.com/maps/api/js?sensor=false: { type: external, minified: true }
+nl-maps:
+  version: 1.x
+  js:
+    js/nl-maps.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - natura_local_search/nl-google.maps

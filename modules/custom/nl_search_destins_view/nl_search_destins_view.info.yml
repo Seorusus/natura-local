@@ -1,0 +1,26 @@
+name: 'NL search Destins view'
+type: module
+core: 8.x
+dependencies:
+  - better_exposed_filters
+  - block
+  - comment
+  - content_types_point_of_interest
+  - content_types_town
+  - field
+  - field_count_formatter
+  - file
+  - fivestar
+  - geolocation
+  - image
+  - interval
+  - node
+  - options
+  - path
+  - search_api
+  - slick_views
+  - text
+  - user
+  - views
+  - views_autocomplete_filters
+  - views_fieldsets

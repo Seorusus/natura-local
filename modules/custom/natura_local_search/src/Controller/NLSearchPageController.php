@@ -96,6 +96,7 @@ class NLSearchPageController extends ControllerBase {
       '#view' => $nl_search,
     );
     $output['#attached']['library'][] = 'natura_local_search/nl-search';
+    $output['#attached']['library'][] = 'natura_local_search/nl-maps';
     $element['#markup'] = '<br>' . ' : ';
     return $output;
   }

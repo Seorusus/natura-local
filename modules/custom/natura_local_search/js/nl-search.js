@@ -5,7 +5,22 @@
   Drupal.behaviors.NLSearchBehavior = {
     attach: function (context, settings) {
       $(window).load(function () {
-        $("#stabs").tabs();
+        var ind = 0;
+        var tabInd = 0;
+        var max = 0;
+        $('.nl-search-tab-content .view-nl-search').each(function () {
+          var hdr = $(this).find('.view-header').html();
+          if(hdr.length) {
+            var arr = $.trim(hdr).split(' ');
+            if (max < parseInt(arr[0])) {
+              max = parseInt(arr[0]);
+              tabInd = ind;
+            }
+          }
+          ind++;
+        });
+        $("#stabs").tabs({active: tabInd});
+        //return false;
       });
 
     }

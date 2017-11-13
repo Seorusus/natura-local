@@ -76,7 +76,7 @@ ul.ui-autocomplete{
     color: darkgrey;
   }
 }
-#views-exposed-form-nl-search-page-2 {
+.view-nl-search .views-exposed-form {
   .form-item-keys {
     display: none;
   }
@@ -90,4 +90,12 @@ ul.ui-autocomplete{
     cursor: pointer;
   }
 }
-
+#search-container{
+  #map-canvas{
+    width: 640px;
+    height: 480px;
+  }
+  .marker-location, .node-id, .marker-preview{
+    display: none;
+  }
+}

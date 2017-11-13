@@ -17,3 +17,11 @@ natura_local_search.json_view:
     arg: ''
   requirements:
     _permission: 'access content'
+
+natura_local_search.search_events:
+  path: '/search-events'
+  defaults:
+    _controller: '\Drupal\natura_local_search\Ajax\jsonViewController::Events'
+  requirements:
+    _permission: 'access content'
+  methods: [POST]
