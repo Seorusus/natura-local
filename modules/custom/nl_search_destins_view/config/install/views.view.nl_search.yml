@@ -95,51 +95,11 @@ display:
                 is_secondary: false
                 rewrite:
                   filter_rewrite_values: ''
-            field_activity:
+            field_typology_serv:
               bef_format: bef
               more_options:
                 bef_select_all_none: false
                 bef_collapsible: true
-                is_secondary: false
-                rewrite:
-                  filter_rewrite_values: ''
-            field_difficulty:
-              bef_format: bef
-              more_options:
-                bef_select_all_none: false
-                bef_collapsible: true
-                is_secondary: false
-                rewrite:
-                  filter_rewrite_values: ''
-            field_time:
-              bef_format: bef
-              more_options:
-                bef_select_all_none: false
-                bef_collapsible: true
-                is_secondary: false
-                rewrite:
-                  filter_rewrite_values: ''
-            field_land:
-              bef_format: bef
-              more_options:
-                bef_select_all_none: false
-                bef_collapsible: false
-                is_secondary: false
-                rewrite:
-                  filter_rewrite_values: ''
-            field_thematic:
-              bef_format: bef
-              more_options:
-                bef_select_all_none: false
-                bef_collapsible: false
-                is_secondary: false
-                rewrite:
-                  filter_rewrite_values: ''
-            field_tour:
-              bef_format: bef
-              more_options:
-                bef_select_all_none: false
-                bef_collapsible: false
                 is_secondary: false
                 rewrite:
                   filter_rewrite_values: ''
@@ -4561,6 +4521,47 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: search_api_language
+        field_typology_vis:
+          id: field_typology_vis
+          table: search_api_index_default_index
+          field: field_typology_vis
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_typology_vis_op
+            label: Typology
+            description: ''
+            use_operator: false
+            operator: field_typology_vis_op
+            identifier: typo_vis
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              app_user: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: search_api_options
       filter_groups:
         operator: AND
         groups:
@@ -6052,6 +6053,47 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: search_api_language
+        field_typology_exp:
+          id: field_typology_exp
+          table: search_api_index_default_index
+          field: field_typology_exp
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_typology_exp_op
+            label: Typology
+            description: ''
+            use_operator: false
+            operator: field_typology_exp_op
+            identifier: typo_exp
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              app_user: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: search_api_options
       filter_groups:
         operator: AND
         groups:
@@ -7538,6 +7580,47 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: search_api_language
+        field_typology_serv:
+          id: field_typology_serv
+          table: search_api_index_default_index
+          field: field_typology_serv
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_typology_serv_op
+            label: Typology
+            description: ''
+            use_operator: false
+            operator: field_typology_serv_op
+            identifier: typo_serv
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              app_user: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: search_api_options
       filter_groups:
         operator: AND
         groups:

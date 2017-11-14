@@ -1,0 +1,11 @@
+name: GPX Track & Elevation
+type: module
+description: Add a visualization fields to show track and elevation profiles from GPX files.
+
+# core: '8.x'
+configure: gpx_track_elevation.form
+# Information added by Drupal.org packaging script on 2017-05-03
+version: '8.x-1.0-alpha1'
+core: '8.x'
+project: 'gpx_track_elevation'
+datestamp: 1493795602
