@@ -255,7 +255,7 @@ li.s-menu__item {
 }
 
 .path-search-destins  main {
-  margin-top: 72px;
+  margin-top: 135px;
 }
 
 .path-search-destins .s-header__box img {
@@ -273,6 +273,7 @@ li.s-menu__item {
   background-image: url(img/search-icon.svg);
   background-position: 0% 75%;
   background-repeat: no-repeat;
+  box-shadow: 0 0.5px 0.5px 0 rgba(144, 144, 144, 0.22);
 }
 .path-search-destins #autocomlpete-sform .button {
   background: #F2B200;
@@ -311,7 +312,7 @@ input {
   background: none;
   border: none;
   display: block;
-  float: right;
+  /*float: left;*/
 }
 
 .path-search-destins .view-piois-etc {
@@ -326,7 +327,7 @@ input {
 }
 
 .path-search-destins .view-nl-search  {
-  width: 60%;
+  /*width: 60%;*/
   float: left;
 }
 
@@ -425,3 +426,24 @@ input {
   background-size: 100%;
 }
 
+.path-search-destins #map-canvas {
+  width: 40%;
+  float: left;
+  }
+.path-search-destins #stabs {
+  width: 60%;
+  float: left;
+}
+.path-search-destins #stabs .field-content.recommended {
+  transform: rotate(-47deg);
+  font-family: Raleway;
+  font-size: 17.5px;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
+  position: relative;
+  top: 77px;
+  /* right: 512px; */
+  width: 200px;
+  height: auto;
+}
