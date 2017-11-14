@@ -88,10 +88,10 @@ h2 {
   color: #2c3644;
 }
 /*.ui-widget-content li {*/
-  /*!*opacity: 0.52;*!*/
-  /*border-radius: 1px;*/
-  /*border: none;*/
-  /*background: rgba(242, 178, 0, 0.52);*/
+/*!*opacity: 0.52;*!*/
+/*border-radius: 1px;*/
+/*border: none;*/
+/*background: rgba(242, 178, 0, 0.52);*/
 /*}*/
 
 .ui-widget-content li:hover {
@@ -102,7 +102,7 @@ h2 {
   display: block;
 }
 
- .ui-widget-content .item {
+.ui-widget-content .item {
   color: #909090;
 }
 /*------------------main slider---------------------------*/
@@ -168,7 +168,7 @@ h2 {
   border-radius: 10px;
 }
 /*.slick--view--card-carousel .slick__slide .slide {*/
-  /*padding-bottom: 10px;*/
+/*padding-bottom: 10px;*/
 /*}*/
 #slick-views-card-carousel-block-4-5  .views-field.views-field-title,
 #slick-views-card-carousel-block-3-4  .views-field.views-field-title,
@@ -405,10 +405,10 @@ input {
   /*right: 0;*/
   /*display: flex;*/
   align-items: center;
-  -moz-transform: rotate(180deg); /* Для Firefox */
-  -ms-transform: rotate(180deg); /* Для IE */
-  -webkit-transform: rotate(180deg); /* Для Safari, Chrome, iOS */
-  -o-transform: rotate(180deg); /* Для Opera */
+  -moz-transform: rotate(180deg); /* for Firefox */
+  -ms-transform: rotate(180deg); /* for IE */
+  -webkit-transform: rotate(180deg); /* for Safari, Chrome, iOS */
+  -o-transform: rotate(180deg); /* for Opera */
   transform: rotate(180deg);
 }
 .path-search-destins .view-filters details {
@@ -429,7 +429,7 @@ input {
 .path-search-destins #map-canvas {
   width: 40%;
   float: left;
-  }
+}
 .path-search-destins #stabs {
   width: 60%;
   float: left;
