@@ -89,7 +89,7 @@ class NLSearchPageController extends ControllerBase {
     );
     $output =  array(
       '#theme' => 'natura_local_search',
-      '#keys' => $this->t($keys),
+      '#keys' => $keys,
 //      '#places' => $places,
       '#form' => \Drupal::formBuilder()->getForm('Drupal\natura_local_sform\Form\AutocompleteSForm'),
       '#map' => $maps,

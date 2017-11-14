@@ -22,15 +22,34 @@ function natura_local_sform_form_alter(&$form, \Drupal\Core\Form\FormStateInterf
     $view_names = array('nl_search');
     $view = $form_state->getStorage('view');
     if(in_array($view['view']->id(), $view_names)){
-      $afields = array('activity', 'difficulty', 'time', 'typo_serv', 'typo_exp', 'typo_vis');
-      foreach ($afields as $k => $afield) {
-        if(!isset($form[$afield])){
+      $afields = array(
+        'activity' => 'activity',
+        'difficulty' => 'difficulty',
+        'time' => 'time',
+        'typo_serv' => 'typology_serv',
+        'typo_exp' => 'typology_exp',
+        'typo_vis' => 'typology_vis',
+      );
+      //debug($form);
+      foreach ($afields as $key => $field) {
+        if(!isset($form[$key])){
           continue;
         }
-        $form[$afield]['enabletext'] = array(
+        $form[$key]['enabletext'] = array(
           '#markup' => '<span class="enable-values">' . t('Apply') . '</span>',
           '#weight' => 77,
         );
+        $form[$key]['#type'] = 'checkboxes';
+        $form[$key]['#theme'] = 'bef_checkboxes';
+        $form[$key]['#theme_wrappers'] = array(
+          'details' => array(
+            '#title' => t($form['#info']['filter-field_' . $field]['label']),
+            '#description' => '',
+            '#attributes' => array('class' => 'form-item'),
+            '#value' => '',
+          )
+        );
+        $form['#info']['filter-field_' . $field]['label'] = '';
       }
       if($view['view']->current_display == 'page_2') {
         $form['other'] = array(
@@ -45,6 +64,8 @@ function natura_local_sform_form_alter(&$form, \Drupal\Core\Form\FormStateInterf
           'thema' => 'thematic'
         );
         foreach ($alteredfields as $id => $field) {
+          $form[$id]['#type'] = 'checkboxes';
+          $form[$id]['#theme'] = 'bef_checkboxes';
           $form['other'][$id] = $form[$id];
           $form['other'][$id]['#title'] = $form['#info']['filter-field_' . $field]['label'];
           unset($form[$id]);
@@ -54,11 +75,12 @@ function natura_local_sform_form_alter(&$form, \Drupal\Core\Form\FormStateInterf
         );
       }
       $form['actions']['submit']['#attributes'] = array('class' => array('nls-page2-filter-submit'));
-
-      $form['resetic'] = array(
-        '#markup' => '<span class="reset-values">' . t('Clear') . '</span>',
-        '#weight' => 8,
-      );
+      if($view['view']->current_display != 'page_1') {
+        $form['resetic'] = array(
+          '#markup' => '<span class="reset-values">' . t('Clear') . '</span>',
+          '#weight' => 8,
+        );
+      }
       $form['sort_by']['#weight'] = 9;
       unset($form['sort_order']);
     }
