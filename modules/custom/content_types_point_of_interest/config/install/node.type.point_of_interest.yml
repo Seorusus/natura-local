@@ -12,5 +12,5 @@ type: point_of_interest
 description: 'Services that a place/route have around.'
 help: ''
 new_revision: true
-preview_mode: 1
-display_submitted: true
+preview_mode: 0
+display_submitted: false
