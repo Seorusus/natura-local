@@ -1,0 +1,174 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment.default
+    - field.field.node.experience.field_comments
+    - field.field.node.experience.field_description
+    - field.field.node.experience.field_email
+    - field.field.node.experience.field_experience_tags
+    - field.field.node.experience.field_fivestar
+    - field.field.node.experience.field_local_term
+    - field.field.node.experience.field_locality
+    - field.field.node.experience.field_location
+    - field.field.node.experience.field_poi_images
+    - field.field.node.experience.field_recommended
+    - field.field.node.experience.field_telephone
+    - field.field.node.experience.field_typology_exp
+    - field.field.node.experience.field_vote
+    - node.type.experience
+  module:
+    - address
+    - comment
+    - fivestar
+    - geolocation
+    - image
+    - options
+    - telephone
+    - user
+    - votingapi_widgets
+id: node.experience.default
+targetEntityType: node
+bundle: experience
+mode: default
+content:
+  field_comments:
+    weight: 107
+    label: above
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    type: comment_default
+    region: content
+  field_description:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_email:
+    weight: 109
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_experience_tags:
+    weight: 112
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_fivestar:
+    weight: 116
+    label: above
+    settings:
+      fivestar_widget: modules/fivestar/widgets/basic/basic.css
+    third_party_settings: {  }
+    type: fivestar_stars
+    region: content
+  field_local_term:
+    weight: 114
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_locality:
+    weight: 111
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_location:
+    weight: 101
+    label: above
+    settings:
+      set_marker: '1'
+      title: ''
+      info_text: ''
+      google_map_settings:
+        height: 400px
+        width: 100%
+        type: SATELLITE
+        zoom: '10'
+        maxZoom: 18
+        minZoom: 0
+        mapTypeControl: 1
+        streetViewControl: 1
+        zoomControl: 1
+        scrollwheel: 1
+        gestureHandling: auto
+        draggable: 1
+        style: ''
+        info_auto_display: 1
+        marker_icon_path: ''
+        disableAutoPan: 1
+        rotateControl: 0
+        fullscreenControl: 0
+        preferScrollingToZooming: 0
+        disableDoubleClickZoom: 0
+      use_overridden_map_settings: 0
+      common_map: ''
+    third_party_settings: {  }
+    type: geolocation_map
+    region: content
+  field_poi_images:
+    weight: 106
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_recommended:
+    weight: 104
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_telephone:
+    weight: 110
+    label: above
+    settings:
+      title: ''
+    third_party_settings: {  }
+    type: telephone_link
+    region: content
+  field_typology_exp:
+    weight: 117
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_vote:
+    weight: 115
+    label: above
+    settings:
+      style: default
+      show_results: '1'
+      readonly: 0
+      values: {  }
+    third_party_settings: {  }
+    type: voting_api_formatter
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true
