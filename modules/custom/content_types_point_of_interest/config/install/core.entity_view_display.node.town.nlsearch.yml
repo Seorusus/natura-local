@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.nlsearch
     - field.field.node.town.body
     - field.field.node.town.field_comments
     - field.field.node.town.field_description
@@ -20,32 +21,51 @@ dependencies:
     - image.style.medium
     - node.type.town
   module:
+    - field_group
     - fivestar
     - geolocation
     - image
     - text
     - user
-id: node.town.default
+third_party_settings:
+  field_group:
+    group_head:
+      children:
+        - field_land_type
+        - field_fivestar
+      parent_name: ''
+      weight: 2
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: head
+id: node.town.nlsearch
 targetEntityType: node
 bundle: town
-mode: default
+mode: nlsearch
 content:
   body:
-    weight: 4
-    label: hidden
-    settings:
-      trim_length: 400
-    third_party_settings: {  }
-    type: text_trimmed
+    type: text_default
+    weight: 3
     region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
   field_description:
-    weight: 7
-    label: above
+    type: string
+    weight: 4
+    region: content
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
-    region: content
   field_fivestar:
     weight: 3
     label: hidden
@@ -55,7 +75,7 @@ content:
     type: fivestar_stars
     region: content
   field_image_default:
-    weight: 1
+    weight: 0
     label: hidden
     settings:
       image_style: medium
@@ -64,48 +84,22 @@ content:
     type: image
     region: content
   field_land_type:
-    weight: 0
-    label: above
+    weight: 2
+    label: hidden
     settings:
       link: false
     third_party_settings: {  }
     type: entity_reference_label
     region: content
   field_location:
-    weight: 6
+    weight: 5
     label: hidden
-    settings:
-      set_marker: '1'
-      title: ''
-      info_text: ''
-      google_map_settings:
-        height: 400px
-        width: 100%
-        type: SATELLITE
-        zoom: '10'
-        maxZoom: 18
-        minZoom: 0
-        mapTypeControl: 1
-        streetViewControl: 1
-        zoomControl: 1
-        scrollwheel: 1
-        gestureHandling: auto
-        draggable: 1
-        style: ''
-        info_auto_display: 1
-        marker_icon_path: ''
-        disableAutoPan: 1
-        rotateControl: 0
-        fullscreenControl: 0
-        preferScrollingToZooming: 0
-        disableDoubleClickZoom: 0
-      use_overridden_map_settings: 0
-      common_map: ''
+    settings: {  }
     third_party_settings: {  }
-    type: geolocation_map
+    type: geolocation_latlng
     region: content
   field_recommended:
-    weight: 2
+    weight: 1
     label: hidden
     settings:
       format: custom
@@ -114,21 +108,13 @@ content:
     third_party_settings: {  }
     type: boolean
     region: content
-  field_total_routes:
-    weight: 5
-    label: inline
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    type: number_integer
-    region: content
 hidden:
   field_comments: true
   field_experiences: true
   field_local_term: true
   field_routes: true
   field_services: true
+  field_total_routes: true
   field_visits: true
   field_vote: true
   langcode: true

@@ -37,13 +37,13 @@ field_settings:
         'entity:node':
           article: search_index
           destins: ''
-          experience: ''
+          experience: default
           navigation_poi: ''
           page: search_index
-          point_of_interest: ''
-          route: ''
+          point_of_interest: default
+          route: nlsearch
           town: nlsearch
-          visit: ''
+          visit: default
   node_grants:
     label: 'Node access information'
     property_path: search_api_node_grants
