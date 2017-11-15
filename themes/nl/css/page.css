@@ -427,7 +427,7 @@ input {
 }
 
 .path-search-destins #map-canvas {
-  width: 40%;
+  width: 40%!important;
   float: left;
 }
 .path-search-destins #stabs {
@@ -446,4 +446,5 @@ input {
   /* right: 512px; */
   width: 200px;
   height: auto;
+  background-image: url("/img/recomenada-shape.png");
 }
