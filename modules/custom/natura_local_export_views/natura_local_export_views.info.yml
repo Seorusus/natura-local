@@ -13,4 +13,5 @@ dependencies:
   - taxonomy
   - user
   - views
+  - views_autocomplete_filters
   - votingapi_widgets

@@ -11,13 +11,18 @@ dependencies:
   - content_types_route
   - content_types_town
   - field
+  - field_group
   - file
+  - fivestar
   - geolocation
   - image
   - image_url_formatter
+  - interval
   - language
+  - link
   - menu_ui
   - node
+  - options
   - path
   - point_of_interest
   - rest
