@@ -8,19 +8,23 @@ dependencies:
     - field.field.node.experience.field_description
     - field.field.node.experience.field_email
     - field.field.node.experience.field_experience_tags
+    - field.field.node.experience.field_fivestar
     - field.field.node.experience.field_local_term
     - field.field.node.experience.field_locality
     - field.field.node.experience.field_location
     - field.field.node.experience.field_poi_images
     - field.field.node.experience.field_recommended
     - field.field.node.experience.field_telephone
+    - field.field.node.experience.field_typology_exp
     - field.field.node.experience.field_vote
     - node.type.experience
   module:
     - address
     - comment
+    - fivestar
     - geolocation
     - image
+    - options
     - telephone
     - user
     - votingapi_widgets
@@ -60,6 +64,14 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_fivestar:
+    weight: 116
+    label: above
+    settings:
+      fivestar_widget: modules/fivestar/widgets/basic/basic.css
+    third_party_settings: {  }
+    type: fivestar_stars
     region: content
   field_local_term:
     weight: 114
@@ -135,6 +147,13 @@ content:
       title: ''
     third_party_settings: {  }
     type: telephone_link
+    region: content
+  field_typology_exp:
+    weight: 117
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   field_vote:
     weight: 115

@@ -1,0 +1,27 @@
+uuid: 7ddb43a1-29ab-4459-b836-417dda0b6616
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fivestar
+    - node.type.experience
+  module:
+    - fivestar
+id: node.experience.field_fivestar
+field_name: field_fivestar
+entity_type: node
+bundle: experience
+label: fivestar
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  stars: 5
+  allow_clear: false
+  allow_revote: true
+  allow_ownvote: true
+  rated_while: viewing
+  target: ''
+field_type: fivestar

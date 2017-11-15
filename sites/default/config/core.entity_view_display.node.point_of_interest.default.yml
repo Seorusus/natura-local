@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.point_of_interest.field_comments
     - field.field.node.point_of_interest.field_description
     - field.field.node.point_of_interest.field_email
+    - field.field.node.point_of_interest.field_fivestar
     - field.field.node.point_of_interest.field_image_default
     - field.field.node.point_of_interest.field_local_term
     - field.field.node.point_of_interest.field_locality
@@ -16,6 +17,7 @@ dependencies:
     - field.field.node.point_of_interest.field_poi_type
     - field.field.node.point_of_interest.field_recommended
     - field.field.node.point_of_interest.field_telephone
+    - field.field.node.point_of_interest.field_typology_serv
     - field.field.node.point_of_interest.field_video
     - field.field.node.point_of_interest.field_vote
     - node.type.point_of_interest
@@ -24,8 +26,10 @@ dependencies:
     - audiofield
     - comment
     - file
+    - fivestar
     - geolocation
     - image
+    - options
     - telephone
     - user
     - votingapi_widgets
@@ -73,6 +77,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: basic_string
+    region: content
+  field_fivestar:
+    weight: 16
+    label: above
+    settings:
+      fivestar_widget: modules/fivestar/widgets/basic/basic.css
+    third_party_settings: {  }
+    type: fivestar_stars
     region: content
   field_image_default:
     weight: 4
@@ -139,6 +151,13 @@ content:
       title: ''
     third_party_settings: {  }
     type: telephone_link
+    region: content
+  field_typology_serv:
+    weight: 17
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   field_video:
     weight: 12

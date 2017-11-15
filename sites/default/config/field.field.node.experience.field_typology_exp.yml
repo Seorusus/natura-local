@@ -1,0 +1,21 @@
+uuid: 96b8f6a3-f425-4f8e-90ca-cd9867de7cf2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_typology_exp
+    - node.type.experience
+  module:
+    - options
+id: node.experience.field_typology_exp
+field_name: field_typology_exp
+entity_type: node
+bundle: experience
+label: 'Typology (exp)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
