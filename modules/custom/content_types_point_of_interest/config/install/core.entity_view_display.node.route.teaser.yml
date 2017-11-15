@@ -1,0 +1,78 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.route.field_advices
+    - field.field.node.route.field_audio
+    - field.field.node.route.field_comments
+    - field.field.node.route.field_description
+    - field.field.node.route.field_distance
+    - field.field.node.route.field_duration
+    - field.field.node.route.field_experiences
+    - field.field.node.route.field_fivestar
+    - field.field.node.route.field_gpx
+    - field.field.node.route.field_image_default
+    - field.field.node.route.field_land_type
+    - field.field.node.route.field_local_term
+    - field.field.node.route.field_locality
+    - field.field.node.route.field_location
+    - field.field.node.route.field_navigation_pois
+    - field.field.node.route.field_others
+    - field.field.node.route.field_recommended
+    - field.field.node.route.field_route_difficulty
+    - field.field.node.route.field_route_images
+    - field.field.node.route.field_route_time
+    - field.field.node.route.field_route_type
+    - field.field.node.route.field_route_typology
+    - field.field.node.route.field_services
+    - field.field.node.route.field_slope
+    - field.field.node.route.field_surroundings
+    - field.field.node.route.field_theme
+    - field.field.node.route.field_video
+    - field.field.node.route.field_visits
+    - field.field.node.route.field_vote
+    - node.type.route
+  module:
+    - user
+id: node.route.teaser
+targetEntityType: node
+bundle: route
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_advices: true
+  field_audio: true
+  field_comments: true
+  field_description: true
+  field_distance: true
+  field_duration: true
+  field_experiences: true
+  field_fivestar: true
+  field_gpx: true
+  field_image_default: true
+  field_land_type: true
+  field_local_term: true
+  field_locality: true
+  field_location: true
+  field_navigation_pois: true
+  field_others: true
+  field_recommended: true
+  field_route_difficulty: true
+  field_route_images: true
+  field_route_time: true
+  field_route_type: true
+  field_route_typology: true
+  field_services: true
+  field_slope: true
+  field_surroundings: true
+  field_theme: true
+  field_video: true
+  field_visits: true
+  field_vote: true
+  langcode: true

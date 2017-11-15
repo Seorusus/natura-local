@@ -3,12 +3,15 @@ description: 'Provides Town content type and related configuration. Areas to gro
 type: module
 core: 8.x
 dependencies:
+  - block
   - comment
   - content_translation
   - content_types_field_storage
   - content_types_point_of_interest
   - content_types_route
   - field
+  - file
+  - fivestar
   - geolocation
   - image
   - image_url_formatter
@@ -19,6 +22,8 @@ dependencies:
   - rest
   - rest_export_nested
   - serialization
+  - slick_views
+  - text
   - town
   - user
   - views

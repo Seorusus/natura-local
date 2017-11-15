@@ -1,0 +1,287 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment.default
+    - field.field.node.destins.field_advices
+    - field.field.node.destins.field_audio
+    - field.field.node.destins.field_comments
+    - field.field.node.destins.field_description
+    - field.field.node.destins.field_distance
+    - field.field.node.destins.field_duration
+    - field.field.node.destins.field_experiences
+    - field.field.node.destins.field_gpx
+    - field.field.node.destins.field_image_default
+    - field.field.node.destins.field_land_type
+    - field.field.node.destins.field_local_term
+    - field.field.node.destins.field_locality
+    - field.field.node.destins.field_location
+    - field.field.node.destins.field_navigation_pois
+    - field.field.node.destins.field_others
+    - field.field.node.destins.field_pois
+    - field.field.node.destins.field_recommended
+    - field.field.node.destins.field_route_difficulty
+    - field.field.node.destins.field_route_images
+    - field.field.node.destins.field_route_time
+    - field.field.node.destins.field_route_type
+    - field.field.node.destins.field_route_typology
+    - field.field.node.destins.field_slope
+    - field.field.node.destins.field_surroundings
+    - field.field.node.destins.field_theme
+    - field.field.node.destins.field_video
+    - field.field.node.destins.field_visits
+    - field.field.node.destins.field_vote
+    - node.type.destins
+  module:
+    - address
+    - comment
+    - file
+    - geolocation
+    - image
+    - interval
+    - link
+    - user
+    - votingapi_widgets
+id: node.destins.default
+targetEntityType: node
+bundle: destins
+mode: default
+content:
+  field_advices:
+    type: string
+    weight: 12
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_audio:
+    type: file_default
+    weight: 14
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_comments:
+    type: comment_default
+    weight: 18
+    region: content
+    label: above
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+  field_description:
+    type: string
+    weight: 13
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_distance:
+    type: number_decimal
+    weight: 4
+    region: content
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+  field_duration:
+    type: interval_default
+    weight: 11
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_experiences:
+    type: entity_reference_label
+    weight: 25
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_gpx:
+    type: link
+    weight: 6
+    region: content
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+  field_image_default:
+    type: image
+    weight: 10
+    region: content
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+  field_land_type:
+    type: entity_reference_label
+    weight: 21
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_local_term:
+    type: entity_reference_label
+    weight: 1
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_locality:
+    type: address_default
+    weight: 15
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_location:
+    type: geolocation_latlng
+    weight: 2
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_navigation_pois:
+    type: entity_reference_label
+    weight: 19
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_others:
+    type: entity_reference_label
+    weight: 24
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_recommended:
+    type: boolean
+    weight: 20
+    region: content
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+  field_route_difficulty:
+    type: entity_reference_label
+    weight: 7
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_route_images:
+    type: image
+    weight: 9
+    region: content
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+  field_route_time:
+    type: entity_reference_label
+    weight: 17
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_route_type:
+    type: entity_reference_label
+    weight: 3
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_route_typology:
+    type: entity_reference_label
+    weight: 8
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_slope:
+    type: number_decimal
+    weight: 5
+    region: content
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+  field_surroundings:
+    type: entity_reference_label
+    weight: 22
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_theme:
+    type: entity_reference_label
+    weight: 23
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_video:
+    type: file_default
+    weight: 16
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_visits:
+    type: entity_reference_label
+    weight: 26
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_vote:
+    type: voting_api_formatter
+    weight: 27
+    region: content
+    label: above
+    settings:
+      readonly: false
+      style: default
+      show_results: false
+      values: {  }
+      show_own_vote: false
+    third_party_settings: {  }
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_pois: true
+  langcode: true
