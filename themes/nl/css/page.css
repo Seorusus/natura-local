@@ -88,10 +88,10 @@ h2 {
   color: #2c3644;
 }
 /*.ui-widget-content li {*/
-  /*!*opacity: 0.52;*!*/
-  /*border-radius: 1px;*/
-  /*border: none;*/
-  /*background: rgba(242, 178, 0, 0.52);*/
+/*!*opacity: 0.52;*!*/
+/*border-radius: 1px;*/
+/*border: none;*/
+/*background: rgba(242, 178, 0, 0.52);*/
 /*}*/
 
 .ui-widget-content li:hover {
@@ -102,7 +102,7 @@ h2 {
   display: block;
 }
 
- .ui-widget-content .item {
+.ui-widget-content .item {
   color: #909090;
 }
 /*------------------main slider---------------------------*/
@@ -168,7 +168,7 @@ h2 {
   border-radius: 10px;
 }
 /*.slick--view--card-carousel .slick__slide .slide {*/
-  /*padding-bottom: 10px;*/
+/*padding-bottom: 10px;*/
 /*}*/
 #slick-views-card-carousel-block-4-5  .views-field.views-field-title,
 #slick-views-card-carousel-block-3-4  .views-field.views-field-title,
@@ -219,6 +219,7 @@ h2 {
 .search-header__logo {
   float: left;
   margin-left: 20px;
+  margin-top: 28px;
 }
 
 #block-maine-menu-search-res .s-menu__item a {
@@ -237,18 +238,212 @@ h2 {
 li.s-menu__item {
   list-style-type: none;
 }
+
 .path-search-destins .s-header {
   margin: 25px 0px;
 }
+
 .path-search-destins .region-primary-menu,
 #block-nl-search-block-page {
   float: left;
+  width: 400px;
 }
+
 .path-search-destins  .search-container-subtitle,
 .path-search-destins #block-nl-page-title {
   display: none;
 }
 
 .path-search-destins  main {
-  margin-top: 72px;
+  margin-top: 135px;
+}
+
+.path-search-destins .s-header__box img {
+  width: 40px;
+}
+
+.path-search-destins #autocomlpete-sform {
+  /* width: 450px; */
+  height: 53px;
+  object-fit: contain;
+  border-radius: 0px;
+  background-color: #ffffff;
+  border: none;
+  border-bottom: solid 0.3px #909090;;
+  background-image: url(img/search-icon.svg);
+  background-position: 0% 75%;
+  background-repeat: no-repeat;
+  box-shadow: 0 0.5px 0.5px 0 rgba(144, 144, 144, 0.22);
+}
+.path-search-destins #autocomlpete-sform .button {
+  background: #F2B200;
+  font-family: "Arimo", sans-serif;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  width: 11%;
+  height: 50px;
+  margin: 10px 0;
+  border: 0;
+  text-align: center;
+  outline: 0;
+  box-shadow: none;
+  border-radius: 1px;
+  display: block;
+  position: relative;
+  right: 350px;
+  opacity: 0;
+}
+
+input {
+  outline: 0;
+}
+
+#autocomlpete-sform .form-autocomplete input#edit-keys::-moz-focus-inner {
+  border: 0;
+}
+
+.path-search-destins .s-menu {
+  margin: 40px;
+}
+
+/*---Content Page search result---*/
+
+.path-search-destins #stabs .ui-tabs-nav {
+  background: none;
+  border: none;
+  display: block;
+  /*float: left;*/
+}
+
+.path-search-destins .view-piois-etc {
+  width: 40%;
+  float: left;
+  margin-top: 35px;
+
+}
+.path-search-destins  .view-filters {
+  float: right;
+  width: 100%;
+}
+
+.path-search-destins .view-nl-search  {
+  /*width: 60%;*/
+  float: left;
+}
+
+.path-search-destins .ui-widget-content {
+  border: none;
+}
+
+.path-search-destins .ui-tabs .ui-tabs-nav li {
+  border: none;
+  background: none;
+  font-family: Raleway;
+  font-weight: 600;
+  text-align: center;
+  color: #909090;
+  display: block;
+  height: 48px;
+  padding-top: 5px;
+}
+
+.path-search-destins li.ui-state-default.ui-corner-top.ui-tabs-active.ui-state-active a {
+  color: #f2b200;
+}
+
+.path-search-destins li.ui-state-default.ui-corner-top a {
+  display: block;
+  text-align: center;
+  height: 100%;
+}
+
+.path-search-destins li.ui-state-default.ui-corner-top.ui-tabs-active.ui-state-active a:focus {
+  outline: 0;
+}
+.path-search-destins li.ui-state-default.ui-corner-top.ui-tabs-active.ui-state-active {
+  border-bottom: solid 3px #f2b200 ;
+}
+.path-search-destins .view-nl-search .view-empty {
+  float: right;
+}
+.path-search-destins .view-filters details {
+  border:none;
+}
+.path-search-destins .view-filters  .form-checkboxes {
+  border: 1px solid #ccc;
+}
+.path-search-destins .view-filters summary {
+  outline: 0;
+}
+.path-search-destins .view-filters summary::-webkit-details-marker {
+  display: none
+}
+.path-search-destins .view-filters summary:after {
+  position: absolute;
+  margin: auto;
+  content: "\F140";
+  font-family: "Material Design Icons";
+  font-weight: inherit;
+  line-height: 1;
+  font-size: 24px;
+  /*top: 0;*/
+  /*bottom: 0;*/
+  /*right: 0;*/
+  /*display: flex;*/
+  align-items: center;
+}
+.path-search-destins .view-filters details[open] summary:after {
+  position: absolute;
+  margin: auto;
+  content: "\F140";
+  font-family: "Material Design Icons";
+  font-weight: inherit;
+  line-height: 1;
+  font-size: 24px;
+  /*top: 0;*/
+  /*bottom: 0;*/
+  /*right: 0;*/
+  /*display: flex;*/
+  align-items: center;
+  -moz-transform: rotate(180deg); /* for Firefox */
+  -ms-transform: rotate(180deg); /* for IE */
+  -webkit-transform: rotate(180deg); /* for Safari, Chrome, iOS */
+  -o-transform: rotate(180deg); /* for Opera */
+  transform: rotate(180deg);
+}
+.path-search-destins .view-filters details {
+  width: 24%;
+}
+.path-search-destins .view-filters span.reset-values {
+  float: right!important;
+  display: block;
+}
+.path-search-destins .view-nl-search .view-content {
+  background: url(img/background-search.jpg);
+  background-position-y: 100%;
+  background-repeat: repeat-x;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+}
+
+.path-search-destins #map-canvas {
+  width: 40%;
+  float: left;
+}
+.path-search-destins #stabs {
+  width: 60%;
+  float: left;
+}
+.path-search-destins #stabs .field-content.recommended {
+  transform: rotate(-47deg);
+  font-family: Raleway;
+  font-size: 17.5px;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
+  position: relative;
+  top: 77px;
+  /* right: 512px; */
+  width: 200px;
+  height: auto;
 }
