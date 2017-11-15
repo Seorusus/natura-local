@@ -1755,7 +1755,7 @@ display:
           group_type: group
           admin_label: ''
           order: DESC
-          exposed: false
+          exposed: true
           expose:
             label: Relevance
           plugin_id: search_api
@@ -1908,7 +1908,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          operator: or
+          operator: and
           value: ''
           group: 1
           exposed: true
@@ -1945,7 +1945,7 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          parse_mode: phrase
+          parse_mode: terms
           min_length: 3
           fields: {  }
           plugin_id: views_autocomplete_filters_search_api_fulltext
@@ -2075,7 +2075,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          operator: or
+          operator: and
           value: ''
           group: 1
           exposed: true
@@ -2112,7 +2112,7 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          parse_mode: phrase
+          parse_mode: terms
           min_length: 3
           fields: {  }
           plugin_id: views_autocomplete_filters_search_api_fulltext
@@ -4454,7 +4454,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          operator: or
+          operator: and
           value: ''
           group: 1
           exposed: true
@@ -4491,7 +4491,7 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          parse_mode: phrase
+          parse_mode: terms
           min_length: 3
           fields: {  }
           plugin_id: views_autocomplete_filters_search_api_fulltext
@@ -5986,7 +5986,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          operator: or
+          operator: and
           value: ''
           group: 1
           exposed: true
@@ -6023,7 +6023,7 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          parse_mode: phrase
+          parse_mode: terms
           min_length: 3
           fields: {  }
           plugin_id: views_autocomplete_filters_search_api_fulltext
@@ -7513,7 +7513,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          operator: or
+          operator: and
           value: ''
           group: 1
           exposed: true
@@ -7550,7 +7550,7 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          parse_mode: phrase
+          parse_mode: terms
           min_length: 3
           fields: {  }
           plugin_id: views_autocomplete_filters_search_api_fulltext
