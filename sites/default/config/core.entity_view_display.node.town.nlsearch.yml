@@ -26,6 +26,7 @@ dependencies:
     - fivestar
     - geolocation
     - image
+    - text
     - user
 third_party_settings:
   field_group:
@@ -51,9 +52,16 @@ targetEntityType: node
 bundle: town
 mode: nlsearch
 content:
+  body:
+    type: text_default
+    weight: 3
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
   field_description:
     type: string
-    weight: 3
+    weight: 4
     region: content
     label: hidden
     settings:
@@ -85,7 +93,7 @@ content:
     type: entity_reference_label
     region: content
   field_location:
-    weight: 4
+    weight: 5
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -102,7 +110,6 @@ content:
     type: boolean
     region: content
 hidden:
-  body: true
   field_comments: true
   field_experiences: true
   field_local_term: true

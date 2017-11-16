@@ -8,7 +8,15 @@
         var ind = 0;
         var tabInd = 0;
         var max = 0;
+        var depth = 3;
+        var keys = drupalSettings.nls.keys;
         $('.nl-search-tab-content .view-nl-search').each(function () {
+          for(i = 1; i <= depth; i++){
+            if($(this).find('.row-counter-' + i + ' .title-wrapper h3 span').text() == keys){
+              tabInd = ind;
+              return false;
+            }
+          }
           var hdr = $(this).find('.view-header').html();
           if(hdr.length) {
             var arr = $.trim(hdr).split(' ');

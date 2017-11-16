@@ -1,0 +1,21 @@
+uuid: a79e77a2-4050-4411-9516-47ee9356b6f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_typology_vis
+    - node.type.visit
+  module:
+    - options
+id: node.visit.field_typology_vis
+field_name: field_typology_vis
+entity_type: node
+bundle: visit
+label: 'Typology (vis)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -4,6 +4,7 @@ nl-search:
     js/nl-search.js: {}
   dependencies:
     - core/drupal
+    - core/drupalSettings
     - core/jquery
     - core/jquery.ui.tabs
     - core/drupal.ajax
@@ -17,5 +18,6 @@ nl-maps:
     js/nl-maps.js: {}
   dependencies:
     - core/drupal
+    - core/drupalSettings
     - core/jquery
     - natura_local_search/nl-google.maps

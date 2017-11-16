@@ -11,6 +11,10 @@ dependencies:
     - field.storage.node.field_tour
     - field.storage.node.field_land
     - field.storage.node.field_thematic
+    - field.storage.node.field_fivestar
+    - field.storage.node.field_typology_exp
+    - field.storage.node.field_typology_serv
+    - field.storage.node.field_typology_vis
     - search_api.server.default_server
     - core.entity_view_mode.node.nlsearch
     - core.entity_view_mode.node.search_index
@@ -36,13 +40,13 @@ field_settings:
         'entity:node':
           article: search_index
           destins: ''
-          experience: ''
+          experience: default
           navigation_poi: ''
           page: search_index
-          point_of_interest: ''
-          route: ''
+          point_of_interest: default
+          route: nlsearch
           town: nlsearch
-          visit: ''
+          visit: default
   node_grants:
     label: 'Node access information'
     property_path: search_api_node_grants
@@ -168,6 +172,38 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_thematic
+  rating:
+    label: 'fivestar » Rating'
+    datasource_id: 'entity:node'
+    property_path: 'field_fivestar:rating'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_fivestar
+  field_typology_exp:
+    label: 'Typology (exp)'
+    datasource_id: 'entity:node'
+    property_path: field_typology_exp
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_typology_exp
+  field_typology_serv:
+    label: 'Typology (serv)'
+    datasource_id: 'entity:node'
+    property_path: field_typology_serv
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_typology_serv
+  field_typology_vis:
+    label: 'Typology (vis)'
+    datasource_id: 'entity:node'
+    property_path: field_typology_vis
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_typology_vis
 datasource_settings:
   'entity:node':
     bundles:

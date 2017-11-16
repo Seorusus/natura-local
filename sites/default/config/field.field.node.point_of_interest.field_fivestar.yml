@@ -1,0 +1,30 @@
+uuid: 2cd9c8e9-06c4-41ae-8b22-d0fff406a0dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fivestar
+    - node.type.point_of_interest
+  module:
+    - fivestar
+id: node.point_of_interest.field_fivestar
+field_name: field_fivestar
+entity_type: node
+bundle: point_of_interest
+label: fivestar
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    rating: '20'
+    target: null
+default_value_callback: ''
+settings:
+  stars: '5'
+  allow_clear: 0
+  allow_revote: 1
+  allow_ownvote: 1
+  rated_while: viewing
+  target: ''
+field_type: fivestar
