@@ -1,9 +1,0 @@
-uuid: 1408ed7c-646e-4f13-a455-6797a9b75676
-langcode: en
-status: true
-dependencies: {  }
-name: 'Service Type'
-vid: poi_type
-description: 'Food, To sleep, Local product, Active leisure, Art and culture, Architecture, Landscape, Events'
-hierarchy: 0
-weight: 0
