@@ -222,11 +222,11 @@ h2 {
   margin-top: 28px;
 }
 
-#block-maine-menu-search-res .s-menu__item a {
+#block-mainnavigation1 .s-menu__item a {
   line-height: 1.25;
   color: #2c3644;
 }
-#block-maine-menu-search-res .s-menu__item a:hover {
+#block-mainnavigation1 .s-menu__item a:hover {
   line-height: 1.25;
   color: #f2b200;
 }
@@ -255,7 +255,7 @@ li.s-menu__item {
 }
 
 .path-search-destins  main {
-  margin-top: 135px;
+  margin-top: 125px;
 }
 
 .path-search-destins .s-header__box img {
@@ -322,8 +322,8 @@ input {
 
 }
 .path-search-destins  .view-filters {
-  float: right;
-  width: 100%;
+  /*float: right;*/
+  /*width: 100%;*/
 }
 
 .path-search-destins .view-nl-search  {
@@ -433,6 +433,7 @@ input {
 .path-search-destins #stabs {
   width: 60%;
   float: left;
+  margin-top: -59px;
 }
 .path-search-destins #stabs .field-content.recommended {
   transform: rotate(-47deg);
@@ -447,4 +448,105 @@ input {
   width: 200px;
   height: auto;
   background-image: url("/img/recomenada-shape.png");
+}
+
+.path-search-destins .view-content .image-wrapper {
+  float: left;
+  margin-right: 10px;
+}
+
+.path-search-destins .view-content  .title-wrapper h3 {
+  display: inline-block;
+  font-family: Raleway;
+  font-weight: bold;
+  line-height: 1.17;
+  letter-spacing: 0.1px;
+  text-align: left;
+  color: #f1b400;
+  margin-top: 0px;
+}
+
+.path-search-destins .view-content .views-field-field-fivestar {
+  display: inline-block;
+  float: right;
+}
+
+.path-search-destins .view-content  .rating-wrapper .views-field {
+  display: inline-block;
+  font-family: Raleway;
+  font-weight: 500;
+  text-align: left;
+  color: #909090;
+}
+
+.path-search-destins .view-content  .rating-wrapper .views-field .field-content{
+  color: #2c3644;
+}
+
+.path-search-destins .view-content  .rating-wrapper .views-field-created {
+  display: inline-block;
+  float: right;
+}
+.path-search-destins .view-content  .rating-wrapper .views-field-created .field-content {
+  color: #909090;
+}
+
+.path-search-destins .view-content   .views-row {
+  /*width: 90%;*/
+  min-height: 250px;
+  margin-bottom: 15px;
+}
+
+.path-search-destins .view-content   .views-field.views-field-field-description {
+  display: block;
+  border-bottom: 2px solid #909090;
+  color: #909090;
+  padding: 12px;
+  margin-right: 12px;
+}
+
+.path-search-destins .view-content   .views-field.views-field-field-description span.field-content {
+  color: #909090;
+}
+
+.path-search-destins .view-content  .rating-wrapper {
+  width: 70%;
+  float: left;
+}
+
+.path-search-destins .view-content  .footer-wrapper {
+  width: 70%;
+  display: inline-block;
+}
+
+.path-search-destins .view-content  .footer-wrapper .views-field-field-route-typology-1,
+.path-search-destins .view-content  .footer-wrapper .views-field-field-route-difficulty,
+.path-search-destins .view-content  .footer-wrapper .views-field-field-duration,
+.path-search-destins .view-content  .footer-wrapper .views-field-field-distance {
+  display: inline-block;
+}
+
+.path-search-destins .view-content  .footer-wrapper span.views-label.views-label-field-route-typology-1,
+.path-search-destins .view-content  .footer-wrapper span.views-label.views-label-field-route-difficulty,
+.path-search-destins .view-content  .footer-wrapper span.views-label.views-label-field-duration,
+.path-search-destins .view-content  .footer-wrapper span.views-label.views-label-field-distance {
+  display: block;
+}
+
+.path-search-destins .view-content .footer-wrapper .views-field.views-field-field-route-difficulty {
+  border-left: 2px solid #909090;
+  border-right: 2px solid #909090;
+  /*padding: 0 40px;*/
+}
+
+.path-search-destins .view-content .footer-wrapper .views-field.views-field-field-duration {
+  border-right: 2px solid #909090;
+  /*padding: 0 40px;*/
+}
+.path-search-destins .view-content .footer-wrapper .views-field.views-field-field-route-typology-1,
+.path-search-destins .view-content .footer-wrapper .views-field.views-field-field-duration,
+.path-search-destins .view-content .footer-wrapper .views-field.views-field-field-route-difficulty,
+.path-search-destins .view-content .footer-wrapper .views-field.views-field-field-distance {
+  padding: 0 32px;
+  height: 30px;
 }
