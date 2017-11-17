@@ -1,0 +1,10 @@
+uuid: aaf5093a-d13c-43c4-9242-cab2d0552bf5
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.nlsearch
+label: NLSearch
+targetEntityType: node
+cache: true

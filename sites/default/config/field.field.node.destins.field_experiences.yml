@@ -1,0 +1,28 @@
+uuid: 88a75623-8007-4d45-94c0-665331f6abca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_experiences
+    - node.type.destins
+    - node.type.experience
+id: node.destins.field_experiences
+field_name: field_experiences
+entity_type: node
+bundle: destins
+label: Experiences
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      experience: experience
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

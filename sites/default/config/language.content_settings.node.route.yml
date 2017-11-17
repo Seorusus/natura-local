@@ -1,0 +1,16 @@
+uuid: 47e434ac-26a7-47f0-8cc5-e04b8ecc4c30
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.route
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.route
+target_entity_type_id: node
+target_bundle: route
+default_langcode: site_default
+language_alterable: false

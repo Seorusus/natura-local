@@ -1,0 +1,180 @@
+uuid: 01893ce1-f613-4b36-8285-c085bc7b3cfc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.experience.field_comments
+    - field.field.node.experience.field_description
+    - field.field.node.experience.field_email
+    - field.field.node.experience.field_experience_tags
+    - field.field.node.experience.field_fivestar
+    - field.field.node.experience.field_local_term
+    - field.field.node.experience.field_locality
+    - field.field.node.experience.field_location
+    - field.field.node.experience.field_poi_images
+    - field.field.node.experience.field_recommended
+    - field.field.node.experience.field_telephone
+    - field.field.node.experience.field_typology_exp
+    - field.field.node.experience.field_vote
+    - image.style.thumbnail
+    - node.type.experience
+  module:
+    - address
+    - comment
+    - fivestar
+    - geolocation
+    - image
+    - path
+    - telephone
+    - votingapi_widgets
+id: node.experience.default
+targetEntityType: node
+bundle: experience
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_comments:
+    weight: 13
+    settings: {  }
+    third_party_settings: {  }
+    type: comment_default
+    region: content
+  field_description:
+    weight: 10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_email:
+    weight: 14
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_experience_tags:
+    weight: 17
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_fivestar:
+    weight: 27
+    settings:
+      fivestar_widget: modules/fivestar/widgets/basic/basic.css
+    third_party_settings: {  }
+    type: fivestar_stars
+    region: content
+  field_local_term:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_locality:
+    weight: 16
+    settings:
+      default_country: null
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_location:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: geolocation_latlng
+    region: content
+  field_poi_images:
+    weight: 12
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_recommended:
+    weight: 11
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_telephone:
+    weight: 15
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_typology_exp:
+    weight: 28
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_vote:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: voting_api_widget
+    region: content
+  langcode:
+    type: language_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 7
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 8
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 4
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden: {  }

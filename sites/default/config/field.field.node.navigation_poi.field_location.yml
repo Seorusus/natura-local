@@ -1,0 +1,21 @@
+uuid: 1cb19c40-9b31-47af-adcb-6514a793afdf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_location
+    - node.type.navigation_poi
+  module:
+    - geolocation
+id: node.navigation_poi.field_location
+field_name: field_location
+entity_type: node
+bundle: navigation_poi
+label: Location
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: geolocation

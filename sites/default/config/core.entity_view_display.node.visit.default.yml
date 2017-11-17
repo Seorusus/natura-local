@@ -1,0 +1,131 @@
+uuid: 2ca22cec-510e-4fb2-9a7f-638bd314c650
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment.default
+    - field.field.node.visit.field_comments
+    - field.field.node.visit.field_description
+    - field.field.node.visit.field_fivestar
+    - field.field.node.visit.field_local_term
+    - field.field.node.visit.field_locality
+    - field.field.node.visit.field_location
+    - field.field.node.visit.field_poi_images
+    - field.field.node.visit.field_recommended
+    - field.field.node.visit.field_typology_vis
+    - field.field.node.visit.field_visit_tags
+    - field.field.node.visit.field_vote
+    - node.type.visit
+  module:
+    - address
+    - comment
+    - fivestar
+    - geolocation
+    - image
+    - options
+    - user
+    - votingapi_widgets
+id: node.visit.default
+targetEntityType: node
+bundle: visit
+mode: default
+content:
+  field_comments:
+    weight: 4
+    label: above
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    type: comment_default
+    region: content
+  field_description:
+    weight: 7
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_fivestar:
+    weight: 10
+    label: above
+    settings:
+      fivestar_widget: modules/fivestar/widgets/basic/basic.css
+    third_party_settings: {  }
+    type: fivestar_stars
+    region: content
+  field_local_term:
+    weight: 1
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_locality:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_location:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: geolocation_latlng
+    region: content
+  field_poi_images:
+    weight: 6
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_recommended:
+    weight: 3
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_typology_vis:
+    weight: 11
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_visit_tags:
+    weight: 8
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_vote:
+    weight: 9
+    label: above
+    settings:
+      style: default
+      show_results: '1'
+      readonly: 0
+      values: {  }
+    third_party_settings: {  }
+    type: voting_api_formatter
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

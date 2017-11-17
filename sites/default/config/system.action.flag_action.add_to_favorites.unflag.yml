@@ -1,0 +1,13 @@
+uuid: ae9ea10e-c674-4117-9eae-7a0079486320
+langcode: en
+status: true
+dependencies:
+  module:
+    - flag
+id: flag_action.add_to_favorites.unflag
+label: 'Unflag this item'
+type: node
+plugin: 'flag_action:add_to_favorites.unflag'
+configuration:
+  flag_id: add_to_favorites
+  flag_action: unflag

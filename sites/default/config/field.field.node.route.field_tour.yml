@@ -1,0 +1,21 @@
+uuid: e65fab8c-09d3-4aca-8281-0a5bf09e99b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tour
+    - node.type.route
+  module:
+    - options
+id: node.route.field_tour
+field_name: field_tour
+entity_type: node
+bundle: route
+label: Tour
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

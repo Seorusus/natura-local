@@ -1,0 +1,28 @@
+uuid: 2437e27b-0b21-4ed9-a84e-8f99d0e65be9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_route_typology
+    - node.type.destins
+    - taxonomy.vocabulary.route_shape
+id: node.destins.field_route_typology
+field_name: field_route_typology
+entity_type: node
+bundle: destins
+label: 'Route Typology'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      route_shape: route_shape
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

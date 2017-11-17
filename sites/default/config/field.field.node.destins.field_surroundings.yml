@@ -1,0 +1,28 @@
+uuid: 6c7e422b-0465-4f3b-891c-d760828b76fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_surroundings
+    - node.type.destins
+    - taxonomy.vocabulary.surroundings
+id: node.destins.field_surroundings
+field_name: field_surroundings
+entity_type: node
+bundle: destins
+label: Surroundings
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      surroundings: surroundings
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

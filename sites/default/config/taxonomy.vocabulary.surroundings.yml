@@ -1,0 +1,9 @@
+uuid: 0afd5865-4d7a-4e51-b7b0-2449e6ab874c
+langcode: en
+status: true
+dependencies: {  }
+name: Surroundings
+vid: surroundings
+description: 'Water, Rock, Meadows, Forest & Landscape'
+hierarchy: 0
+weight: 0
