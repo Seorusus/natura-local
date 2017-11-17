@@ -456,18 +456,21 @@ input {
 }
 
 .path-search-destins #stabs .field-content.recommended {
-  transform: rotate(-47deg);
+  transform: rotate(-47.7deg);
   font-family: Raleway;
   font-size: 17.5px;
   font-weight: bold;
   text-align: center;
   color: #ffffff;
   position: absolute;
-  top: 44px;
-  right: 71px;
-  width: 250px;
-  height: auto;
-  background-image: url("img/recomenada-shape.png");
+  top: 39px;
+  right: 56px;
+  width: 223px;
+  height: 60px;
+  background-image: url(img/recomenada-shape.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 223px auto;
 }
 
 .path-search-destins .view-content .image-wrapper {
