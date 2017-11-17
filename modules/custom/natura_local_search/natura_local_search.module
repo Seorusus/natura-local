@@ -10,7 +10,7 @@ function _natura_local_search_get_names(){
 }
 
 function _natura_local_search_get_mark_images(){
-  $path = '/' . drupal_get_path('module', 'natura_local_search') . '/';
+  $path = '/' . drupal_get_path('module', 'natura_local_search') . '/img/';
   return array(
     'Place' => $path . 'pin-destins.png',
     'Route' => $path . 'pin-destins.png',
