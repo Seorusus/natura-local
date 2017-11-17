@@ -420,10 +420,10 @@ input {
 }
 .path-search-destins .view-nl-search .view-content {
   background: url(img/background-search.jpg);
-  background-position-y: 100%;
+  background-position: 100%;
   background-repeat: repeat-x;
   -webkit-background-size: 100%;
-  background-size: 100%;
+  background-size: cover;
 }
 
 .path-search-destins #map-canvas {
@@ -509,19 +509,12 @@ input {
   color: #909090;
 }
 
-.path-search-destins .view-content  .rating-wrapper {
-  /*width: 70%;*/
-  /*float: left;*/
-}
-
-.path-search-destins .view-content  .footer-wrapper {
-  /*width: 70%;*/
-  /*display: inline-block;*/
-}
+/*--Theming footer wrapper--*/
 
 .path-search-destins .view-content  .footer-wrapper .views-field-field-route-typology-1,
 .path-search-destins .view-content  .footer-wrapper .views-field-field-route-difficulty,
 .path-search-destins .view-content  .footer-wrapper .views-field-field-duration,
+.path-search-destins .view-content  .footer-wrapper .views-field-field-slope,
 .path-search-destins .view-content  .footer-wrapper .views-field-field-distance {
   display: inline-block;
 }
@@ -529,27 +522,77 @@ input {
 .path-search-destins .view-content  .footer-wrapper span.views-label.views-label-field-route-typology-1,
 .path-search-destins .view-content  .footer-wrapper span.views-label.views-label-field-route-difficulty,
 .path-search-destins .view-content  .footer-wrapper span.views-label.views-label-field-duration,
+.path-search-destins .view-content  .footer-wrapper span.views-label.views-label-field-slope,
 .path-search-destins .view-content  .footer-wrapper span.views-label.views-label-field-distance {
   display: block;
 }
 
-.path-search-destins .view-content .footer-wrapper .views-field.views-field-field-route-difficulty {
-  border-left: 2px solid #909090;
-  border-right: 2px solid #909090;
+.path-search-destins .view-content .footer-wrapper .views-field.views-field-field-route-difficulty,
+.path-search-destins .view-content .footer-wrapper .views-field.views-field-field-slope {
+  border-left: 2px solid #afb8bd;
+  border-right: 2px solid #afb8bd;
   /*padding: 0 40px;*/
 }
 
 .path-search-destins .view-content .footer-wrapper .views-field.views-field-field-duration {
-  border-right: 2px solid #909090;
+  /*border-right: 2px solid #afb8bd;*/
   /*padding: 0 40px;*/
 }
+
 .path-search-destins .view-content .footer-wrapper .views-field.views-field-field-route-typology-1,
 .path-search-destins .view-content .footer-wrapper .views-field.views-field-field-duration,
 .path-search-destins .view-content .footer-wrapper .views-field.views-field-field-route-difficulty,
+.path-search-destins .view-content .footer-wrapper .views-field.views-field-field-slope,
 .path-search-destins .view-content .footer-wrapper .views-field.views-field-field-distance {
-  padding: 0 28px;
+  padding: 0 25px;
   height: 30px;
 }
+
 .path-search-destins .view-content .footer-wrapper .views-field.views-field-field-route-typology-1 {
   padding-left: 7px;
+}
+
+.path-search-destins .view-content .footer-wrapper .views-field {
+  margin-top: 10px;
+  line-height: 1.36;
+  text-align: center;
+  color: #9b9b9b;
+}
+
+.path-search-destins .view-content .footer-wrapper .views-field.views-field-field-route-typology-1 {
+  background: url(img/icon-type.png);
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.path-search-destins .view-content .footer-wrapper .views-field.views-field-field-route-difficulty {
+  background: url(img/icon-difficulty.png);
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.path-search-destins .view-content .footer-wrapper .views-field.views-field-field-duration {
+  background: url(img/icon-duration.png);
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.path-search-destins .view-content .footer-wrapper .views-field.views-field-field-slope {
+  background: url(img/icon-ramp.png);
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.path-search-destins .view-content .footer-wrapper .views-field.views-field-field-distance {
+  background: url(img/icon-distance.png);
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.path-search-destins .view-content .footer-wrapper span.views-label {
+  padding-top: 25px;
+}
+
+.path-search-destins .view-content .footer-wrapper span.field-content {
+  font-size: 0.8em;
 }
