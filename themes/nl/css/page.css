@@ -510,13 +510,13 @@ input {
 }
 
 .path-search-destins .view-content  .rating-wrapper {
-  width: 70%;
-  float: left;
+  /*width: 70%;*/
+  /*float: left;*/
 }
 
 .path-search-destins .view-content  .footer-wrapper {
-  width: 70%;
-  display: inline-block;
+  /*width: 70%;*/
+  /*display: inline-block;*/
 }
 
 .path-search-destins .view-content  .footer-wrapper .views-field-field-route-typology-1,
@@ -547,6 +547,9 @@ input {
 .path-search-destins .view-content .footer-wrapper .views-field.views-field-field-duration,
 .path-search-destins .view-content .footer-wrapper .views-field.views-field-field-route-difficulty,
 .path-search-destins .view-content .footer-wrapper .views-field.views-field-field-distance {
-  padding: 0 32px;
+  padding: 0 28px;
   height: 30px;
+}
+.path-search-destins .view-content .footer-wrapper .views-field.views-field-field-route-typology-1 {
+  padding-left: 7px;
 }
