@@ -9,6 +9,17 @@ function _natura_local_search_get_names(){
   );
 }
 
+function _natura_local_search_get_mark_images(){
+  $path = '/' . drupal_get_path('module', 'natura_local_search') . '/img/';
+  return array(
+    'Place' => $path . 'pin-destins.png',
+    'Route' => $path . 'pin-destins.png',
+    'Experience' => $path . 'pin-destins.png',
+    'Service' => $path . 'pin-destins.png',
+    'Visit' => $path . 'pin-visits.png',
+  );
+}
+
 function _natura_local_search_get_ids($vals){
   $vals = (array)$vals;
   $arr = array();
