@@ -6,7 +6,6 @@ dependencies:
     - field.storage.node.field_description
     - field.storage.node.field_difficulty
     - field.storage.node.field_distance
-    - field.storage.node.field_duration
     - field.storage.node.field_experiences
     - field.storage.node.field_fivestar
     - field.storage.node.field_image_default
@@ -14,10 +13,10 @@ dependencies:
     - field.storage.node.field_location
     - field.storage.node.field_poi_type
     - field.storage.node.field_recommended
-    - field.storage.node.field_route_difficulty
     - field.storage.node.field_route_typology
     - field.storage.node.field_routes
     - field.storage.node.field_services
+    - field.storage.node.field_slope
     - field.storage.node.field_time
     - field.storage.node.field_visits
     - image.style.medium
@@ -29,7 +28,6 @@ dependencies:
     - fivestar
     - geolocation
     - image
-    - interval
     - options
     - search_api
     - user
@@ -213,7 +211,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: true
+          exclude: false
           alter:
             alter_text: false
             text: ''
@@ -246,9 +244,9 @@ display:
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
+          element_wrapper_type: div
+          element_wrapper_class: node-type
+          element_default_classes: false
           empty: ''
           hide_empty: false
           empty_zero: false
@@ -2556,7 +2554,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: true
+          exclude: false
           alter:
             alter_text: false
             text: ''
@@ -2589,9 +2587,9 @@ display:
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
+          element_wrapper_type: div
+          element_wrapper_class: node-type
+          element_default_classes: false
           empty: ''
           hide_empty: false
           empty_zero: false
@@ -2875,6 +2873,7 @@ display:
           fields:
             - title
             - field_land_type
+            - field_fivestar
           wrapper: div
           legend: ''
           classes: title-wrapper
@@ -2950,161 +2949,6 @@ display:
             multi_type: separator
             multi_separator: ', '
           plugin_id: search_api_field
-        field_land_type:
-          id: field_land_type
-          table: search_api_datasource_default_index_entity_node
-          field: field_land_type
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: false
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          field_rendering: true
-          fallback_handler: search_api_entity
-          fallback_options:
-            link_to_item: false
-            multi_type: separator
-            multi_separator: ', '
-            display_methods:
-              experience_tags:
-                display_method: label
-              location:
-                display_method: label
-                view_mode: default
-              others:
-                display_method: label
-              poi_type:
-                display_method: label
-              route_difficulty:
-                display_method: label
-              route_duration:
-                display_method: label
-              route_land_type:
-                display_method: label
-              route_shape:
-                display_method: label
-              route_type:
-                display_method: label
-              surroundings:
-                display_method: label
-              tags:
-                display_method: label
-              theme:
-                display_method: label
-              visit_type:
-                display_method: label
-          entity_type: node
-          plugin_id: search_api_field
-        fieldset_1:
-          id: fieldset_1
-          table: views
-          field: fieldset
-          relationship: none
-          group_type: group
-          admin_label: rating-wrapper
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          fields:
-            - field_fivestar
-            - created
-          wrapper: div
-          legend: ''
-          classes: rating-wrapper
-          collapsible: 0
-          collapsed: 0
-          plugin_id: fieldset
         field_fivestar:
           id: field_fivestar
           table: search_api_datasource_default_index_entity_node
@@ -3173,6 +3017,137 @@ display:
             link_to_item: false
             multi_type: separator
             multi_separator: ', '
+          entity_type: node
+          plugin_id: search_api_field
+        fieldset_1:
+          id: fieldset_1
+          table: views
+          field: fieldset
+          relationship: none
+          group_type: group
+          admin_label: rating-wrapper
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          fields:
+            - uid_1
+            - created
+          wrapper: div
+          legend: ''
+          classes: rating-wrapper
+          collapsible: 0
+          collapsed: 0
+          plugin_id: fieldset
+        uid_1:
+          id: uid_1
+          table: search_api_datasource_default_index_entity_node
+          field: uid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Per
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: true
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api_entity
+          fallback_options:
+            link_to_item: false
+            multi_type: separator
+            multi_separator: ', '
+            display_methods:
+              user:
+                display_method: label
+                view_mode: default
           entity_type: node
           plugin_id: search_api_field
         created:
@@ -3369,8 +3344,9 @@ display:
           hide_alter_empty: true
           fields:
             - field_route_typology_1
-            - field_route_difficulty
-            - field_duration
+            - field_difficulty
+            - field_time
+            - field_slope
             - field_distance
           wrapper: div
           legend: ''
@@ -3476,13 +3452,13 @@ display:
                 display_method: label
           entity_type: node
           plugin_id: search_api_field
-        field_route_difficulty:
-          id: field_route_difficulty
-          table: search_api_datasource_default_index_entity_node
-          field: field_route_difficulty
+        field_difficulty:
+          id: field_difficulty
+          table: search_api_index_default_index
+          field: field_difficulty
           relationship: none
           group_type: group
-          admin_label: ''
+          admin_label: 'content difficulty'
           label: Difficulty
           exclude: false
           alter:
@@ -3524,11 +3500,10 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: false
-          group_column: target_id
+          click_sort_column: value
+          type: list_default
+          settings: {  }
+          group_column: value
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -3539,48 +3514,19 @@ display:
           separator: ', '
           field_api_classes: false
           field_rendering: true
-          fallback_handler: search_api_entity
+          fallback_handler: search_api
           fallback_options:
             link_to_item: false
             multi_type: separator
             multi_separator: ', '
-            display_methods:
-              experience_tags:
-                display_method: label
-              location:
-                display_method: label
-                view_mode: default
-              others:
-                display_method: label
-              poi_type:
-                display_method: label
-              route_difficulty:
-                display_method: label
-              route_duration:
-                display_method: label
-              route_land_type:
-                display_method: label
-              route_shape:
-                display_method: label
-              route_type:
-                display_method: label
-              surroundings:
-                display_method: label
-              tags:
-                display_method: label
-              theme:
-                display_method: label
-              visit_type:
-                display_method: label
-          entity_type: node
           plugin_id: search_api_field
-        field_duration:
-          id: field_duration
-          table: search_api_datasource_default_index_entity_node
-          field: field_duration
+        field_time:
+          id: field_time
+          table: search_api_index_default_index
+          field: field_time
           relationship: none
           group_type: group
-          admin_label: ''
+          admin_label: 'content time'
           label: Duration
           exclude: false
           alter:
@@ -3622,13 +3568,13 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: interval
-          type: interval_default
+          click_sort_column: value
+          type: list_default
           settings: {  }
-          group_column: ''
+          group_column: value
           group_columns: {  }
           group_rows: true
-          delta_limit: 2
+          delta_limit: 0
           delta_offset: 0
           delta_reversed: false
           delta_first_last: false
@@ -3641,6 +3587,89 @@ display:
             link_to_item: false
             multi_type: separator
             multi_separator: ', '
+          plugin_id: search_api_field
+        field_slope:
+          id: field_slope
+          table: search_api_datasource_default_index_entity_node
+          field: field_slope
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Slope
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_decimal
+          settings:
+            thousand_separator: ''
+            prefix_suffix: true
+            decimal_separator: .
+            scale: 2
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api_numeric
+          fallback_options:
+            set_precision: false
+            precision: 0
+            decimal: .
+            separator: ','
+            format_plural: false
+            format_plural_string: "1\x03@count"
+            prefix: ''
+            suffix: ''
+            link_to_item: false
+            multi_type: separator
+            multi_separator: ', '
+            format_plural_values:
+              - '1'
+              - '@count'
           entity_type: node
           plugin_id: search_api_field
         field_distance:
@@ -4120,83 +4149,15 @@ display:
           empty_zero: false
           hide_alter_empty: true
           fields:
-            - field_time
             - field_distance_1
-            - field_difficulty
+            - field_time_1
+            - field_difficulty_1
           wrapper: div
           legend: ''
           classes: marker-preview-list
           collapsible: 0
           collapsed: 0
           plugin_id: fieldset
-        field_time:
-          id: field_time
-          table: search_api_index_default_index
-          field: field_time
-          relationship: none
-          group_type: group
-          admin_label: 'prev time'
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: list_default
-          settings: {  }
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          field_rendering: true
-          fallback_handler: search_api
-          fallback_options:
-            link_to_item: false
-            multi_type: separator
-            multi_separator: ', '
-          plugin_id: search_api_field
         field_distance_1:
           id: field_distance_1
           table: search_api_datasource_default_index_entity_node
@@ -4281,8 +4242,76 @@ display:
               - '@count'
           entity_type: node
           plugin_id: search_api_field
-        field_difficulty:
-          id: field_difficulty
+        field_time_1:
+          id: field_time_1
+          table: search_api_index_default_index
+          field: field_time
+          relationship: none
+          group_type: group
+          admin_label: 'prev time'
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: list_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: false
+            multi_type: separator
+            multi_separator: ', '
+          plugin_id: search_api_field
+        field_difficulty_1:
+          id: field_difficulty_1
           table: search_api_index_default_index
           field: field_difficulty
           relationship: none
@@ -4484,14 +4513,12 @@ display:
         - 'config:field.storage.node.field_description'
         - 'config:field.storage.node.field_difficulty'
         - 'config:field.storage.node.field_distance'
-        - 'config:field.storage.node.field_duration'
         - 'config:field.storage.node.field_fivestar'
         - 'config:field.storage.node.field_image_default'
-        - 'config:field.storage.node.field_land_type'
         - 'config:field.storage.node.field_location'
         - 'config:field.storage.node.field_recommended'
-        - 'config:field.storage.node.field_route_difficulty'
         - 'config:field.storage.node.field_route_typology'
+        - 'config:field.storage.node.field_slope'
         - 'config:field.storage.node.field_time'
   page_3:
     display_plugin: page
@@ -4780,7 +4807,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: true
+          exclude: false
           alter:
             alter_text: false
             text: ''
@@ -4813,9 +4840,9 @@ display:
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
+          element_wrapper_type: div
+          element_wrapper_class: node-type
+          element_default_classes: false
           empty: ''
           hide_empty: false
           empty_zero: false
@@ -6362,7 +6389,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: true
+          exclude: false
           alter:
             alter_text: false
             text: ''
@@ -6395,9 +6422,9 @@ display:
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
+          element_wrapper_type: div
+          element_wrapper_class: node-type
+          element_default_classes: false
           empty: ''
           hide_empty: false
           empty_zero: false
@@ -8754,7 +8781,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: true
+          exclude: false
           alter:
             alter_text: false
             text: ''
@@ -8787,9 +8814,9 @@ display:
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
+          element_wrapper_type: div
+          element_wrapper_class: node-type
+          element_default_classes: false
           empty: ''
           hide_empty: false
           empty_zero: false

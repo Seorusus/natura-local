@@ -10,10 +10,12 @@
         var max = 0;
         var depth = 3;
         var keys = drupalSettings.nls.keys;
+        drupalSettings.nls.resultIs = false;
         $('.nl-search-tab-content .view-nl-search').each(function () {
           for(i = 1; i <= depth; i++){
             if($(this).find('.row-counter-' + i + ' .title-wrapper h3 span').text() == keys){
               tabInd = ind;
+              drupalSettings.nls.resultIs = true;
               return false;
             }
           }
@@ -23,12 +25,12 @@
             if (max < parseInt(arr[0])) {
               max = parseInt(arr[0]);
               tabInd = ind;
+              drupalSettings.nls.resultIs = true;
             }
           }
           ind++;
         });
         $("#stabs").tabs({active: tabInd});
-        //return false;
       });
 
     }
