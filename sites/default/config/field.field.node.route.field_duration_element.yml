@@ -1,0 +1,28 @@
+uuid: ee6a1272-6600-4d2f-8e87-0b28e5f999cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_duration_element
+    - node.type.route
+  module:
+    - duration_field
+id: node.route.field_duration_element
+field_name: field_duration_element
+entity_type: node
+bundle: route
+label: 'Duration element'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  granularity:
+    hour: true
+    minute: true
+    year: false
+    month: false
+    day: false
+    second: false
+field_type: duration

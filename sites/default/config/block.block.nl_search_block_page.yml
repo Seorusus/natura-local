@@ -1,0 +1,26 @@
+uuid: 7c75ea65-8bf6-49f0-a2a0-d533bace9725
+langcode: en
+status: true
+dependencies:
+  module:
+    - natura_local_sform
+    - system
+  theme:
+    - nl
+id: nl_search_block_page
+theme: nl
+region: primary_menu
+weight: -10
+provider: null
+plugin: nl_search_block
+settings:
+  id: nl_search_block
+  label: 'NL Search Block copy'
+  provider: natura_local_sform
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

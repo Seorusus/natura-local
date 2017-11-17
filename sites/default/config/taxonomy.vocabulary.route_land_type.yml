@@ -1,0 +1,9 @@
+uuid: 02d79b2d-d1fb-48da-85e7-4f166e5b8b1a
+langcode: en
+status: true
+dependencies: {  }
+name: 'Land Type'
+vid: route_land_type
+description: 'High mountain, Hills, Lowland & Coastline'
+hierarchy: 0
+weight: 0

@@ -1,0 +1,19 @@
+uuid: 24783e6d-a6be-4cb8-947b-710106053355
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description
+    - node.type.destins
+id: node.destins.field_description
+field_name: field_description
+entity_type: node
+bundle: destins
+label: Description
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

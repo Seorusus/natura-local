@@ -1,0 +1,28 @@
+uuid: 9065daa4-f10f-4a84-81df-a8990d46b5d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_local_term
+    - node.type.experience
+    - taxonomy.vocabulary.location
+id: node.experience.field_local_term
+field_name: field_local_term
+entity_type: node
+bundle: experience
+label: 'Local term'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      location: location
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,29 @@
+uuid: 1de6d357-c819-42da-a41d-2386c8e3bc7f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.navigation_poi.field_location
+    - node.type.navigation_poi
+  module:
+    - geolocation
+    - user
+id: node.navigation_poi.default
+targetEntityType: node
+bundle: navigation_poi
+mode: default
+content:
+  field_location:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: geolocation_latlng
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

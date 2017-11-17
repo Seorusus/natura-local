@@ -1,0 +1,23 @@
+uuid: b280b02a-9d7d-4f0f-8053-b8f684370ff4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_gpx
+    - node.type.destins
+  module:
+    - link
+id: node.destins.field_gpx
+field_name: field_gpx
+entity_type: node
+bundle: destins
+label: GPX
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

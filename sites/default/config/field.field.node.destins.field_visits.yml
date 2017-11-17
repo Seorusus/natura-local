@@ -1,0 +1,28 @@
+uuid: 4533fb80-c4ba-4485-8c2f-8e8ae8317bfa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_visits
+    - node.type.destins
+    - node.type.visit
+id: node.destins.field_visits
+field_name: field_visits
+entity_type: node
+bundle: destins
+label: Visits
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      visit: visit
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

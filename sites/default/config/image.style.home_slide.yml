@@ -1,0 +1,15 @@
+uuid: 91b7f3a8-7713-40ce-8b12-71b86e70a600
+langcode: en
+status: true
+dependencies: {  }
+name: home_slide
+label: 'home slide'
+effects:
+  33e48091-0f6d-4ac0-9073-6556d7639416:
+    uuid: 33e48091-0f6d-4ac0-9073-6556d7639416
+    id: image_scale
+    weight: 1
+    data:
+      width: 800
+      height: 500
+      upscale: false

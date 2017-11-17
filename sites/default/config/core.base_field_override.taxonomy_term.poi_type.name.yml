@@ -1,0 +1,18 @@
+uuid: 9f94c3e5-9432-443b-babf-41d1d2682200
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.poi_type
+id: taxonomy_term.poi_type.name
+field_name: name
+entity_type: taxonomy_term
+bundle: poi_type
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

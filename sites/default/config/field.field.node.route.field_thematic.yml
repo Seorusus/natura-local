@@ -1,0 +1,21 @@
+uuid: 641bdeb9-01f9-41b6-b0a4-57e87b7a1cbf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_thematic
+    - node.type.route
+  module:
+    - options
+id: node.route.field_thematic
+field_name: field_thematic
+entity_type: node
+bundle: route
+label: Thematic
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

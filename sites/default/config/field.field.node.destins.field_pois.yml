@@ -1,0 +1,28 @@
+uuid: dad66f56-d262-49c1-905c-5c6d4425dc89
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pois
+    - node.type.destins
+    - node.type.point_of_interest
+id: node.destins.field_pois
+field_name: field_pois
+entity_type: node
+bundle: destins
+label: Services
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      point_of_interest: point_of_interest
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,26 @@
+uuid: cb0409e7-0d9f-4429-b7ee-136b28566b39
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_route_difficulty
+    - node.type.destins
+id: node.destins.field_route_difficulty
+field_name: field_route_difficulty
+entity_type: node
+bundle: destins
+label: 'Route Difficulty'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles: {  }
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

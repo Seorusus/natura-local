@@ -1,0 +1,16 @@
+uuid: 98ee87b4-cf32-4098-bee9-26370721ec8c
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.route_land_type
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.route_land_type
+target_entity_type_id: taxonomy_term
+target_bundle: route_land_type
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,22 @@
+uuid: 1b6035f0-7b1c-4d95-af5e-a492e3dab817
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.town
+  module:
+    - text
+id: node.town.body
+field_name: body
+entity_type: node
+bundle: town
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

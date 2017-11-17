@@ -1,0 +1,24 @@
+uuid: bb983083-a481-4ece-b545-aaf2d12f96af
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.card_carousel
+  module:
+    - views
+  theme:
+    - nl
+id: views_block__card_carousel_block_3
+theme: nl
+region: front_content
+weight: -8
+provider: null
+plugin: 'views_block:card_carousel-block_3'
+settings:
+  id: 'views_block:card_carousel-block_3'
+  label: Experience
+  provider: views
+  label_display: visible
+  views_label: Experience
+  items_per_page: none
+visibility: {  }

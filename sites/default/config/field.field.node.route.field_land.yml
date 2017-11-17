@@ -1,0 +1,21 @@
+uuid: bc806c6d-4734-498a-a740-b440f0c2ee35
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_land
+    - node.type.route
+  module:
+    - options
+id: node.route.field_land
+field_name: field_land
+entity_type: node
+bundle: route
+label: Land
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
