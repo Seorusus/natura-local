@@ -1,0 +1,21 @@
+uuid: 5b7c9e42-5f04-4882-a074-fc3bb14cb16b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_locations
+    - taxonomy.vocabulary.location
+  module:
+    - geolocation
+id: taxonomy_term.location.field_locations
+field_name: field_locations
+entity_type: taxonomy_term
+bundle: location
+label: Locations
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: geolocation

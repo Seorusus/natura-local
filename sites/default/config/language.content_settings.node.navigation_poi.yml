@@ -1,0 +1,16 @@
+uuid: 5b51f64f-94ee-43af-8606-d6f1d00a4f47
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.navigation_poi
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.navigation_poi
+target_entity_type_id: node
+target_bundle: navigation_poi
+default_langcode: site_default
+language_alterable: false

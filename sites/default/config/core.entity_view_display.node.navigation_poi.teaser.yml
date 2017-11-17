@@ -1,0 +1,19 @@
+uuid: 74adc08f-dfc6-4784-a522-f345030d7184
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.navigation_poi
+  module:
+    - user
+id: node.navigation_poi.teaser
+targetEntityType: node
+bundle: navigation_poi
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

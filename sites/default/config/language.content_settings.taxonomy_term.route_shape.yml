@@ -1,0 +1,16 @@
+uuid: 7a19be31-d0c6-4191-8187-a16abfa17b35
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.route_shape
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.route_shape
+target_entity_type_id: taxonomy_term
+target_bundle: route_shape
+default_langcode: site_default
+language_alterable: false

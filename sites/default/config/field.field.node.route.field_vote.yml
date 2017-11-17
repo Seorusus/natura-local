@@ -1,0 +1,27 @@
+uuid: dfbd08b1-c181-4477-9648-0f489e11c01a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_vote
+    - node.type.route
+  module:
+    - votingapi_widgets
+id: node.route.field_vote
+field_name: field_vote
+entity_type: node
+bundle: route
+label: Vote
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    status: '1'
+default_value_callback: ''
+settings:
+  anonymous_window: '-1'
+  user_window: '-1'
+  result_function: vote_average
+  widget_format: fivestar
+field_type: voting_api_field

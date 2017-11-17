@@ -1,0 +1,51 @@
+uuid: f0a65615-7cc8-469c-896f-42909811efa5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.location.field_locations
+    - taxonomy.vocabulary.location
+  module:
+    - geolocation
+    - path
+    - text
+id: taxonomy_term.location.default
+targetEntityType: taxonomy_term
+bundle: location
+mode: default
+content:
+  description:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      placeholder: ''
+      rows: 5
+    third_party_settings: {  }
+  field_locations:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: geolocation_latlng
+    region: content
+  langcode:
+    type: language_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

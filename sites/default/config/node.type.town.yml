@@ -1,0 +1,17 @@
+uuid: 9a610b70-5a36-4169-91b0-612d13f1a3ac
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Place
+type: town
+description: 'Places are areas which contain routes, visits, services & experiences.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

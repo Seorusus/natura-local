@@ -1,0 +1,22 @@
+uuid: 54987ec0-c659-4c71-849f-e19a69854e5b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.destins
+id: node.destins.promote
+field_name: promote
+entity_type: node
+bundle: destins
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,16 @@
+uuid: b9d37b82-44c5-4e50-b7bd-35b7c640a312
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.poi_type
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.poi_type
+target_entity_type_id: taxonomy_term
+target_bundle: poi_type
+default_langcode: site_default
+language_alterable: false

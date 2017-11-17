@@ -1,0 +1,20 @@
+uuid: 3c4a04f7-64fe-4234-9f94-b8ca6d39a236
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.route_shape
+  module:
+    - path
+id: taxonomy_term.route_shape.path
+field_name: path
+entity_type: taxonomy_term
+bundle: route_shape
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

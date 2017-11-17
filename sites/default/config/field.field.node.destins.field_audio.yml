@@ -1,0 +1,27 @@
+uuid: a74febb2-6f2c-4859-888d-531cf944e72a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_audio
+    - node.type.destins
+  module:
+    - file
+id: node.destins.field_audio
+field_name: field_audio
+entity_type: node
+bundle: destins
+label: Audio
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: mp3
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

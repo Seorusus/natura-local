@@ -1,0 +1,33 @@
+uuid: 1189273a-1db7-4d38-ae03-7e6893d80d57
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_typology_serv
+field_name: field_typology_serv
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: sleep
+      label: 'To sleep'
+    -
+      value: food
+      label: Food
+    -
+      value: leisure
+      label: 'Active leisure'
+    -
+      value: product
+      label: 'Local product'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,6 @@
+access_token_expiration: 300000
+refresh_token_expiration: 1209600
+_core:
+  default_config_hash: YJrGmZVEcxxUt1ffTwS_DybfKrbnRkwF1GXzPj-j7aE
+public_key: ../certificates/public.key
+private_key: ../certificates/private.key

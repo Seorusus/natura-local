@@ -1,0 +1,28 @@
+uuid: f332f2c8-82c5-4876-b17a-ecd610c231f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_land_type
+    - node.type.town
+    - taxonomy.vocabulary.route_land_type
+id: node.town.field_land_type
+field_name: field_land_type
+entity_type: node
+bundle: town
+label: 'Land type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      route_land_type: route_land_type
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

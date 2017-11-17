@@ -1,0 +1,9 @@
+uuid: 0c8ffcf8-6790-4e64-ab63-fd4ba804c77a
+langcode: en
+status: true
+dependencies: {  }
+name: 'Visit tags'
+vid: visit_type
+description: 'Architecture, Museums, Parties, Places'
+hierarchy: 0
+weight: 0

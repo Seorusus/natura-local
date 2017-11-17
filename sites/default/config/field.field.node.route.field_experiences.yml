@@ -1,0 +1,28 @@
+uuid: c58f285a-b7d2-42f5-b14b-e929790a102c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_experiences
+    - node.type.experience
+    - node.type.route
+id: node.route.field_experiences
+field_name: field_experiences
+entity_type: node
+bundle: route
+label: Experiences
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      experience: experience
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

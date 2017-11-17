@@ -1,0 +1,14 @@
+uuid: 25222c7c-0497-4e1f-b363-dfc4cd9b7367
+langcode: en
+status: true
+dependencies: {  }
+name: photo
+label: 'photo 145×104'
+effects:
+  a3e9b246-c23f-47fe-bd76-fd55c5b85162:
+    uuid: a3e9b246-c23f-47fe-bd76-fd55c5b85162
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 145
+      height: 104

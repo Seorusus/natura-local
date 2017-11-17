@@ -1,0 +1,20 @@
+uuid: f9928e34-902a-4b52-8b76-3a193eb83af5
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_route_difficulty
+field_name: field_route_difficulty
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

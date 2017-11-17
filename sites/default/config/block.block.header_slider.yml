@@ -1,0 +1,24 @@
+uuid: 063f5fe7-3efe-47c7-be49-c8564b00a7a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.search_slider
+  module:
+    - views
+  theme:
+    - nl
+id: header_slider
+theme: nl
+region: page_bottom_fixed
+weight: 0
+provider: null
+plugin: 'views_block:search_slider-block_1'
+settings:
+  id: 'views_block:search_slider-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility: {  }

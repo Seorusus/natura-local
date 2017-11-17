@@ -1,0 +1,23 @@
+uuid: c85c4e34-c526-4087-9a21-dc24ab5ef935
+langcode: en
+status: true
+dependencies: {  }
+name: style_for_courusel
+label: 'style for courusel'
+effects:
+  002a4538-f577-4639-80a0-cba128d56a08:
+    uuid: 002a4538-f577-4639-80a0-cba128d56a08
+    id: image_crop
+    weight: -9
+    data:
+      width: 800
+      height: 600
+      anchor: center-top
+  b153c170-0fd0-41e7-b353-1e1a146f03bd:
+    uuid: b153c170-0fd0-41e7-b353-1e1a146f03bd
+    id: image_scale
+    weight: -10
+    data:
+      width: 800
+      height: 600
+      upscale: false
