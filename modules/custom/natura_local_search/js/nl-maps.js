@@ -53,6 +53,10 @@
   });
 
   function loadMarkers(obj) {
+    if(!drupalSettings.nls.resultIs){
+      //loadGooglePoint();
+      return false;
+    }
     var dest = $('#'+obj.attr('aria-controls'));
     drupalSettings.currmarkers.every(function (val, key, arr) {
       val.setMap(null);
@@ -63,11 +67,20 @@
       var parent = $(this).parents('.views-row').eq(0);
       var detail = parent.find('.marker-preview').html();
       var nid = parent.find('.node-id span').text();
+      var type = parent.find('.node-type span').text();
       var currLoc = $(this).text().split(',');
       var point = new google.maps.LatLng(currLoc[0], currLoc[1]);
+      var image = {
+        url: drupalSettings.nls.mark_imgs[type],
+        size: new google.maps.Size(43, 57),
+        origin: new google.maps.Point(0, 0),
+        anchor: new google.maps.Point(17, 34),
+        scaledSize: new google.maps.Size(30, 40)
+      };
       var marker = new google.maps.Marker({
         position: point,
-        map: drupalSettings.currmap
+        map: drupalSettings.currmap,
+        icon: image,
       });
       marker.infowindow = new google.maps.InfoWindow({
         content: detail
@@ -95,6 +108,20 @@
       gmapInit();
     }
     drupalSettings.currmarkers = markers;
+  }
+
+  function loadGooglePoint() {
+    var geocoder = new google.maps.Geocoder();
+    geocoder.geocode({address: addressInput}, function(results, status) {
+
+      if (status == google.maps.GeocoderStatus.OK) {
+
+        map.setCenter(results[0].geometry.location);
+
+        map.setZoom(17);
+      }
+    });
+    return;
   }
 
   function setVisibleNodes(){

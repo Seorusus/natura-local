@@ -98,6 +98,8 @@ class NLSearchPageController extends ControllerBase {
     $output['#attached']['library'][] = 'natura_local_search/nl-search';
     $output['#attached']['library'][] = 'natura_local_search/nl-maps';
     $output['#attached']['drupalSettings']['nls']['keys'] = $keys;
+    $output['#attached']['drupalSettings']['nls']['mark_imgs'] = _natura_local_search_get_mark_images();
+    //$module_handler = \Drupal::service('module_handler');
     $element['#markup'] = '<br>' . ' : ';
     return $output;
   }
