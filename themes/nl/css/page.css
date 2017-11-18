@@ -363,21 +363,83 @@ input {
 .path-search-destins li.ui-state-default.ui-corner-top.ui-tabs-active.ui-state-active {
   border-bottom: solid 3px #f2b200 ;
 }
+
 .path-search-destins .view-nl-search .view-empty {
   float: right;
 }
+
 .path-search-destins .view-filters details {
   border:none;
 }
+
 .path-search-destins .view-filters  .form-checkboxes {
   border: 1px solid #ccc;
+  /*position: absolute;*/
+  padding: 20px;
+  width: 250px;
+  background: #ffffff;
+  color: #909090;
 }
+
+/*---Theming checkboxes---*/
+
+.path-search-destins .view-filters  .form-checkboxes .js-form-type-checkbox input[type=checkbox] {
+  display: none;
+}
+
+.path-search-destins .view-filters .form-checkboxes .js-form-type-checkbox {
+  position: relative;
+  padding-left: 25px;
+}
+
+.path-search-destins .view-filters .form-checkboxes .js-form-type-checkbox  label:after {
+  content: '';
+  display: block;
+  height: 14px;
+  width: 14px;
+  outline: 1px solid #939598;
+  position: absolute;
+  top: 3px;
+  left: 0;
+}
+
+.path-search-destins .view-filters .form-checkboxes .js-form-type-checkbox input[type=checkbox]:checked + label:after {
+  outline: 1px solid #ffffff;
+  /*border: 2px solid #fff;*/
+  width: 15px;
+  height: 15px;
+  background: url("img/shape.png");
+  background-size: contain;
+}
+
+.path-search-destins .view-filters .edit-other .details-wrapper {
+  background: #ffffff;
+}
+
+.path-search-destins .view-filters .edit-other  .form-checkboxes {
+  border: none;
+}
+
+.path-search-destins .view-filters  .form-checkboxes span.enable-values {
+  display: block;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+  text-align: right;
+  color: #f2b200;
+}
+
+.path-search-destins .view-filters .details-wrapper {
+  position: absolute;
+}
+
 .path-search-destins .view-filters summary {
   outline: 0;
 }
+
 .path-search-destins .view-filters summary::-webkit-details-marker {
   display: none
 }
+
 .path-search-destins .view-filters summary:after {
   position: absolute;
   margin: auto;
@@ -392,6 +454,7 @@ input {
   /*display: flex;*/
   align-items: center;
 }
+
 .path-search-destins .view-filters details[open] summary:after {
   position: absolute;
   margin: auto;
@@ -411,14 +474,17 @@ input {
   -o-transform: rotate(180deg); /* for Opera */
   transform: rotate(180deg);
 }
+
 .path-search-destins .view-filters details {
-  width: 24%;
+  width: 20%;
 }
+
 .path-search-destins .view-filters span.reset-values {
   float: right!important;
-  display: block;
+  display: none;
 }
-#stabs {
+
+.path-search-destins #stabs {
   background: url(img/background-search.jpg);
   background-position: 100%;
   background-repeat: repeat-x;
@@ -427,8 +493,24 @@ input {
   padding: 0px;
 }
 
-.ui-tabs-nav {
+.path-search-destins .js-form-item.form-item.js-form-type-select.form-type-select.js-form-item-sort-by.form-item-sort-by {
+  float: right;
+}
+
+/*.path-search-destins  .view-filters .form--inline.clearfix::after {*/
+  /*content: "Eliminar filtres";*/
+  /*display: block;*/
+  /*position: relative;*/
+  /*bottom: 100px;*/
+  /*left: 684px;*/
+/*}*/
+
+.path-search-destins .ui-tabs-nav {
   background: #ffffff !important;
+  box-shadow: 0 0.5px 1px 0.5px rgba(151, 151, 151, 0.5);
+  border: solid 0.5px rgba(151, 151, 151, 0.5)  !important;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
 }
 
 .path-search-destins .view-nl-search .view-content {
@@ -471,7 +553,9 @@ input {
   background-repeat: no-repeat;
   background-position: left;
   background-size: 223px auto;
+  padding-top: 15px ;
 }
+
 
 .path-search-destins .view-content .image-wrapper {
   float: left;
