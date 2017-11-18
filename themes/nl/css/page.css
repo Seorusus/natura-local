@@ -582,6 +582,16 @@ padding-top: 10px;
   margin: 6px 0;
 }
 
+.path-search-destins .view-content  .title-wrapper h3 a {
+  color: #f1b400;
+  text-decoration: none;
+}
+
+.path-search-destins .view-content  .title-wrapper h3 a:hover {
+  color: #909090;
+
+}
+
 .path-search-destins .view-content .views-field-field-fivestar {
   display: inline-block;
   float: right;
