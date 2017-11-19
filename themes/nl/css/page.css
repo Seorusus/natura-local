@@ -582,6 +582,16 @@ padding-top: 10px;
   margin: 6px 0;
 }
 
+.path-search-destins .view-content  .title-wrapper h3 a {
+  color: #f1b400;
+  text-decoration: none;
+}
+
+.path-search-destins .view-content  .title-wrapper h3 a:hover {
+  color: #909090;
+
+}
+
 .path-search-destins .view-content .views-field-field-fivestar {
   display: inline-block;
   float: right;
@@ -725,3 +735,18 @@ padding-top: 10px;
 .path-search-destins .view-content .footer-wrapper span.field-content {
   font-size: 0.8em;
 }
+
+/*--- Theming Node-type-route page ---*/
+
+.page-node-type-route .s-page {
+  box-shadow: none;
+}
+
+.page-node-type-route .s-page .s-header {
+  position: relative;
+}
+
+.page-node-type-route .s-page .s-layout__top::after {
+  background: none;
+}
+

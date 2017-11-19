@@ -85,10 +85,19 @@
 
   </main>
 
-  {% if page.footer %}
-    <footer role="contentinfo">
-      {{ page.footer }}
-    </footer>
-  {% endif %}
-
+  {#{% if page.footer %}#}
+    {#<footer role="contentinfo">#}
+      {#{{ page.footer }}#}
+    {#</footer>#}
+  {#{% endif %}#}
 </div>{# /.layout-container #}
+<div class="s-layout__footer">
+  <footer class="s-footer">
+    <div class="s-footer__top">
+      <div class="s-footer__logo">
+        <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="s-footer__logo-link">Home</a>
+      </div>
+      {{ page.footer }}
+    </div>
+  </footer>
+</div>

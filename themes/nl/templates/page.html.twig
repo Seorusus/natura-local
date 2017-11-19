@@ -42,14 +42,28 @@
  * @see html.html.twig
  */
 #}
+<div class="s-page">
+  <div class="s-layout__top">
+    {{ header_slider }}
+    <div class="s-header">
+      <div class="s-header__box">
+        {% if site_logo %}
+          <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="s-header__logo">
+            <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" />
+          </a>
+        {% endif %}
+        {{ page.primary_menu }}
+      </div>
+    </div>
+  </div>
 <div class="layout-container">
 
   <header role="banner">
     {{ page.header }}
   </header>
 
-  {{ page.primary_menu }}
-  {{ page.secondary_menu }}
+  {#{{ page.primary_menu }}#}
+  {#{{ page.secondary_menu }}#}
 
   {{ page.breadcrumb }}
 
@@ -77,11 +91,23 @@
     {% endif %}
 
   </main>
-
-  {% if page.footer %}
-    <footer role="contentinfo">
-      {{ page.footer }}
-    </footer>
-  {% endif %}
-
 </div>{# /.layout-container #}
+
+  <div class="s-layout__footer">
+    <footer class="s-footer">
+      <div class="s-footer__top">
+        <div class="s-footer__logo">
+          <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="s-footer__logo-link">Home</a>
+        </div>
+        {{ page.footer }}
+      </div>
+    </footer>
+  </div>
+
+  {#{% if page.footer %}#}
+    {#<footer role="contentinfo">#}
+      {#{{ page.footer }}#}
+    {#</footer>#}
+  {#{% endif %}#}
+
+  </div>
