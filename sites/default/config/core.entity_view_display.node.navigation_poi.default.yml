@@ -3,27 +3,116 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.navigation_poi.field_description
+    - field.field.node.navigation_poi.field_fivestar
+    - field.field.node.navigation_poi.field_image_default
     - field.field.node.navigation_poi.field_location
+    - field.field.node.navigation_poi.field_promoted
+    - field.field.node.navigation_poi.field_recommended
+    - field.field.node.navigation_poi.field_theme
+    - image.style.large
     - node.type.navigation_poi
   module:
+    - fivestar
     - geolocation
+    - image
     - user
 id: node.navigation_poi.default
 targetEntityType: node
 bundle: navigation_poi
 mode: default
 content:
-  field_location:
-    weight: 101
-    label: above
-    settings: {  }
+  field_description:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
-    type: geolocation_latlng
+    type: string
     region: content
-  links:
-    weight: 100
+  field_fivestar:
+    weight: 4
+    label: hidden
+    settings:
+      fivestar_widget: modules/fivestar/widgets/basic/basic.css
+    third_party_settings: {  }
+    type: fivestar_stars
+    region: content
+  field_image_default:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: large
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_location:
+    weight: 1
+    label: hidden
+    settings:
+      set_marker: '1'
+      title: ''
+      info_text: ''
+      google_map_settings:
+        height: 400px
+        width: 50%
+        type: ROADMAP
+        zoom: '10'
+        maxZoom: 18
+        minZoom: 0
+        mapTypeControl: 1
+        streetViewControl: 1
+        zoomControl: 1
+        scrollwheel: 1
+        gestureHandling: auto
+        draggable: 1
+        style: ''
+        info_auto_display: 1
+        marker_icon_path: ''
+        disableAutoPan: 1
+        rotateControl: 0
+        fullscreenControl: 0
+        preferScrollingToZooming: 0
+        disableDoubleClickZoom: 0
+      use_overridden_map_settings: 0
+      common_map: ''
+    third_party_settings: {  }
+    type: geolocation_map
+    region: content
+  field_promoted:
+    weight: 6
+    label: hidden
+    settings:
+      format: custom
+      format_custom_true: Promoted
+      format_custom_false: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_recommended:
+    weight: 5
+    label: hidden
+    settings:
+      format: custom
+      format_custom_true: Recommended
+      format_custom_false: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_theme:
+    weight: 2
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  flag_add_to_favorites:
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
   langcode: true
+  links: true

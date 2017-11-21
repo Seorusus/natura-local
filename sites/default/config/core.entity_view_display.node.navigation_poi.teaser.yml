@@ -4,16 +4,70 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.navigation_poi.field_description
+    - field.field.node.navigation_poi.field_fivestar
+    - field.field.node.navigation_poi.field_image_default
+    - field.field.node.navigation_poi.field_location
+    - field.field.node.navigation_poi.field_promoted
+    - field.field.node.navigation_poi.field_recommended
+    - field.field.node.navigation_poi.field_theme
+    - image.style.medium
     - node.type.navigation_poi
   module:
+    - fivestar
+    - image
     - user
 id: node.navigation_poi.teaser
 targetEntityType: node
 bundle: navigation_poi
 mode: teaser
 content:
-  links:
-    weight: 100
+  field_description:
+    type: string
+    weight: 4
     region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_fivestar:
+    type: fivestar_stars
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      fivestar_widget: modules/fivestar/widgets/basic/basic.css
+    third_party_settings: {  }
+  field_image_default:
+    type: image
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: ''
+    third_party_settings: {  }
+  field_recommended:
+    type: boolean
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      format: custom
+      format_custom_true: Recommended
+      format_custom_false: ''
+    third_party_settings: {  }
+  field_theme:
+    type: entity_reference_label
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
 hidden:
+  field_location: true
+  field_promoted: true
+  flag_add_to_favorites: true
   langcode: true
+  links: true

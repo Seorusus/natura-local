@@ -15,6 +15,7 @@ dependencies:
     - field.field.node.route.field_fivestar
     - field.field.node.route.field_gpx
     - field.field.node.route.field_image_default
+    - field.field.node.route.field_introduction
     - field.field.node.route.field_land
     - field.field.node.route.field_land_type
     - field.field.node.route.field_local_term
@@ -23,7 +24,8 @@ dependencies:
     - field.field.node.route.field_navigation_pois
     - field.field.node.route.field_others
     - field.field.node.route.field_recommended
-    - field.field.node.route.field_route_images
+    - field.field.node.route.field_route_gpx
+    - field.field.node.route.field_route_icons
     - field.field.node.route.field_route_type
     - field.field.node.route.field_route_typology
     - field.field.node.route.field_services
@@ -35,7 +37,6 @@ dependencies:
     - field.field.node.route.field_tour
     - field.field.node.route.field_video
     - field.field.node.route.field_visits
-    - field.field.node.route.field_vote
     - image.style.thumbnail
     - node.type.route
   module:
@@ -49,7 +50,7 @@ dependencies:
     - image
     - link
     - path
-    - votingapi_widgets
+    - text
 third_party_settings:
   field_group:
     group_services_visits_experience:
@@ -57,7 +58,7 @@ third_party_settings:
         - field_visits
         - field_experiences
       parent_name: ''
-      weight: 7
+      weight: 9
       format_type: accordion
       format_settings:
         id: ''
@@ -82,7 +83,7 @@ content:
     type: options_select
     region: content
   field_advices:
-    weight: 20
+    weight: 23
     settings:
       size: 60
       placeholder: ''
@@ -90,14 +91,14 @@ content:
     type: string_textfield
     region: content
   field_audio:
-    weight: 22
+    weight: 25
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
     type: file_generic
     region: content
   field_comments:
-    weight: 25
+    weight: 27
     settings: {  }
     third_party_settings: {  }
     type: comment_default
@@ -117,7 +118,7 @@ content:
     type: options_select
     region: content
   field_distance:
-    weight: 12
+    weight: 14
     settings:
       placeholder: ''
     third_party_settings: {  }
@@ -144,7 +145,7 @@ content:
     type: fivestar_stars
     region: content
   field_gpx:
-    weight: 14
+    weight: 16
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -152,12 +153,20 @@ content:
     type: link_default
     region: content
   field_image_default:
-    weight: 17
+    weight: 7
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
+  field_introduction:
+    weight: 20
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
     region: content
   field_land:
     weight: 39
@@ -166,7 +175,7 @@ content:
     type: options_select
     region: content
   field_land_type:
-    weight: 28
+    weight: 30
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -178,39 +187,80 @@ content:
     type: options_select
     region: content
   field_locality:
-    weight: 23
+    weight: 26
     settings:
       default_country: null
     third_party_settings: {  }
     type: address_default
     region: content
   field_location:
-    weight: 10
-    settings: {  }
+    weight: 12
+    settings:
+      populate_address_field: ''
+      target_address_field: null
+      explicite_actions_address_field: ''
+      default_longitude: null
+      default_latitude: null
+      auto_client_location: ''
+      auto_client_location_marker: ''
+      allow_override_map_settings: 0
+      google_map_settings:
+        type: ROADMAP
+        zoom: '10'
+        minZoom: 0
+        maxZoom: 18
+        rotateControl: 0
+        mapTypeControl: 1
+        streetViewControl: 1
+        zoomControl: 1
+        fullscreenControl: 0
+        scrollwheel: 1
+        disableDoubleClickZoom: 0
+        draggable: 1
+        height: 400px
+        width: 100%
+        info_auto_display: 1
+        marker_icon_path: ''
+        disableAutoPan: 1
+        style: ''
+        preferScrollingToZooming: 0
+        gestureHandling: auto
     third_party_settings: {  }
-    type: geolocation_latlng
+    type: geolocation_googlegeocoder
     region: content
   field_navigation_pois:
-    weight: 26
-    settings: {  }
+    weight: 28
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: options_select
+    type: entity_reference_autocomplete
     region: content
   field_others:
-    weight: 31
+    weight: 32
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_recommended:
-    weight: 27
+    weight: 29
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
-  field_route_images:
-    weight: 16
+  field_route_gpx:
+    weight: 17
+    settings:
+      progress_indicator: throbber
+    third_party_settings:
+      imce:
+        enabled: true
+    type: file_generic
+    region: content
+  field_route_icons:
+    weight: 8
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -218,13 +268,13 @@ content:
     type: image_image
     region: content
   field_route_type:
-    weight: 11
+    weight: 13
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_route_typology:
-    weight: 15
+    weight: 18
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -239,14 +289,14 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_slope:
-    weight: 13
+    weight: 15
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
     region: content
   field_surroundings:
-    weight: 29
+    weight: 31
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -258,10 +308,13 @@ content:
     type: options_select
     region: content
   field_theme:
-    weight: 30
-    settings: {  }
+    weight: 22
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: options_select
+    type: entity_reference_autocomplete
     region: content
   field_time:
     weight: 37
@@ -288,13 +341,6 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
-  field_vote:
-    weight: 32
-    settings:
-      show_initial_vote: 0
-    third_party_settings: {  }
-    type: voting_api_widget
-    region: content
   langcode:
     type: language_select
     weight: 2
@@ -303,7 +349,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 9
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -318,7 +364,7 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 8
+    weight: 10
     region: content
     third_party_settings: {  }
   title:

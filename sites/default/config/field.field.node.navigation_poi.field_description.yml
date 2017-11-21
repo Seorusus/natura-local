@@ -1,0 +1,19 @@
+uuid: 43918fb1-1563-4339-93ca-953c73f8f830
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description
+    - node.type.navigation_poi
+id: node.navigation_poi.field_description
+field_name: field_description
+entity_type: node
+bundle: navigation_poi
+label: Description
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

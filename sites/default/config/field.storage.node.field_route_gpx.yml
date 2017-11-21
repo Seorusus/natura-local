@@ -1,0 +1,23 @@
+uuid: 6e175417-6e2c-481f-aa8a-9831ea554132
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - node
+id: node.field_route_gpx
+field_name: field_route_gpx
+entity_type: node
+type: file
+settings:
+  display_field: false
+  display_default: false
+  uri_scheme: public
+  target_type: file
+module: file
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

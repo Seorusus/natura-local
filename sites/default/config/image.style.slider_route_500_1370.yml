@@ -1,0 +1,14 @@
+uuid: 87ae5abe-0508-4740-b7ec-f4d0382111dd
+langcode: en
+status: true
+dependencies: {  }
+name: slider_route_500_1370
+label: 'Slider route 500*1370'
+effects:
+  9d526cd5-dc5a-4e3e-92c1-6d5a0eb287db:
+    uuid: 9d526cd5-dc5a-4e3e-92c1-6d5a0eb287db
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1370
+      height: 500

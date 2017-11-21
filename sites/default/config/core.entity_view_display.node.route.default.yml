@@ -16,6 +16,7 @@ dependencies:
     - field.field.node.route.field_fivestar
     - field.field.node.route.field_gpx
     - field.field.node.route.field_image_default
+    - field.field.node.route.field_introduction
     - field.field.node.route.field_land
     - field.field.node.route.field_land_type
     - field.field.node.route.field_local_term
@@ -24,7 +25,8 @@ dependencies:
     - field.field.node.route.field_navigation_pois
     - field.field.node.route.field_others
     - field.field.node.route.field_recommended
-    - field.field.node.route.field_route_images
+    - field.field.node.route.field_route_gpx
+    - field.field.node.route.field_route_icons
     - field.field.node.route.field_route_type
     - field.field.node.route.field_route_typology
     - field.field.node.route.field_services
@@ -36,28 +38,249 @@ dependencies:
     - field.field.node.route.field_tour
     - field.field.node.route.field_video
     - field.field.node.route.field_visits
-    - field.field.node.route.field_vote
+    - image.style.route_gelary
+    - image.style.slider_route_500_1370
+    - image.style.thumbnail
     - node.type.route
   module:
-    - address
+    - audiofield
+    - colorbox
     - comment
     - duration_field
+    - field_group
     - file
     - fivestar
     - geolocation
     - image
-    - image_url_formatter
     - link
     - options
+    - text
     - user
-    - votingapi_widgets
+third_party_settings:
+  field_group:
+    group_que_hi_ha_:
+      children:
+        - field_navigation_pois
+      parent_name: group_main
+      weight: 5
+      format_type: tab
+      format_settings:
+        label: 'What is it?'
+        formatter: closed
+        description: ''
+        id: ''
+        classes: ''
+      label: 'What is it?'
+    group_main:
+      children:
+        - riute_slider_entity_view_1
+        - field_location
+        - group_sheet
+        - group_que_hi_ha_
+        - group_images
+        - group_valuations
+        - group_what_more_does_
+      parent_name: ''
+      weight: 1
+      format_type: tabs
+      format_settings:
+        label: Main
+        direction: horizontal
+        id: main_route_tabs
+        classes: ''
+      label: Main
+    group_images:
+      children:
+        - field_image_default
+      parent_name: group_main
+      weight: 6
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+      label: Images
+    group_sheet:
+      children:
+        - group_01
+        - group_02
+        - group_03_slope_graph
+        - group_04_save_this_route
+        - group_05_advices
+      parent_name: group_main
+      weight: 4
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: open
+        description: ''
+      label: Sheet
+    group_01:
+      children:
+        - field_introduction
+        - field_route_icons
+        - field_route_typology
+        - field_difficulty
+        - field_duration_element
+        - field_slope
+        - field_distance
+        - field_thematic
+        - field_activity
+        - field_fivestar
+      parent_name: group_sheet
+      weight: 1
+      format_type: html_element
+      format_settings:
+        label: '01 Introduction'
+        element: div
+        show_label: true
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: ''
+      label: '01 Introduction'
+    group_02:
+      children:
+        - field_description
+      parent_name: group_sheet
+      weight: 3
+      format_type: html_element
+      format_settings:
+        label: '02 Description'
+        element: div
+        show_label: true
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: ''
+      label: '02 Description'
+    group_03_slope_graph:
+      children:
+        - field_gpx
+      parent_name: group_sheet
+      weight: 4
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: true
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: '03 Slope graph'
+    group_04_save_this_route:
+      children:
+        - field_route_gpx
+      parent_name: group_sheet
+      weight: 5
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: true
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: '04 Save this route'
+    group_05_advices:
+      children:
+        - field_theme
+        - field_advices
+        - field_video
+        - field_audio
+      parent_name: group_sheet
+      weight: 6
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: true
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: '05 Advices'
+    group_valuations:
+      children:
+        - field_comments
+      parent_name: group_main
+      weight: 7
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+      label: Valuations
+    group_what_more_does_:
+      children:
+        - group_srvices
+        - group_experience
+        - group_visites
+      parent_name: group_main
+      weight: 8
+      format_type: tab
+      format_settings:
+        label: 'What more does?'
+        formatter: closed
+        description: ''
+        id: ''
+        classes: ''
+      label: 'What more does?'
+    group_srvices:
+      children:
+        - field_services
+      parent_name: group_what_more_does_
+      weight: 20
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+      label: Srvices
+    group_experience:
+      children:
+        - field_experiences
+      parent_name: group_what_more_does_
+      weight: 21
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+      label: Experience
+    group_visites:
+      children:
+        - field_visits
+      parent_name: group_what_more_does_
+      weight: 22
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+      label: Visites
 id: node.route.default
 targetEntityType: node
 bundle: route
 mode: default
 content:
   field_activity:
-    weight: 29
+    weight: 13
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -65,7 +288,7 @@ content:
     region: content
   field_advices:
     weight: 12
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -73,37 +296,46 @@ content:
     region: content
   field_audio:
     weight: 14
-    label: above
-    settings: {  }
+    label: hidden
+    settings:
+      audio_player: default_mp3_player
+      audio_player_jplayer_theme: none
+      audio_player_wordpress_animation: '1'
+      audio_player_soundmanager_theme: default
+      audio_player_initial_volume: '8'
+      audio_player_wavesurfer_combine_files: 0
+      audio_player_wordpress_combine_files: 0
+      audio_player_autoplay: 0
+      download_link: 0
     third_party_settings: {  }
-    type: file_url_plain
+    type: audiofield_audioplayer
     region: content
   field_comments:
-    weight: 17
-    label: above
+    type: comment_default
+    weight: 7
+    region: content
+    label: hidden
     settings:
       view_mode: default
       pager_id: 0
     third_party_settings: {  }
-    type: comment_default
-    region: content
   field_description:
-    weight: 13
-    label: above
+    weight: 15
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
   field_difficulty:
-    weight: 30
+    weight: 8
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_distance:
-    weight: 4
+    weight: 11
     label: above
     settings:
       thousand_separator: ''
@@ -114,7 +346,7 @@ content:
     type: number_decimal
     region: content
   field_duration_element:
-    weight: 11
+    weight: 9
     label: above
     settings:
       text_length: full
@@ -123,15 +355,16 @@ content:
     type: duration_human_display
     region: content
   field_experiences:
-    weight: 24
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
+    type: entity_reference_entity_view
+    weight: 22
     region: content
+    label: hidden
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
   field_fivestar:
-    weight: 27
+    weight: 14
     label: above
     settings:
       fivestar_widget: modules/fivestar/widgets/basic/basic.css
@@ -139,7 +372,7 @@ content:
     type: fivestar_stars
     region: content
   field_gpx:
-    weight: 6
+    weight: 12
     label: above
     settings:
       trim_length: 80
@@ -151,95 +384,83 @@ content:
     type: link
     region: content
   field_image_default:
-    weight: 9
-    label: above
+    weight: 2
+    label: hidden
     settings:
-      image_style: ''
-      image_link: ''
+      colorbox_node_style: route_gelary
+      colorbox_node_style_first: ''
+      colorbox_image_style: slider_route_500_1370
+      colorbox_gallery: post
+      colorbox_gallery_custom: ''
+      colorbox_caption: auto
+      colorbox_caption_custom: ''
     third_party_settings: {  }
-    type: image
+    type: colorbox
     region: content
-  field_land:
-    weight: 33
-    label: above
+  field_introduction:
+    weight: 5
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: list_default
-    region: content
-  field_land_type:
-    weight: 20
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_local_term:
-    weight: 1
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_locality:
-    weight: 15
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: address_default
+    type: text_default
     region: content
   field_location:
-    weight: 2
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: geolocation_latlng
+    type: geolocation_map
+    weight: 3
     region: content
-  field_navigation_pois:
-    weight: 18
-    label: above
+    label: hidden
     settings:
-      link: true
-      view_mode: default
+      set_marker: '1'
+      title: ''
+      info_text: ''
+      google_map_settings:
+        height: 400px
+        width: 50%
+        type: SATELLITE
+        zoom: '10'
+        maxZoom: 18
+        minZoom: 0
+        mapTypeControl: 1
+        streetViewControl: 1
+        zoomControl: 1
+        scrollwheel: 1
+        gestureHandling: auto
+        draggable: 1
+        style: ''
+        info_auto_display: 1
+        marker_icon_path: ''
+        disableAutoPan: 1
+        rotateControl: 0
+        fullscreenControl: 0
+        preferScrollingToZooming: 0
+        disableDoubleClickZoom: 0
+      use_overridden_map_settings: 0
+      common_map: ''
+    third_party_settings: {  }
+  field_navigation_pois:
+    weight: 11
+    label: hidden
+    settings:
+      view_mode: teaser
+      link: false
     third_party_settings: {  }
     type: entity_reference_entity_view
     region: content
-  field_others:
-    weight: 23
-    label: above
-    settings:
-      link: true
+  field_route_gpx:
+    weight: 6
+    label: hidden
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_label
+    type: file_default
     region: content
-  field_recommended:
-    weight: 19
-    label: above
+  field_route_icons:
+    weight: 6
+    label: hidden
     settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    type: boolean
-    region: content
-  field_route_images:
-    weight: 8
-    label: above
-    settings:
-      image_style: ''
+      image_style: thumbnail
       image_link: ''
-      url_type: ''
     third_party_settings: {  }
-    type: image_url
-    region: content
-  field_route_type:
-    weight: 3
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
+    type: image
     region: content
   field_route_typology:
     weight: 7
@@ -250,15 +471,16 @@ content:
     type: entity_reference_label
     region: content
   field_services:
-    weight: 28
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
+    type: entity_reference_entity_view
+    weight: 2
     region: content
+    label: hidden
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
   field_slope:
-    weight: 5
+    weight: 10
     label: above
     settings:
       thousand_separator: ''
@@ -268,74 +490,67 @@ content:
     third_party_settings: {  }
     type: number_decimal
     region: content
-  field_surroundings:
-    weight: 21
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
   field_thematic:
-    weight: 34
+    weight: 12
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_theme:
-    weight: 22
-    label: above
+    weight: 11
+    label: hidden
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
     type: entity_reference_label
-    region: content
-  field_time:
-    weight: 31
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
-  field_tour:
-    weight: 32
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
     region: content
   field_video:
-    weight: 16
-    label: above
-    settings: {  }
+    weight: 13
+    label: hidden
+    settings:
+      audio_player: default_mp3_player
+      audio_player_jplayer_theme: none
+      audio_player_wordpress_animation: '1'
+      audio_player_soundmanager_theme: default
+      audio_player_initial_volume: '8'
+      audio_player_wavesurfer_combine_files: 0
+      audio_player_wordpress_combine_files: 0
+      audio_player_autoplay: 0
+      download_link: 0
     third_party_settings: {  }
-    type: file_default
+    type: audiofield_audioplayer
     region: content
   field_visits:
-    weight: 25
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
+    type: entity_reference_entity_view
+    weight: 23
     region: content
-  field_vote:
-    weight: 26
-    label: above
+    label: hidden
     settings:
-      style: bootstrap-stars
-      show_results: '1'
-      readonly: 0
-      show_own_vote: 0
-      values: {  }
+      view_mode: teaser
+      link: false
     third_party_settings: {  }
-    type: voting_api_formatter
-    region: content
-  links:
+  riute_slider_entity_view_1:
     weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
+  slider_route_entity_view_1:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
+  field_land: true
+  field_land_type: true
+  field_local_term: true
+  field_locality: true
+  field_others: true
+  field_recommended: true
+  field_route_type: true
+  field_surroundings: true
+  field_time: true
+  field_tour: true
+  flag_add_to_favorites: true
   langcode: true
+  links: true

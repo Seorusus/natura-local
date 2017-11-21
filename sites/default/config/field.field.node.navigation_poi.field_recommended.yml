@@ -1,0 +1,23 @@
+uuid: 67513f91-8460-4389-988a-60452112c469
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_recommended
+    - node.type.navigation_poi
+id: node.navigation_poi.field_recommended
+field_name: field_recommended
+entity_type: node
+bundle: navigation_poi
+label: Recommended
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
