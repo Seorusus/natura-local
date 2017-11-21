@@ -1,21 +1,21 @@
-uuid: 641bdeb9-01f9-41b6-b0a4-57e87b7a1cbf
+uuid: ea008b78-06bb-47af-ac96-a73dad08e31f
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_thematic
+    - field.storage.node.field_duration
     - node.type.route
   module:
-    - options
-id: node.route.field_thematic
-field_name: field_thematic
+    - interval
+id: node.route.field_duration
+field_name: field_duration
 entity_type: node
 bundle: route
-label: Thematic
+label: Duration
 description: ''
-required: false
+required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: list_string
+field_type: interval

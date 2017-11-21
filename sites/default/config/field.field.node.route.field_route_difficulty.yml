@@ -1,16 +1,16 @@
-uuid: 34a953c9-dc0f-400c-ba4c-15f7b82d13f5
+uuid: a85c837a-8af1-4a4c-875e-8b6a41e8a912
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_route_typology
+    - field.storage.node.field_route_difficulty
     - node.type.route
-    - taxonomy.vocabulary.route_shape
-id: node.route.field_route_typology
-field_name: field_route_typology
+    - taxonomy.vocabulary.route_difficulty
+id: node.route.field_route_difficulty
+field_name: field_route_difficulty
 entity_type: node
 bundle: route
-label: 'Route Typology'
+label: 'Route Difficulty'
 description: ''
 required: true
 translatable: false
@@ -20,7 +20,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      route_shape: route_shape
+      route_difficulty: route_difficulty
     sort:
       field: _none
     auto_create: false

@@ -1,18 +1,18 @@
-uuid: 34a953c9-dc0f-400c-ba4c-15f7b82d13f5
+uuid: 5ac0d0f9-5bc7-48ed-88d3-f5f8a2bbd1bf
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_route_typology
+    - field.storage.node.field_route_time
     - node.type.route
-    - taxonomy.vocabulary.route_shape
-id: node.route.field_route_typology
-field_name: field_route_typology
+    - taxonomy.vocabulary.route_duration
+id: node.route.field_route_time
+field_name: field_route_time
 entity_type: node
 bundle: route
-label: 'Route Typology'
+label: 'Route Time'
 description: ''
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
@@ -20,7 +20,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      route_shape: route_shape
+      route_duration: route_duration
     sort:
       field: _none
     auto_create: false
