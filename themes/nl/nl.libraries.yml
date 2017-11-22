@@ -2,6 +2,7 @@ global-styling:
   css:
     theme:
       css/styles.css: {}
+      css/style_fix.css: {}
       css/page.css: {}
   js:
       js/main.js: {}
