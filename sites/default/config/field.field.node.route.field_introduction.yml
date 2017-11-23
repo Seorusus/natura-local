@@ -1,0 +1,21 @@
+uuid: 8b15d0fe-35a3-46a9-87c9-ec7867b1acc5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_introduction
+    - node.type.route
+  module:
+    - text
+id: node.route.field_introduction
+field_name: field_introduction
+entity_type: node
+bundle: route
+label: Introduction
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

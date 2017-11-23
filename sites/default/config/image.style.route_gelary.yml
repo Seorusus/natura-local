@@ -1,0 +1,15 @@
+uuid: 4d9fb8db-8b17-4597-8cbe-f7d5d18d47d4
+langcode: en
+status: true
+dependencies: {  }
+name: route_gelary
+label: 'Route gallery'
+effects:
+  36835119-3be5-4166-a676-963e9f4c78fd:
+    uuid: 36835119-3be5-4166-a676-963e9f4c78fd
+    id: image_crop
+    weight: 2
+    data:
+      width: 250
+      height: 170
+      anchor: center-center

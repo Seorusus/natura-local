@@ -2,7 +2,7 @@ uuid: f76b35cb-85a5-49d9-a5f8-2438a875a6c7
 langcode: en
 status: true
 dependencies: {  }
-name: Theme
+name: 'Theme of Advices'
 vid: theme
 description: 'Flora, Fauna, Landscapes, Architecture, Transportation, Geology, Others'
 hierarchy: 0

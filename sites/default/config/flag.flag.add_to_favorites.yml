@@ -5,6 +5,7 @@ dependencies: {  }
 id: add_to_favorites
 label: 'Add to favorites'
 bundles:
+  - navigation_poi
   - route
 entity_type: node
 global: false

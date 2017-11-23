@@ -1,17 +1,17 @@
-uuid: 460fb261-dd04-487d-bfbd-1c6d1ab6c3f5
+uuid: c1091543-ec64-4772-96bd-7cf13e08ef65
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_route_images
+    - field.storage.node.field_route_icons
     - node.type.route
   module:
     - image
-id: node.route.field_route_images
-field_name: field_route_images
+id: node.route.field_route_icons
+field_name: field_route_icons
 entity_type: node
 bundle: route
-label: 'Route Images'
+label: 'Route Icons'
 description: ''
 required: false
 translatable: false

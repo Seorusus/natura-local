@@ -24,7 +24,6 @@ dependencies:
     - field.field.node.route.field_navigation_pois
     - field.field.node.route.field_others
     - field.field.node.route.field_recommended
-    - field.field.node.route.field_route_images
     - field.field.node.route.field_route_type
     - field.field.node.route.field_route_typology
     - field.field.node.route.field_services
@@ -36,14 +35,12 @@ dependencies:
     - field.field.node.route.field_tour
     - field.field.node.route.field_video
     - field.field.node.route.field_visits
-    - field.field.node.route.field_vote
     - node.type.route
   module:
     - address
     - file
     - geolocation
     - image
-    - image_url_formatter
     - link
     - user
 id: node.route.token
@@ -120,16 +117,6 @@ content:
     third_party_settings: {  }
     type: geolocation_latlng
     region: content
-  field_route_images:
-    weight: 9
-    label: above
-    settings:
-      image_style: ''
-      image_link: ''
-      url_type: ''
-    third_party_settings: {  }
-    type: image_url
-    region: content
   field_route_type:
     weight: 2
     label: above
@@ -157,6 +144,9 @@ content:
     third_party_settings: {  }
     type: number_decimal
     region: content
+  flag_add_to_favorites:
+    weight: 10
+    region: content
   links:
     weight: 0
     region: content
@@ -183,5 +173,4 @@ hidden:
   field_tour: true
   field_video: true
   field_visits: true
-  field_vote: true
   langcode: true

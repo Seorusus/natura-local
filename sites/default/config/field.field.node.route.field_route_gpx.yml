@@ -1,0 +1,27 @@
+uuid: 53791bb3-a38a-4db2-b32f-13facd545c90
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_route_gpx
+    - node.type.route
+  module:
+    - file
+id: node.route.field_route_gpx
+field_name: field_route_gpx
+entity_type: node
+bundle: route
+label: 'Route GPX'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: 'gpx/[date:custom:Y]-[date:custom:m]'
+  file_extensions: gpx
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

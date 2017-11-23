@@ -24,7 +24,6 @@ dependencies:
     - field.field.node.route.field_navigation_pois
     - field.field.node.route.field_others
     - field.field.node.route.field_recommended
-    - field.field.node.route.field_route_images
     - field.field.node.route.field_route_type
     - field.field.node.route.field_route_typology
     - field.field.node.route.field_services
@@ -36,7 +35,6 @@ dependencies:
     - field.field.node.route.field_tour
     - field.field.node.route.field_video
     - field.field.node.route.field_visits
-    - field.field.node.route.field_vote
     - node.type.route
   module:
     - user
@@ -45,6 +43,9 @@ targetEntityType: node
 bundle: route
 mode: teaser
 content:
+  flag_add_to_favorites:
+    weight: 10
+    region: content
   links:
     weight: 100
     region: content
@@ -71,7 +72,6 @@ hidden:
   field_navigation_pois: true
   field_others: true
   field_recommended: true
-  field_route_images: true
   field_route_type: true
   field_route_typology: true
   field_services: true
@@ -83,5 +83,4 @@ hidden:
   field_tour: true
   field_video: true
   field_visits: true
-  field_vote: true
   langcode: true
