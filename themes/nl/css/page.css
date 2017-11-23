@@ -644,13 +644,17 @@ padding-top: 10px;
   padding-right: 20px;
 }
 
+
 /*--Theming footer wrapper--*/
 
 .path-search-destins .view-content  .footer-wrapper .views-field-field-route-typology-1,
 .path-search-destins .view-content  .footer-wrapper .views-field-field-difficulty,
 .path-search-destins .view-content  .footer-wrapper .views-field-field-duration-element,
 .path-search-destins .view-content  .footer-wrapper .views-field-field-slope,
-.path-search-destins .view-content  .footer-wrapper .views-field-field-distance {
+.path-search-destins .view-content  .footer-wrapper .views-field-field-distance,
+.path-search-destins .view-content  .footer-wrapper .views-field-field-routes,
+.path-search-destins .view-content  .footer-wrapper .views-field-field-visits,
+.path-search-destins .view-content  .footer-wrapper .views-field-field-experiences {
   display: inline-block;
 }
 
@@ -658,11 +662,15 @@ padding-top: 10px;
 .path-search-destins .view-content  .footer-wrapper span.views-label.views-label-field-difficulty,
 .path-search-destins .view-content  .footer-wrapper span.views-label.views-label-field-duration-element,
 .path-search-destins .view-content  .footer-wrapper span.views-label.views-label-field-slope,
-.path-search-destins .view-content  .footer-wrapper span.views-label.views-label-field-distance {
+.path-search-destins .view-content  .footer-wrapper span.views-label.views-label-field-distance,
+.path-search-destins .view-content  .footer-wrapper span.views-label.views-label-field-routes,
+.path-search-destins .view-content  .footer-wrapper span.views-label.views-label-field-visits,
+.path-search-destins .view-content  .footer-wrapper span.views-label.views-label-field-experiences {
   display: block;
 }
 
-.path-search-destins .view-content .footer-wrapper .views-field.views-field-field-difficulty {
+.path-search-destins .view-content .footer-wrapper .views-field.views-field-field-difficulty,
+.path-search-destins .view-content .footer-wrapper .views-field.views-field-field-visits {
   border-left: 2px solid #afb8bd;
   border-right: 2px solid #afb8bd;
   /*padding: 0 40px;*/
@@ -682,7 +690,10 @@ padding-top: 10px;
 .path-search-destins .view-content .footer-wrapper .views-field.views-field-field-duration-element,
 .path-search-destins .view-content .footer-wrapper .views-field.views-field-field-difficulty,
 .path-search-destins .view-content .footer-wrapper .views-field.views-field-field-slope,
-.path-search-destins .view-content .footer-wrapper .views-field.views-field-field-distance {
+.path-search-destins .view-content .footer-wrapper .views-field.views-field-field-distance,
+.path-search-destins .view-content .footer-wrapper .views-field.views-field-field-routes,
+.path-search-destins .view-content .footer-wrapper .views-field.views-field-field-visits,
+.path-search-destins .view-content .footer-wrapper .views-field.views-field-field-experiences {
   padding: 0 20px;
   /*height: 30px;*/
 }
@@ -710,6 +721,19 @@ padding-top: 10px;
   background-position: top;
 }
 
+.path-search-destins .view-content .footer-wrapper .views-field.views-field-field-routes {
+  background: url(img/rutes-icon.png);
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.path-search-destins .view-content .footer-wrapper .views-field.views-field-field-visits {
+  background: url(img/visites-icon.png);
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+
 .path-search-destins .view-content .footer-wrapper .views-field.views-field-field-duration-element {
   background: url(img/icon-duration.png);
   background-repeat: no-repeat;
@@ -718,6 +742,12 @@ padding-top: 10px;
 
 .path-search-destins .view-content .footer-wrapper .views-field.views-field-field-slope {
   background: url(img/icon-ramp.png);
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.path-search-destins .view-content .footer-wrapper .views-field.views-field-field-experiences {
+  background: url(img/experiencies-icon.png);
   background-repeat: no-repeat;
   background-position: top;
 }
