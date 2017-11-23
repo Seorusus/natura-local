@@ -37,3 +37,16 @@
     .s-front-search {
       top: 29% !important;
       margin: 0 8% !important; } }
+	  
+	  
+ #autocomlpete-sform {
+  width: 85%;
+  /*height: 35px;*/
+  object-fit: contain;
+  border-radius: 6px;
+  background-color: #ffffff;
+  border: solid 0.3px #909090;
+  background-image: url("img/search-icon.svg");
+  background-position: 1% 50%;
+  background-repeat: no-repeat;
+}
