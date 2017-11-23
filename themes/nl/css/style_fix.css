@@ -50,3 +50,27 @@
   background-position: 1% 50%;
   background-repeat: no-repeat;
 }
+
+
+.region-front-content {
+  margin: 0 auto;
+  padding: 0 15px; }
+  @media (min-width: 960px) {
+    .region-front-content {
+      max-width: 100% !important;
+     padding: 0 5%; } }
+  @media (min-width: 1200px) {
+    .region-front-content {
+      max-width: 100%;
+      padding: 0 30px; } }
+  @media (min-width: 1600px) {
+    .region-front-content {
+      max-width: 100%;
+      padding: 0 40px; } }
+  @media (min-width: 960px) {
+    .region-front-content {
+      position: relative;
+      top: -100px;
+      padding: 0 5%; } }
+	  
+	  
