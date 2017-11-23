@@ -241,6 +241,7 @@ li.s-menu__item {
 
 .path-search-destins .s-header {
   margin: 25px 0px;
+  position: relative;  
 }
 
 .path-search-destins .region-primary-menu,
@@ -255,7 +256,7 @@ li.s-menu__item {
 }
 
 .path-search-destins  main {
-  margin-top: 125px;
+  margin-top: 40px;
 }
 
 .path-search-destins .s-header__box img {
