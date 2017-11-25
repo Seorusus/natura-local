@@ -783,3 +783,24 @@ padding-top: 10px;
   background: none;
 }
 
+/*---fixing bugs mine menu---*/
+
+.path-frontpage .region-primary-menu .s-menu--level-1 > .s-menu__item {
+  height: 69px;
+  }
+
+.region-primary-menu .s-menu--level-1{
+  height: 50px;
+}
+
+.path-search-destins .region-primary-menu .s-menu__item--expanded:hover .s-menu--level-2 {
+  top: 0px
+}
+
+/*----------------*/
+
+.s-layout__footer {
+  position: relative;
+  float: left;
+  width: 100%;;
+}
