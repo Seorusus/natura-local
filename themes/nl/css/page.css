@@ -382,6 +382,7 @@ input {
   color: #909090;
   position: absolute;
   z-index: 1000;
+  top: 8px;
 }
 
 /*---Theming checkboxes---*/
@@ -810,7 +811,8 @@ padding-top: 10px;
 
 .path-search-destins  .result-counter {
   position: absolute;
-  top: 110px;
+  top: 109px;
+  left: 28px;
 }
 
 .path-search-destins  .view-filters {
@@ -820,12 +822,48 @@ padding-top: 10px;
 }
 
 #tabs-visites .js-form-item.form-item.js-form-type-select.form-type-select.js-form-item-sort-by.form-item-sort-by,
-#tabs-destins .js-form-item.form-item.js-form-type-select.form-type-select.js-form-item-sort-by.form-item-sort-by,
 #tabs-experiences .js-form-item.form-item.js-form-type-select.form-type-select.js-form-item-sort-by.form-item-sort-by,
 #tabs-services .js-form-item.form-item.js-form-type-select.form-type-select.js-form-item-sort-by.form-item-sort-by {
-  margin-top: 59px;
+  margin-top: 66px;
 }
 
 #tabs-routes  .js-form-item.form-item.js-form-type-select.form-type-select.js-form-item-sort-by.form-item-sort-by {
-  margin-top: -4px;
+  margin-top: 7px;
+}
+
+.path-search-destins .form--inline.clearfix {
+  height: 57px;
+  background-color: rgba(253, 255, 255, 0.72);
+  padding-top: 5px;
+  padding-left: 20px;
+  margin-top: 4px;
+  box-shadow: 0 0.8px 0px rgba(182, 182, 182, 0.75);
+  -moz-box-shadow: 0 0.8px 0px rgba(182, 182, 182, 0.75);
+  -webkit-box-shadow: 0 0.8px 0px rgba(182, 182, 182, 0.75);
+}
+
+.path-search-destins #tabs-destins .form--inline.clearfix {
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+.path-search-destins div#tabs-routes,
+.path-search-destins div #tabs-visites,
+.path-search-destins div #tabs-experiences,
+.path-search-destins div #tabs-services{
+  padding: 0px;
+}
+
+.path-search-destins #tabs-destins .form--inline.clearfix {
+  height: 0px;
+  margin-top: -63px;
+}
+
+.path-search-destins  #tabs-destins .result-counter {
+  top: 74px;
+}
+
+#tabs-destins .js-form-item.form-item.js-form-type-select.form-type-select.js-form-item-sort-by.form-item-sort-by {
+  margin-top: 60px;
 }
