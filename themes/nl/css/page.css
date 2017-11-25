@@ -380,6 +380,8 @@ input {
   width: 250px;
   background: #ffffff;
   color: #909090;
+  position: absolute;
+  z-index: 1000;
 }
 
 /*---Theming checkboxes---*/
