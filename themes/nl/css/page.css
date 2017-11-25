@@ -825,10 +825,12 @@ padding-top: 10px;
 #tabs-experiences .js-form-item.form-item.js-form-type-select.form-type-select.js-form-item-sort-by.form-item-sort-by,
 #tabs-services .js-form-item.form-item.js-form-type-select.form-type-select.js-form-item-sort-by.form-item-sort-by {
   margin-top: 66px;
+  margin-right: 27px;
 }
 
 #tabs-routes  .js-form-item.form-item.js-form-type-select.form-type-select.js-form-item-sort-by.form-item-sort-by {
-  margin-top: 7px;
+  margin-top: 4px;
+  margin-right: 27px;
 }
 
 .path-search-destins .form--inline.clearfix {
@@ -866,4 +868,11 @@ padding-top: 10px;
 
 #tabs-destins .js-form-item.form-item.js-form-type-select.form-type-select.js-form-item-sort-by.form-item-sort-by {
   margin-top: 60px;
+}
+
+.path-search-destins #tabs-routes .view-content,
+.path-search-destins #tabs-visites .view-content,
+.path-search-destins #tabs-experiences .view-content,
+.path-search-destins #tabs-services .view-content{
+  margin: 0 28px;
 }
