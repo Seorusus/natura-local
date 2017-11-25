@@ -510,10 +510,13 @@ input {
 
 .path-search-destins .ui-tabs-nav {
   background: #ffffff !important;
-  box-shadow: 0 0.5px 1px 0.5px rgba(151, 151, 151, 0.5);
-  border: solid 0.5px rgba(151, 151, 151, 0.5)  !important;
+  box-shadow: 0 2px 0px rgba(182, 182, 182, 0.75);
+  -moz-box-shadow: 0 2px 0px rgba(182, 182, 182, 0.75);
+  -webkit-box-shadow: 0 2px 0px rgba(182, 182, 182, 0.75);
+  border: none !important;
   border-bottom-right-radius: 0px;
   border-bottom-left-radius: 0px;
+
 }
 
 .path-search-destins .view-nl-search .view-content {
@@ -803,4 +806,26 @@ padding-top: 10px;
   position: relative;
   float: left;
   width: 100%;;
+}
+
+.path-search-destins  .result-counter {
+  position: absolute;
+  top: 110px;
+}
+
+.path-search-destins  .view-filters {
+  height: 68px;
+  margin-top: -20px;
+  margin-bottom: 40px;
+}
+
+#tabs-visites .js-form-item.form-item.js-form-type-select.form-type-select.js-form-item-sort-by.form-item-sort-by,
+#tabs-destins .js-form-item.form-item.js-form-type-select.form-type-select.js-form-item-sort-by.form-item-sort-by,
+#tabs-experiences .js-form-item.form-item.js-form-type-select.form-type-select.js-form-item-sort-by.form-item-sort-by,
+#tabs-services .js-form-item.form-item.js-form-type-select.form-type-select.js-form-item-sort-by.form-item-sort-by {
+  margin-top: 59px;
+}
+
+#tabs-routes  .js-form-item.form-item.js-form-type-select.form-type-select.js-form-item-sort-by.form-item-sort-by {
+  margin-top: -4px;
 }
