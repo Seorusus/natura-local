@@ -1,15 +1,15 @@
-uuid: b2de643b-3464-4362-b396-f6a3fbdd9b81
+uuid: 5ac0d0f9-5bc7-48ed-88d3-f5f8a2bbd1bf
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_route_time
-    - node.type.destins
+    - node.type.route
     - taxonomy.vocabulary.route_duration
-id: node.destins.field_route_time
+id: node.route.field_route_time
 field_name: field_route_time
 entity_type: node
-bundle: destins
+bundle: route
 label: 'Route Time'
 description: ''
 required: false

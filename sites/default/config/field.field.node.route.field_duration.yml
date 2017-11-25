@@ -1,0 +1,21 @@
+uuid: ea008b78-06bb-47af-ac96-a73dad08e31f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_duration
+    - node.type.route
+  module:
+    - interval
+id: node.route.field_duration
+field_name: field_duration
+entity_type: node
+bundle: route
+label: Duration
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: interval
